@@ -1,9 +1,9 @@
 title: Lake or swamp (sample - replace with real work)
 date: 2026-07-08
 tool: midjourney
-series: decoded
+format: infographic
+topic: [data quality, governance]
 style: flat geometric
-tags: [data-quality, governance]
 prompt: "minimal geometric poster of a lake made of concentric rings slowly turning into a swamp, flat vector, plum and peach on dark ink, editorial illustration --ar 4:5"
 takeaway: "A data lake without ownership is just a swamp with better marketing."
 featured: true

@@ -1,0 +1,21 @@
+# Format taxonomy - display order + labels for the gallery and README.
+# Topic / style / tool values grow freely inside each work's meta.yml.
+formats:
+  infographic:
+    label: Infographic
+    blurb: A complex data/AI concept, explained in one image.
+  comic:
+    label: Comic
+    blurb: Strips that teach a real lesson.
+  ironic-graph:
+    label: Ironic graph
+    blurb: Charts that tell the truth by exaggerating it.
+  illustration:
+    label: Illustration
+    blurb: Data and AI ideas as scenes and characters.
+  logo:
+    label: Logo
+    blurb: Marks and identity for data/AI things.
+  style-study:
+    label: Style study
+    blurb: The sketchbook - mimicking a beautiful style to learn it.

@@ -1,9 +1,9 @@
 title: Half-truth dashboard mark (sample - replace with real work)
 date: 2026-07-09
 tool: chatgpt
-series: logofolio
+format: logo
+topic: [dashboards]
 style: flat geometric
-tags: [dashboards, branding]
 prompt: "logo mark for a fictional analytics startup called Half Truth: a circle half filled, half outline, single accent dot, bauhaus minimal, plum ink peach"
 takeaway: "Every dashboard shows half the truth. Good design admits which half."
 featured: false

@@ -1,20 +1,30 @@
 {
-  "series": {
-    "decoded": {
-      "label": "Decoded",
-      "blurb": "One complex data/AI concept, one image."
-    },
-    "comics": {
-      "label": "Comics",
-      "blurb": "Ironic strips that teach a real lesson."
-    },
-    "logofolio": {
-      "label": "Logofolio",
-      "blurb": "Logos and identity for data/AI things."
-    },
-    "style-lab": {
-      "label": "Style lab",
-      "blurb": "Same idea, different visual technique - the experiment shelf."
+  "taxonomy": {
+    "formats": {
+      "infographic": {
+        "label": "Infographic",
+        "blurb": "A complex data/AI concept, explained in one image."
+      },
+      "comic": {
+        "label": "Comic",
+        "blurb": "Strips that teach a real lesson."
+      },
+      "ironic-graph": {
+        "label": "Ironic graph",
+        "blurb": "Charts that tell the truth by exaggerating it."
+      },
+      "illustration": {
+        "label": "Illustration",
+        "blurb": "Data and AI ideas as scenes and characters."
+      },
+      "logo": {
+        "label": "Logo",
+        "blurb": "Marks and identity for data/AI things."
+      },
+      "style-study": {
+        "label": "Style study",
+        "blurb": "The sketchbook - mimicking a beautiful style to learn it."
+      }
     }
   },
   "works": [
@@ -23,12 +33,12 @@
       "title": "The forecast, quarterly (sample - replace with real work)",
       "date": "2026-07-10",
       "tool": "nano-banana",
-      "series": "comics",
-      "style": "three-panel strip",
-      "tags": [
-        "forecasting",
-        "satire"
+      "format": "comic",
+      "topic": [
+        "forecasting"
       ],
+      "style": "three-panel strip",
+      "inspired_by": "",
       "prompt": "three panel minimalist comic: panel 1 a jagged line going down, panel 2 a flat wobbly line, panel 3 the same line drawn straight up by hand with a sun in the corner, flat colors",
       "takeaway": "Forecasts bend toward whoever presents last.",
       "featured": false,
@@ -42,12 +52,12 @@
       "title": "Half-truth dashboard mark (sample - replace with real work)",
       "date": "2026-07-09",
       "tool": "chatgpt",
-      "series": "logofolio",
-      "style": "flat geometric",
-      "tags": [
-        "dashboards",
-        "branding"
+      "format": "logo",
+      "topic": [
+        "dashboards"
       ],
+      "style": "flat geometric",
+      "inspired_by": "",
       "prompt": "logo mark for a fictional analytics startup called Half Truth: a circle half filled, half outline, single accent dot, bauhaus minimal, plum ink peach",
       "takeaway": "Every dashboard shows half the truth. Good design admits which half.",
       "featured": false,
@@ -61,12 +71,13 @@
       "title": "Lake or swamp (sample - replace with real work)",
       "date": "2026-07-08",
       "tool": "midjourney",
-      "series": "decoded",
-      "style": "flat geometric",
-      "tags": [
-        "data-quality",
+      "format": "infographic",
+      "topic": [
+        "data quality",
         "governance"
       ],
+      "style": "flat geometric",
+      "inspired_by": "",
       "prompt": "minimal geometric poster of a lake made of concentric rings slowly turning into a swamp, flat vector, plum and peach on dark ink, editorial illustration --ar 4:5",
       "takeaway": "A data lake without ownership is just a swamp with better marketing.",
       "featured": true,

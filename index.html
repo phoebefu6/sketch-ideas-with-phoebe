@@ -26,15 +26,14 @@
 </header>
 
 <nav class="filters" aria-label="Gallery filters">
-  <div class="chips" id="chips-series"></div>
-  <span class="sep" aria-hidden="true"></span>
-  <div class="chips" id="chips-style"></div>
-  <span class="sep" aria-hidden="true"></span>
-  <div class="chips" id="chips-tool"></div>
+  <div class="filter-row"><span class="filter-label">Format</span><div class="chips" id="chips-format"></div></div>
+  <div class="filter-row"><span class="filter-label">Topic</span><div class="chips" id="chips-topic"></div></div>
+  <div class="filter-row"><span class="filter-label">Style</span><div class="chips" id="chips-style"></div></div>
+  <div class="filter-row"><span class="filter-label">Tool</span><div class="chips" id="chips-tool"></div></div>
 </nav>
 
 <main>
-  <div class="grid" id="grid"></div>
+  <div class="wall" id="wall"></div>
   <p class="empty" id="empty" hidden>Nothing here yet - this combination is waiting for its first image.</p>
 </main>
 

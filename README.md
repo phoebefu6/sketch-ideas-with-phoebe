@@ -12,12 +12,14 @@ simplified into images anyone can act on. Every prompt published.
 
 <table><tr><td width="33%"><img src="works/2026-07-10-sample-comic-the-forecast/thumb.webp" alt="The forecast, quarterly (sample - replace with real work)" width="100%"></td><td width="33%"><img src="works/2026-07-09-sample-logo-half-truth/thumb.webp" alt="Half-truth dashboard mark (sample - replace with real work)" width="100%"></td><td width="33%"><img src="works/2026-07-08-sample-decoded-data-swamp/thumb.webp" alt="Lake or swamp (sample - replace with real work)" width="100%"></td></tr><tr><td align="center"><sub><b>The forecast, quarterly (sample - replace with real work)</b> · nano-banana</sub></td><td align="center"><sub><b>Half-truth dashboard mark (sample - replace with real work)</b> · chatgpt</sub></td><td align="center"><sub><b>Lake or swamp (sample - replace with real work)</b> · midjourney</sub></td></tr></table>
 
-## Series
+## Formats
 
-- **Decoded** (1) - One complex data/AI concept, one image.
-- **Comics** (1) - Ironic strips that teach a real lesson.
-- **Logofolio** (1) - Logos and identity for data/AI things.
-- **Style lab** (0) - Same idea, different visual technique - the experiment shelf.
+- **Infographic** (1) - A complex data/AI concept, explained in one image.
+- **Comic** (1) - Strips that teach a real lesson.
+- **Ironic graph** (0) - Charts that tell the truth by exaggerating it.
+- **Illustration** (0) - Data and AI ideas as scenes and characters.
+- **Logo** (1) - Marks and identity for data/AI things.
+- **Style study** (0) - The sketchbook - mimicking a beautiful style to learn it.
 
 ## How this repo works
 

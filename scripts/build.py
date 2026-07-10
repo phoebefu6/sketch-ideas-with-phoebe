@@ -52,11 +52,11 @@ def make_thumb(src: Path, dest: Path) -> tuple[int, int]:
     return width, height
 
 
-def load_series() -> dict:
-    series_path = ROOT / "series.yml"
-    if not series_path.exists():
-        return {}
-    return yaml.safe_load(series_path.read_text()) or {}
+def load_taxonomy() -> dict:
+    taxonomy_path = ROOT / "taxonomy.yml"
+    if not taxonomy_path.exists():
+        return {"formats": {}}
+    return yaml.safe_load(taxonomy_path.read_text()) or {"formats": {}}
 
 
 def scan_works() -> list[dict]:
@@ -85,9 +85,10 @@ def scan_works() -> list[dict]:
                 "title": str(meta["title"]),
                 "date": str(meta["date"]),
                 "tool": str(meta["tool"]),
-                "series": str(meta.get("series") or "playground"),
+                "format": str(meta.get("format") or "style-study"),
+                "topic": [str(t) for t in (meta.get("topic") or [])],
                 "style": str(meta.get("style") or ""),
-                "tags": [str(t) for t in (meta.get("tags") or [])],
+                "inspired_by": str(meta.get("inspired_by") or ""),
                 "prompt": str(meta.get("prompt") or ""),
                 "takeaway": str(meta.get("takeaway") or ""),
                 "featured": bool(meta.get("featured", False)),
@@ -103,16 +104,16 @@ def scan_works() -> list[dict]:
     return works
 
 
-def write_data(works: list[dict], series: dict) -> None:
+def write_data(works: list[dict], taxonomy: dict) -> None:
     DATA_DIR.mkdir(exist_ok=True)
-    payload = {"series": series, "works": works}
+    payload = {"taxonomy": taxonomy, "works": works}
     (DATA_DIR / "works.json").write_text(json.dumps(payload, indent=2) + "\n")
     (DATA_DIR / "works.js").write_text(
         "const GALLERY = " + json.dumps(payload) + ";\n"
     )
 
 
-def write_readme(works: list[dict], series: dict) -> None:
+def write_readme(works: list[dict], taxonomy: dict) -> None:
     styles = sorted({work["style"] for work in works if work["style"]})
     tools = sorted({work["tool"] for work in works})
     lines = [
@@ -142,11 +143,11 @@ def write_readme(works: list[dict], series: dict) -> None:
         )
         lines += ["<table><tr>" + cells_img + "</tr><tr>" + cells_caption + "</tr></table>", ""]
     lines += [
-        "## Series",
+        "## Formats",
         "",
     ]
-    for key, info in series.items():
-        count = sum(1 for work in works if work["series"] == key)
+    for key, info in taxonomy.get("formats", {}).items():
+        count = sum(1 for work in works if work["format"] == key)
         lines.append(f"- **{info.get('label', key)}** ({count}) - {info.get('blurb', '')}")
     lines += [
         "",
@@ -167,10 +168,10 @@ def main() -> None:
     if not WORKS_DIR.exists():
         sys.exit("works/ directory not found")
     print("Scanning works/ ...")
-    series = load_series()
+    taxonomy = load_taxonomy()
     works = scan_works()
-    write_data(works, series)
-    write_readme(works, series)
+    write_data(works, taxonomy)
+    write_readme(works, taxonomy)
     styles = {work["style"] for work in works if work["style"]}
     print(f"Built: {len(works)} works, {len(styles)} styles → data/works.js, README.md")
 
