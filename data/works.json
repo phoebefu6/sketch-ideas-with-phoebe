@@ -5,6 +5,10 @@
         "label": "Infographic",
         "blurb": "A complex data/AI concept, explained in one image."
       },
+      "chart": {
+        "label": "Chart",
+        "blurb": "One chart, one idea - single-chart experiments, d3.js spirit. Never a dashboard."
+      },
       "comic": {
         "label": "Comic",
         "blurb": "Strips that teach a real lesson."
@@ -54,7 +58,7 @@
       "tool": "chatgpt",
       "format": "logo",
       "topic": [
-        "dashboards"
+        "metrics"
       ],
       "style": "flat geometric",
       "inspired_by": "",

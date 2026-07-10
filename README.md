@@ -15,6 +15,7 @@ simplified into images anyone can act on. Every prompt published.
 ## Formats
 
 - **Infographic** (1) - A complex data/AI concept, explained in one image.
+- **Chart** (0) - One chart, one idea - single-chart experiments, d3.js spirit. Never a dashboard.
 - **Comic** (1) - Strips that teach a real lesson.
 - **Ironic graph** (0) - Charts that tell the truth by exaggerating it.
 - **Illustration** (0) - Data and AI ideas as scenes and characters.
