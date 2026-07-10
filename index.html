@@ -14,23 +14,22 @@
 <body>
 <div class="sweep" aria-hidden="true"></div>
 
-<header class="hero">
-  <p class="kicker reveal">Worth a thousand words</p>
-  <h1 class="reveal">Data and AI, <em>explained in pictures</em></h1>
-  <p class="sub reveal">I lead data teams by day and draw what's hard to say - complicated business,
-  data, and data people, simplified into images anyone can act on. Every prompt published,
-  yours to copy.</p>
-  <div class="stats reveal">
-    <div class="stat"><span class="num" id="stat-works">0</span><span class="lbl">works</span></div>
-    <div class="stat"><span class="num" id="stat-styles">0</span><span class="lbl">styles tried</span></div>
-    <div class="stat"><span class="num" id="stat-prompts">0</span><span class="lbl">prompts published</span></div>
+<header class="bar">
+  <div class="brand">
+    <h1 class="mark">Worth a thousand words</h1>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
   </div>
+  <p class="counts"><span class="count-num" id="stat-works">0</span> works ·
+    <span class="count-num" id="stat-styles">0</span> styles ·
+    every prompt published</p>
 </header>
 
-<nav class="filters reveal" aria-label="Gallery filters">
-  <div class="filter-row"><span class="filter-label">Topic</span><div class="chips" id="chips-series"></div></div>
-  <div class="filter-row"><span class="filter-label">Style</span><div class="chips" id="chips-style"></div></div>
-  <div class="filter-row"><span class="filter-label">Tool</span><div class="chips" id="chips-tool"></div></div>
+<nav class="filters" aria-label="Gallery filters">
+  <div class="chips" id="chips-series"></div>
+  <span class="sep" aria-hidden="true"></span>
+  <div class="chips" id="chips-style"></div>
+  <span class="sep" aria-hidden="true"></span>
+  <div class="chips" id="chips-tool"></div>
 </nav>
 
 <main>

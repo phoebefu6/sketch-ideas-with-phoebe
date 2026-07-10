@@ -15,7 +15,6 @@
   /* ---------- hero stats (count up) ---------- */
 
   const styleCount = new Set(works.filter(w => w.style).map(w => w.style)).size;
-  const promptCount = works.filter(w => w.prompt).length;
 
   function countUp(el, target) {
     if (reducedMotion || target === 0) { el.textContent = target; return; }
@@ -32,7 +31,6 @@
 
   countUp(document.getElementById("stat-works"), works.length);
   countUp(document.getElementById("stat-styles"), styleCount);
-  countUp(document.getElementById("stat-prompts"), promptCount);
 
   /* ---------- filters ---------- */
 
