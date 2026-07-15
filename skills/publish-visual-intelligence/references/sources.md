@@ -1,5 +1,9 @@
 # Source configuration
 
+Treat the Notion Sourcebase as the source of truth. Read all rows from
+`collection://4c4b2ddc-0ada-45eb-88af-a59b255e18d1` at the start of each run.
+Keep one row per source and update `Latest Scan Date` only after a successful scan.
+
 ## YouTube subscriptions
 
 - Feed: `https://www.youtube.com/feed/subscriptions`
@@ -23,4 +27,4 @@ Do not use the public subscriptions page while signed out as a substitute for th
 
 ## Future sources
 
-Add RSS, websites, newsletters, Slack channels, podcasts, and papers only after the user supplies or authorizes each source. Keep credentials and private source lists outside public repository files.
+Add RSS, websites, newsletters, Slack channels, podcasts, and papers as new Sourcebase rows only after the user supplies or authorizes each source. Keep credentials and private source details out of public repository files.

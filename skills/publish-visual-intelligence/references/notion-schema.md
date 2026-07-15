@@ -4,11 +4,22 @@
 
 - Database: [Visual Intelligence Queue](https://app.notion.com/p/09116190123a4a0f8e6f847fb5847e11)
 - Data source: `collection://52f37cd9-efcd-4b8d-80d3-c7c28031e04f`
+- Sourcebase: [Sourcebase](https://app.notion.com/p/139d352b51444dacae41d21ca90d3ce2)
+- Sourcebase data source: `collection://4c4b2ddc-0ada-45eb-88af-a59b255e18d1`
 - Parent: [sketch-ideas-with-phoebe](https://app.notion.com/p/39ef64f699d980c992c5fa39b5d329df)
 - Related Content Ideas: `collection://08fe8f44-9d6a-41c8-a26b-8e02da695faf`
 - Related Content Calendar: `collection://ebfe7fbc-0323-4204-818c-42be3260ade1`
 
 Always fetch the database before writes because its schema may evolve.
+
+## Sourcebase contract
+
+Keep exactly one row per source. Read every row at the start of a daily ingest run.
+
+- `Name`: human-readable source name
+- `Link`: canonical feed, channel, publication, or subscriptions URL
+- `Platform`: Video, Blog, Podcast, Website, Newsletter, Paper, Community, or Social
+- `Latest Scan Date`: update only after that source completes successfully
 
 ## Required fields for new candidates
 
