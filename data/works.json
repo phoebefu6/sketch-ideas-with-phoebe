@@ -49,6 +49,29 @@
   },
   "works": [
     {
+      "id": "2026-07-15-minds-of-modern-ai",
+      "title": "The minds of modern AI",
+      "date": "2026-07-15",
+      "tool": "chatgpt",
+      "format": "infographic",
+      "topic": [
+        "AI",
+        "AGI",
+        "deep learning",
+        "AI safety"
+      ],
+      "style": "storybook watercolor infographic",
+      "inspired_by": "https://www.youtube.com/watch?v=0zXSrsKlm5A",
+      "concept": "Modern AI emerged when learning ideas met data, compute, and engineering\u2014but its pioneers still disagree about the road to human-level intelligence.",
+      "prompt": "Portrait storybook editorial infographic titled \u201cTHE MINDS OF MODERN AI,\u201d using an airy cream paper background, watercolor-and-gouache textures, delicate ink outlines, light pastel colors, and a winding golden path through four chapters: \u201c1 \u00b7 BREAKTHROUGHS\u201d showing Bengio, Dally, Hinton, Huang, Li, and LeCun with their core contributions; \u201c2 \u00b7 AI BUBBLE?\u201d contrasting real value today with the limits of the current paradigm; \u201c3 \u00b7 HUMAN-LEVEL AI\u201d presenting six divergent views through signposts and an airplane-and-bird metaphor; and \u201c4 \u00b7 THE SHARED LESSON\u201d ending in a collaborative human-and-machine library-city with the banners \u201cBUILD USEFUL SYSTEMS,\u201d \u201cEXPLORE BEYOND LANGUAGE,\u201d and \u201cGOVERN BEFORE ACCELERATION.\u201d Premium, vivid, optimistic, intellectually serious, readable, no logos, no watermark, no dark cyberpunk, no corporate stock-art look.",
+      "takeaway": "AI's practical value is already real; what remains uncertain is whether scale, new paradigms, or human-machine collaboration defines the road ahead.",
+      "featured": true,
+      "full": "works/2026-07-15-minds-of-modern-ai/full.png",
+      "thumb": "works/2026-07-15-minds-of-modern-ai/thumb.webp",
+      "w": 864,
+      "h": 1821
+    },
+    {
       "id": "2026-07-10-sample-comic-the-forecast",
       "title": "The forecast, quarterly (sample - replace with real work)",
       "date": "2026-07-10",
