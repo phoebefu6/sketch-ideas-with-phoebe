@@ -80,3 +80,14 @@ Avoid:
 - Midjourney: user runs the prompt through Discord/browser unless browser access is explicitly arranged.
 - ChatGPT image/OpenAI image: generated in this chat with the installed `imagegen` workflow.
 - GitHub: commit and push directly when the final image and metadata are ready.
+
+## Daily Visual Intelligence
+
+The repository includes `skills/publish-visual-intelligence/` for the automated research-to-visual pipeline.
+
+- Run daily at 21:00 Asia/Singapore.
+- Crawl the authenticated YouTube subscriptions feed and any later approved sources.
+- Deduplicate and write source-backed candidates to the [Visual Intelligence Queue](https://app.notion.com/p/09116190123a4a0f8e6f847fb5847e11).
+- Use a review-first gate: automation creates `New` records, but only the user may move them to `Approved`.
+- Generate and publish at most one already-approved record per scheduled run.
+- Never generate or publish unapproved candidates.

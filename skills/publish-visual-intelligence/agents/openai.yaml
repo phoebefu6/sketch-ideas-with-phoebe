@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Visual Intelligence"
+  short_description: "Turn trusted sources into reviewed visuals"
+  default_prompt: "Use $publish-visual-intelligence to crawl my configured sources and prepare today’s visual candidates for review."
