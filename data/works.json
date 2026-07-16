@@ -27,7 +27,7 @@
       },
       "cheatsheet": {
         "label": "Cheatsheet",
-        "blurb": "A dense but readable reference for data/AI people."
+        "blurb": "One page, 80% of what matters - a topic distilled and designed to keep."
       },
       "ironic-graph": {
         "label": "Ironic graph",
@@ -48,6 +48,29 @@
     }
   },
   "works": [
+    {
+      "id": "2026-07-16-cheatsheet-rag-finetune-prompttune",
+      "title": "RAG vs Fine-tuning vs Prompt-tuning",
+      "date": "2026-07-16",
+      "tool": "html-render",
+      "format": "cheatsheet",
+      "topic": [
+        "llm optimization",
+        "rag",
+        "fine-tuning",
+        "ai strategy"
+      ],
+      "style": "blueprint ledger",
+      "inspired_by": "",
+      "concept": "",
+      "prompt": "Blueprint Ledger style-DNA - deep blueprint indigo (#1f3a5f) on warm paper, Georgia display + mono spec labels, thin ruled hairlines. Hero: four LLM levers as blueprint line-art (prompt box, RAG retrieval circle, fine-tune dial, soft-prompt vectors). Rendered SVG, not diffusion.",
+      "takeaway": "Fine-tuning teaches a skill; RAG supplies facts. Default to prompt + RAG - fine-tune only the pipelines that prove they need it.",
+      "featured": false,
+      "full": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/full.png",
+      "thumb": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/thumb.webp",
+      "w": 1588,
+      "h": 2246
+    },
     {
       "id": "2026-07-15-minds-of-modern-ai",
       "title": "The minds of modern AI",
