@@ -1,0 +1,10 @@
+title: What is a token?
+date: 2026-07-18
+tool: chatgpt
+format: data-portrait
+topic: [llm, tokenization, foundations]
+style: two-color acid
+prompt: "Flat vector editorial data-portrait poster, crop 4:5. STRICT two-color system: acid lime #D2FF00 and near-black #111112 ONLY - no white, no gray, no third color, no gradients. Near-black background. One giant hero: the mark '≈4' in acid lime, set enormous in a bold neo-grotesque, filling the upper two-thirds - it means '1 token ≈ 4 characters.' Beneath it, small and quiet in acid-lime outline, the word 'tokenization' broken into three tile chunks [token][iza][tion] to show an LLM chopping text. Top-left, tiny acid-lime mono-caps label 'WHAT IS A TOKEN?'. Bottom, one thin acid-lime hairline rule with small caption '1,000 words ≈ 1,300 tokens.' Massive negative space, Swiss grid discipline, the ratio legible in two seconds. No logos, no watermark, no photoreal, flat only."
+takeaway: "A token isn't a word - it's about 4 characters. Your 1,000-word doc is ~1,300 tokens, and that's what you pay for."
+inspired_by: "Two-color system - OFF+BRAND (Lando Norris) x Josef Müller-Brockmann"
+featured: false
