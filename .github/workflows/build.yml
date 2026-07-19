@@ -32,6 +32,9 @@ jobs:
       - name: Build gallery
         run: python scripts/build.py
 
+      - name: QA pages
+        run: python scripts/qa_pages.py
+
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"

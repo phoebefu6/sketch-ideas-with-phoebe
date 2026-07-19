@@ -49,11 +49,16 @@ Use manually or during a scheduled run after ingestion.
    - use the image-generation workflow for illustrated or raster-first formats;
    - preserve exact source-backed wording and minimize text inside generated images.
 6. Inspect the final visual for legibility, factual accuracy, spelling, copyright risk, confidential details, and unsupported likenesses.
-7. If validation fails, set `Status = Error`, write `Last Error`, and do not publish.
-8. If validation passes, create the repository work folder using the publish contract below.
-9. Run `python3 scripts/build.py`, validate generated JSON, inspect the thumbnail, and run `git diff --check`.
-10. Commit only the scoped work and generated gallery files, then push according to repository policy.
-11. Set `Status = Published`; populate `Repository Slug`, `GitHub URL`, and the final prompt.
+7. Run the QA specialist review before publish:
+   - every gallery detail view and standalone `sheet.html` page must scroll naturally on desktop and mobile;
+   - no screen page may lock `html` or `body` with `overflow: hidden` or a fixed viewport height unless an inner content surface clearly scrolls;
+   - long prompts, captions, legends, tables, diagrams, and generated sheets must not be clipped;
+   - links, filters, copy actions, thumbnails, and full images must remain usable.
+8. If visual or QA validation fails, set `Status = Error`, write `Last Error`, and do not publish.
+9. If validation passes, create the repository work folder using the publish contract below.
+10. Run `python3 scripts/build.py`, `python3 scripts/qa_pages.py`, validate generated JSON, inspect the thumbnail, and run `git diff --check`.
+11. Commit only the scoped work and generated gallery files, then push according to repository policy.
+12. Set `Status = Published`; populate `Repository Slug`, `GitHub URL`, and the final prompt.
 
 ## Review-first policy
 
@@ -86,6 +91,8 @@ works/YYYY-MM-DD-short-slug/
 ```
 
 Allow the repository build to create `thumb.webp` and generated catalog files. Store the public source URL in `inspired_by` only when safe. Include the final OpenAI prompt and a reusable Midjourney prompt track in `idea.md`.
+
+Standalone HTML pages must be flexible on screen and precise only for export. Put fixed poster, map, or cheatsheet dimensions on a stage/sheet wrapper, keep document scrolling enabled, and run the QA specialist gate before commit.
 
 ## Automation behavior
 

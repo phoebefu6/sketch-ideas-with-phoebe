@@ -9,8 +9,9 @@ Use `$publish-visual-intelligence` from `skills/publish-visual-intelligence/SKIL
 5. Create at most 10 strong, source-backed candidates with `Status = New`. Never approve them.
 6. Query the queue for `Status = Approved`. If present, process at most the highest-scoring one using the approved-generation workflow.
 7. Never generate or publish a `New` or `Triaged` item.
-8. Validate repository output using `WORKFLOW.md`, `taxonomy.yml`, `scripts/build.py`, JSON validation, thumbnail inspection, scrollable standalone subpages, and `git diff --check`.
-9. Commit and push only validated, approved output. Update the Notion record to `Published` with its GitHub URL.
-10. Return a compact summary: discovered, deduplicated, created, approved processed, published, skipped, errors, and direct Notion links.
+8. Run the QA specialist review: check desktop/mobile usability, scrollable gallery detail views, scrollable standalone subpages, text clipping, links, copy actions, thumbnails, and full images.
+9. Validate repository output using `WORKFLOW.md`, `taxonomy.yml`, `scripts/build.py`, `scripts/qa_pages.py`, JSON validation, thumbnail inspection, and `git diff --check`.
+10. Commit and push only validated, approved output. Update the Notion record to `Published` with its GitHub URL.
+11. Return a compact summary: discovered, deduplicated, created, approved processed, published, skipped, errors, and direct Notion links.
 
 Update a source row's `Latest Scan Date` only after its scan succeeds. If a source is signed out or unavailable, do not guess its content; report the block and leave its scan date unchanged.

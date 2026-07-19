@@ -52,7 +52,9 @@ works/YYYY-MM-DD-short-slug/
 
 Run `python3 scripts/build.py` before publishing. The script creates `thumb.webp`, updates `data/works.js`, updates `data/works.json`, refreshes `CATALOG.md`, and rewrites the README gallery.
 
-If a work includes a standalone subpage such as `sheet.html`, keep `html` and `body` scrollable on screen. Fixed poster dimensions should live inside a stage/sheet wrapper, not by locking the viewport with `overflow: hidden`.
+Run `python3 scripts/qa_pages.py` before publishing. The QA specialist gate checks the gallery detail view and every standalone visual subpage for scrollability and content clipping risks.
+
+If a work includes a standalone subpage such as `sheet.html`, keep `html` and `body` scrollable on screen. Fixed poster dimensions should live inside a stage/sheet wrapper, not by locking the viewport with `overflow: hidden`. Let the page grow with the content; use print-only locks only when exporting a PDF/image.
 
 ## Prompt Safety
 

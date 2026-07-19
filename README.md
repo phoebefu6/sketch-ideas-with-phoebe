@@ -42,6 +42,7 @@ simplified into images anyone can act on. Every prompt published.
 
 - `works/` holds one folder per image: the original, `meta.yml`, optional `idea.md`, and an auto thumbnail.
 - `scripts/build.py` regenerates thumbnails, `data/works.js`, `CATALOG.md`, and this README.
+- `scripts/qa_pages.py` checks gallery/detail pages and standalone visual sheets before publish.
 - Private inspiration notes live in ignored folders like `inbox/` or `private/`.
 - New work = drop one folder, run the build, push. Nothing else is ever edited by hand.
 
