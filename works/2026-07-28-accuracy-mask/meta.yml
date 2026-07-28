@@ -1,0 +1,29 @@
+title: The accuracy mask
+date: 2026-07-28
+tool: chatgpt
+format: illustration
+topic: [model validation, data quality, ai risk, fake data]
+style: bold editorial paper collage
+concept: "A polished validation score can become a public mask when the evidence behind it is empty, synthetic, or meaningless."
+prompt: >-
+  Create a vivid, bold editorial image about a data model that displays a perfect board-ready score while secretly being validated on fake data that means nothing.
+  Avoid literal robots and corporate stock-photo cliches.
+  Concept/metaphor: A giant glossy green "97%" approval mask floats on a vivid orange-pink background like a perfect public face.
+  Behind the mask, the back side is peeled open in an X-ray / paper-cutaway collage, exposing that the mask is stuffed with hundreds of identical blank grey placeholder cards.
+  The blank cards spill downward like a waterfall into an empty black void.
+  Small applauding executive silhouettes appear only as tiny paper cutouts at the bottom, dwarfed by the score-mask.
+  Style/medium: bold editorial paper collage mixed with screenprint, vivid color blocking, sharp surreal magazine cover, tactile torn-paper edges, high contrast, graphic and memorable.
+  Think art-director poster energy, not dashboard art.
+  Composition/framing: 4:5 portrait. Huge central 97% mask takes most of the frame.
+  Peeled-open backside and blank-card stuffing must be obvious. Strong negative space around the main object.
+  Bottom silhouettes are tiny and secondary.
+  Mood: electric and uneasy - confidence as a mask, truth as hollow stuffing.
+  Color palette: saturated vermilion, magenta, acid green, ink black, bone white, blank neutral grey.
+  Bold but disciplined, no rainbow clutter.
+  Text (verbatim): only "97%" as the face of the mask. No caption, no extra readable text.
+  Constraints: The blank grey cards must read as meaningless fake validation inputs.
+  The 97% must feel polished and seductive.
+  Avoid robots, sci-fi circuitry, generic dashboards, boardroom photo realism, logos, watermark, extra text, horror gore, and cute mascots.
+takeaway: "A perfect score is not proof. Validation only means something when the validation data means something."
+featured: true
+inspired_by: ""
