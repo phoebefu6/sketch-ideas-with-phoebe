@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import sys
+import hashlib
 from pathlib import Path
 
 import yaml
@@ -50,6 +51,12 @@ def make_thumb(src: Path, dest: Path) -> tuple[int, int]:
                 thumb = thumb.convert("RGB")
             thumb.save(dest, "WEBP", quality=84)
     return width, height
+
+
+def versioned_path(path: Path) -> str:
+    """Return a repo-relative asset URL with a content hash cache key."""
+    digest = hashlib.md5(path.read_bytes()).hexdigest()[:8]
+    return f"{path.relative_to(ROOT).as_posix()}?v={digest}"
 
 
 def load_taxonomy() -> dict:
@@ -93,8 +100,8 @@ def scan_works() -> list[dict]:
                 "prompt": str(meta.get("prompt") or ""),
                 "takeaway": str(meta.get("takeaway") or ""),
                 "featured": bool(meta.get("featured", False)),
-                "full": f"works/{folder.name}/{full.name}",
-                "thumb": f"works/{folder.name}/{THUMB_NAME}",
+                "full": versioned_path(full),
+                "thumb": versioned_path(folder / THUMB_NAME),
                 "w": width,
                 "h": height,
             }
@@ -158,7 +165,6 @@ def write_catalog(works: list[dict], taxonomy: dict) -> None:
 
 def stamp_assets() -> None:
     """Cache-bust asset URLs in index.html so browsers never mix site versions."""
-    import hashlib
     import re
 
     index_path = ROOT / "index.html"

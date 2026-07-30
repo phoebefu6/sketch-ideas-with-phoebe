@@ -107,8 +107,8 @@
       "prompt": "DESIGN-BUILT (not prompted) - hand-authored HTML/SVG, rendered with Chrome.\nSTYLE: graphic measured-shadow poster. A signed point-estimate card sits on a diagonal planning axis and casts a widening prediction-interval fan across a ruled quarterly horizon.\nMARKS: point card = approved forecast value; dark widening fan = uncertainty over time; diagonal grid = forecast horizon; acid-lime marker = where the actual business commitment lands; lamp/assumption set = the model assumptions casting the range.\nPALETTE: warm planning-paper ground, near-black ink and graphite interval bands, one acid-lime accent only for the downstream commitment.\nTYPE: compressed heavy sans for the warning, monospace labels for the forecast system, tabular numerals on the point estimate.\nMESSAGE: approve the range, not just the value.",
       "takeaway": "A forecast is a distribution. Removing the interval does not remove the risk - it only moves the risk to the operator.",
       "featured": true,
-      "full": "works/2026-07-30-you-inherited-the-shadow/full.png",
-      "thumb": "works/2026-07-30-you-inherited-the-shadow/thumb.webp",
+      "full": "works/2026-07-30-you-inherited-the-shadow/full.png?v=7be86693",
+      "thumb": "works/2026-07-30-you-inherited-the-shadow/thumb.webp?v=37dbfc10",
       "w": 2160,
       "h": 2700
     },
@@ -130,8 +130,8 @@
       "prompt": "Create a vivid, bold editorial image about a data model that displays a perfect board-ready score while secretly being validated on fake data that means nothing. Avoid literal robots and corporate stock-photo cliches. Concept/metaphor: A giant glossy green \"97%\" approval mask floats on a vivid orange-pink background like a perfect public face. Behind the mask, the back side is peeled open in an X-ray / paper-cutaway collage, exposing that the mask is stuffed with hundreds of identical blank grey placeholder cards. The blank cards spill downward like a waterfall into an empty black void. Small applauding executive silhouettes appear only as tiny paper cutouts at the bottom, dwarfed by the score-mask. Style/medium: bold editorial paper collage mixed with screenprint, vivid color blocking, sharp surreal magazine cover, tactile torn-paper edges, high contrast, graphic and memorable. Think art-director poster energy, not dashboard art. Composition/framing: 4:5 portrait. Huge central 97% mask takes most of the frame. Peeled-open backside and blank-card stuffing must be obvious. Strong negative space around the main object. Bottom silhouettes are tiny and secondary. Mood: electric and uneasy - confidence as a mask, truth as hollow stuffing. Color palette: saturated vermilion, magenta, acid green, ink black, bone white, blank neutral grey. Bold but disciplined, no rainbow clutter. Text (verbatim): only \"97%\" as the face of the mask. No caption, no extra readable text. Constraints: The blank grey cards must read as meaningless fake validation inputs. The 97% must feel polished and seductive. Avoid robots, sci-fi circuitry, generic dashboards, boardroom photo realism, logos, watermark, extra text, horror gore, and cute mascots.",
       "takeaway": "A perfect score is not proof. Validation only means something when the validation data means something.",
       "featured": true,
-      "full": "works/2026-07-28-accuracy-mask/full.png",
-      "thumb": "works/2026-07-28-accuracy-mask/thumb.webp",
+      "full": "works/2026-07-28-accuracy-mask/full.png?v=8f336812",
+      "thumb": "works/2026-07-28-accuracy-mask/thumb.webp?v=da939dd0",
       "w": 1122,
       "h": 1402
     },
@@ -153,8 +153,8 @@
       "prompt": "Create an unforgettable portrait 4:5 editorial poster titled exactly \"THE AVERAGE CUSTOMER IS A MYTH\". Show a pristine museum gallery where a beautiful white marble statue labeled \"AVERAGE CUSTOMER\" is cracking apart. Inside the cracks are not bones or machinery but hundreds of tiny mismatched customer receipts, invoices, support tickets, discount tags, churn notes, premium badges, and margin slips spilling out in different colors and sizes. One elegant executive stands in front of the statue with a confident presentation card reading exactly \"AVG +8%\", unaware that the statue is hollow and impossible. The visual message: the average customer is a fake artifact assembled from customers who do not behave alike. Premium museum editorial set, quiet off-white walls, soft gallery lighting, expensive magazine-cover art direction, strong negative space. Luxury editorial surrealism, sculptural realism mixed with crisp graphic data ephemera, publication-grade typography, subtle paper grain, refined not flashy. Centered statue as hero, title at top with clean generous margin, executive small at lower left for scale, fragments spilling diagonally to create motion. Warm ivory, charcoal ink, marble white, muted teal shadows, restrained red for loss notes, small green accent on AVG card. Render exactly and clearly: \"THE AVERAGE CUSTOMER IS A MYTH\"; \"AVERAGE CUSTOMER\"; \"AVG +8%\". No other text. No visible charts, histograms, dashboards, robots, brains, network nodes, generic AI glow, stock corporate illustration, cluttered labels, extra text, watermark, living artist imitation, or brand mimicry.",
       "takeaway": "The average customer is a myth - decide on the distribution, not the mean.",
       "featured": true,
-      "full": "works/2026-07-19-average-customer-myth/full.png",
-      "thumb": "works/2026-07-19-average-customer-myth/thumb.webp",
+      "full": "works/2026-07-19-average-customer-myth/full.png?v=dc5c943d",
+      "thumb": "works/2026-07-19-average-customer-myth/thumb.webp?v=d0f1a13b",
       "w": 1003,
       "h": 1568
     },
@@ -175,8 +175,8 @@
       "prompt": "Flat vector editorial data-portrait poster, crop 4:5. STRICT two-color system: acid lime #D2FF00 and near-black #111112 ONLY - no white, no gray, no third color, no gradients. Near-black background. Concept: an LLM confidently miscounts letters because it reads tokens, not characters. HERO: a giant acid-lime '2' (the model's confident answer) with a bold strike-through slash, and a smaller correct '3' beside it. Top-left, tiny mono-caps question: 'HOW MANY R'S IN STRAWBERRY?'. Below the hero, the word 'strawberry' broken into token tiles [str][aw][berry], with the three r's circled inside the tiles so the eye hunts and finds them. Bottom: one thin acid-lime hairline rule with caption 'It reads tokens, not letters. That's why it can't spell.' Massive negative space, Swiss grid discipline, the joke lands in two seconds. No logos, no watermark, no photoreal, flat only.",
       "takeaway": "LLMs read tokens, not letters - which is why they confidently miscount the r's in strawberry. The unit of thought isn't the character you see.",
       "featured": false,
-      "full": "works/2026-07-18-strawberry-tokens/full.png",
-      "thumb": "works/2026-07-18-strawberry-tokens/thumb.webp",
+      "full": "works/2026-07-18-strawberry-tokens/full.png?v=dfa97872",
+      "thumb": "works/2026-07-18-strawberry-tokens/thumb.webp?v=b7ea77ea",
       "w": 1122,
       "h": 1402
     },
@@ -197,8 +197,8 @@
       "prompt": "DESIGN-BUILT (not prompted) - hand-authored SVG, rendered headless.\nSTYLE: transit map, Vignelli discipline - cream ground, one bold colour per line, uniform station dots, stadium interchange markers, 45/90 geometry, Helvetica.\nLINES: Machine Learning \u00b7 Deep Learning \u00b7 Language \u00b7 Vision \u00b7 Generative & Agents \u00b7 Data & MLOps (the full-width foundation everything rides on).\nINTERCHANGES (where fields connect): Neural Networks = ML + Deep Learning \u00b7 Embeddings = Deep Learning + Language \u00b7 Transformers = Language + Vision + Generative.\nFull editable SVG source is published alongside this work as sheet.html.\n",
       "takeaway": "The whole field is one connected network - and the breakthroughs happen at the interchanges (embeddings, transformers), all riding on data. Most people never leave their home station.",
       "featured": false,
-      "full": "works/2026-07-18-ai-landscape-transit-map/full.png",
-      "thumb": "works/2026-07-18-ai-landscape-transit-map/thumb.webp",
+      "full": "works/2026-07-18-ai-landscape-transit-map/full.png?v=f71935f2",
+      "thumb": "works/2026-07-18-ai-landscape-transit-map/thumb.webp?v=50b42254",
       "w": 3200,
       "h": 2240
     },
@@ -220,8 +220,8 @@
       "prompt": "Blueprint Ledger style-DNA - deep blueprint indigo (#1f3a5f) on warm paper, Georgia display + mono spec labels, thin ruled hairlines. Hero: four LLM levers as blueprint line-art (prompt box, RAG retrieval circle, fine-tune dial, soft-prompt vectors). Rendered SVG, not diffusion.",
       "takeaway": "Fine-tuning teaches a skill; RAG supplies facts. Default to prompt + RAG - fine-tune only the pipelines that prove they need it.",
       "featured": false,
-      "full": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/full.png",
-      "thumb": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/thumb.webp",
+      "full": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/full.png?v=10e0e462",
+      "thumb": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/thumb.webp?v=534c68e8",
       "w": 1588,
       "h": 2246
     },
@@ -243,8 +243,8 @@
       "prompt": "Portrait storybook editorial infographic titled \u201cTHE MINDS OF MODERN AI,\u201d using an airy cream paper background, watercolor-and-gouache textures, delicate ink outlines, light pastel colors, and a winding golden path through four chapters: \u201c1 \u00b7 BREAKTHROUGHS\u201d showing Bengio, Dally, Hinton, Huang, Li, and LeCun with their core contributions; \u201c2 \u00b7 AI BUBBLE?\u201d contrasting real value today with the limits of the current paradigm; \u201c3 \u00b7 HUMAN-LEVEL AI\u201d presenting six divergent views through signposts and an airplane-and-bird metaphor; and \u201c4 \u00b7 THE SHARED LESSON\u201d ending in a collaborative human-and-machine library-city with the banners \u201cBUILD USEFUL SYSTEMS,\u201d \u201cEXPLORE BEYOND LANGUAGE,\u201d and \u201cGOVERN BEFORE ACCELERATION.\u201d Premium, vivid, optimistic, intellectually serious, readable, no logos, no watermark, no dark cyberpunk, no corporate stock-art look.",
       "takeaway": "AI's practical value is already real; what remains uncertain is whether scale, new paradigms, or human-machine collaboration defines the road ahead.",
       "featured": true,
-      "full": "works/2026-07-15-minds-of-modern-ai/full.png",
-      "thumb": "works/2026-07-15-minds-of-modern-ai/thumb.webp",
+      "full": "works/2026-07-15-minds-of-modern-ai/full.png?v=e9b7f10c",
+      "thumb": "works/2026-07-15-minds-of-modern-ai/thumb.webp?v=b62bcfba",
       "w": 864,
       "h": 1821
     }
