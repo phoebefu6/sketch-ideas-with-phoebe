@@ -4,15 +4,17 @@ Data and AI, explained in pictures. I lead data teams by day and draw
 what's hard to say - complicated business, data, and data people,
 simplified into images anyone can act on. Every prompt published.
 
-**6 works · 6 styles · 2 tools · every prompt is yours to copy**
+**7 works · 7 styles · 2 tools · every prompt is yours to copy**
 
 🖼️ **[Enter the gallery →](https://phoebefu6.github.io/sketch-ideas-with-phoebe/)**
 
 ## Latest
 
-<table><tr><td width="33%"><img src="works/2026-07-28-accuracy-mask/thumb.webp" alt="The accuracy mask" width="100%"></td><td width="33%"><img src="works/2026-07-19-average-customer-myth/thumb.webp" alt="The average customer is a myth" width="100%"></td><td width="33%"><img src="works/2026-07-18-strawberry-tokens/thumb.webp" alt="The model can't spell strawberry" width="100%"></td></tr><tr><td align="center"><sub><b>The accuracy mask</b> · chatgpt</sub></td><td align="center"><sub><b>The average customer is a myth</b> · chatgpt</sub></td><td align="center"><sub><b>The model can't spell strawberry</b> · chatgpt</sub></td></tr></table>
+<table><tr><td width="33%"><img src="works/2026-07-30-you-inherited-the-shadow/thumb.webp" alt="You approved the number. You inherited the shadow." width="100%"></td><td width="33%"><img src="works/2026-07-28-accuracy-mask/thumb.webp" alt="The accuracy mask" width="100%"></td><td width="33%"><img src="works/2026-07-19-average-customer-myth/thumb.webp" alt="The average customer is a myth" width="100%"></td></tr><tr><td align="center"><sub><b>You approved the number. You inherited the shadow.</b> · html-render</sub></td><td align="center"><sub><b>The accuracy mask</b> · chatgpt</sub></td><td align="center"><sub><b>The average customer is a myth</b> · chatgpt</sub></td></tr></table>
 
-<table><tr><td width="33%"><img src="works/2026-07-18-ai-landscape-transit-map/thumb.webp" alt="The AI landscape" width="100%"></td><td width="33%"><img src="works/2026-07-16-cheatsheet-rag-finetune-prompttune/thumb.webp" alt="RAG vs Fine-tuning vs Prompt-tuning" width="100%"></td><td width="33%"><img src="works/2026-07-15-minds-of-modern-ai/thumb.webp" alt="The minds of modern AI" width="100%"></td></tr><tr><td align="center"><sub><b>The AI landscape</b> · html-render</sub></td><td align="center"><sub><b>RAG vs Fine-tuning vs Prompt-tuning</b> · html-render</sub></td><td align="center"><sub><b>The minds of modern AI</b> · chatgpt</sub></td></tr></table>
+<table><tr><td width="33%"><img src="works/2026-07-18-strawberry-tokens/thumb.webp" alt="The model can't spell strawberry" width="100%"></td><td width="33%"><img src="works/2026-07-18-ai-landscape-transit-map/thumb.webp" alt="The AI landscape" width="100%"></td><td width="33%"><img src="works/2026-07-16-cheatsheet-rag-finetune-prompttune/thumb.webp" alt="RAG vs Fine-tuning vs Prompt-tuning" width="100%"></td></tr><tr><td align="center"><sub><b>The model can't spell strawberry</b> · chatgpt</sub></td><td align="center"><sub><b>The AI landscape</b> · html-render</sub></td><td align="center"><sub><b>RAG vs Fine-tuning vs Prompt-tuning</b> · html-render</sub></td></tr></table>
+
+<table><tr><td width="33%"><img src="works/2026-07-15-minds-of-modern-ai/thumb.webp" alt="The minds of modern AI" width="100%"></td></tr><tr><td align="center"><sub><b>The minds of modern AI</b> · chatgpt</sub></td></tr></table>
 
 ## Formats
 
@@ -27,7 +29,7 @@ simplified into images anyone can act on. Every prompt published.
 - **Annotated** (0) - A chart, screenshot, or artifact with labels pointing straight at the meaning.
 - **Field guide** (0) - A naturalist plate cataloguing the "species" of a data/AI thing.
 - **Comic** (0) - Strips that teach a real lesson.
-- **Poster** (1) - One bold visual metaphor for a data/AI idea.
+- **Poster** (2) - One bold visual metaphor for a data/AI idea.
 - **Typographic** (0) - Type IS the image - words as the whole composition.
 - **Carousel** (0) - Multi-slide explainers for concepts that need pacing.
 - **Zine** (0) - An editorial spread or mini-page - print-craft applied to one idea.

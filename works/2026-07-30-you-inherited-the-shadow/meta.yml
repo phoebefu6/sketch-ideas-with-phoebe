@@ -1,0 +1,20 @@
+title: You approved the number. You inherited the shadow.
+date: 2026-07-30
+tool: html-render
+format: poster
+topic: [forecasting, uncertainty, executive decision support, prediction intervals]
+style: measured object shadow
+concept: "A point forecast is only the crisp object in front of the board. The prediction interval is the widening shadow the business actually has to operate inside."
+takeaway: "Ask for the width, not just the value. Removing the interval does not remove the risk - it silently transfers the uncertainty from the forecaster to the operator."
+prompt: |
+  DESIGN-BUILT - hand-authored SVG rendered headless as a staged still-life poster.
+  Build only four semantic objects: a small freestanding $4.23M metal numeral, a ruled quarterly
+  planning surface, its widening fan-shaped prediction-interval shadow, and one violet commitment
+  flag planted at the far, soft edge. Use a low oblique evidence-photo register with a single hard
+  directional light, visible grain, long fall-off, and near-black material tones. Keep the point
+  estimate crisp and neutral. Reserve the only chromatic accent for the business commitment inside
+  the uncertain zone. Measure the shadow against quarter lines so it cannot read as a generic hidden
+  truth metaphor. Bottom-anchor one restrained sans caption. No doom, no storm, no cracks, no extra
+  symbols, no decorative color. Full editable SVG source is published as sheet.html.
+inspired_by: "Poster House - Sculpting Sound: Günther Kieser's Music Posters; the technique of building and photographing three-dimensional poster elements"
+featured: false
