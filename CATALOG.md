@@ -7,7 +7,7 @@ Search this file to find anything ever published (Cmd+F a topic, style, tool, or
 
 | Date | Title | Format | Topics | Style | Tool | Key concept | Takeaway | Files |
 |------|-------|--------|--------|-------|------|-------------|----------|-------|
-| 2026-07-30 | You approved the number. You inherited the shadow. | Poster | forecasting, uncertainty, executive decision support, prediction intervals, model risk | measured object shadow | html-render | A point forecast is only the crisp object in front of the board. The prediction interval is the widening shadow the business actually has to operate inside. | Ask for the width, not just the value. Removing the interval does not remove the risk - it silently transfers the uncertainty from the forecaster to the operator. | [image](works/2026-07-30-you-inherited-the-shadow/full.png) · [folder](works/2026-07-30-you-inherited-the-shadow/) |
+| 2026-07-30 | You approved the number. You inherited the shadow. | Poster | forecasting, uncertainty, executive decision support, prediction intervals, model risk | measured object shadow | html-render | Executive forecasts often collapse a distribution into one approved number; the missing interval becomes the operating risk the business inherits. | A forecast is a distribution. Removing the interval does not remove the risk - it only moves the risk to the operator. | [image](works/2026-07-30-you-inherited-the-shadow/full.png) · [folder](works/2026-07-30-you-inherited-the-shadow/) |
 | 2026-07-28 | The accuracy mask | Illustration | model validation, data quality, ai risk, fake data | bold editorial paper collage | chatgpt | A polished validation score can become a public mask when the evidence behind it is empty, synthetic, or meaningless. | A perfect score is not proof. Validation only means something when the validation data means something. | [image](works/2026-07-28-accuracy-mask/full.png) · [folder](works/2026-07-28-accuracy-mask/) |
 | 2026-07-19 | The average customer is a myth | Poster | customer analytics, metrics, distribution, profitability | luxury editorial surrealism | chatgpt | Averages can turn many incompatible customer realities into one fake persona, hiding where margin, churn, support cost, and discounting actually live. | The average customer is a myth - decide on the distribution, not the mean. | [image](works/2026-07-19-average-customer-myth/full.png) · [folder](works/2026-07-19-average-customer-myth/) |
 | 2026-07-18 | The model can't spell strawberry | Data portrait | llm, tokenization, foundations | two-color acid | chatgpt | - | LLMs read tokens, not letters - which is why they confidently miscount the r's in strawberry. The unit of thought isn't the character you see. | [image](works/2026-07-18-strawberry-tokens/full.png) · [folder](works/2026-07-18-strawberry-tokens/) |
@@ -19,16 +19,12 @@ Search this file to find anything ever published (Cmd+F a topic, style, tool, or
 
 ### 2026-07-30 - You approved the number. You inherited the shadow.
 
-> DESIGN-BUILT - hand-authored SVG rendered headless as a staged still-life poster.
-Build only four semantic objects: a small freestanding $4.23M metal numeral, a ruled quarterly
-planning surface, its widening fan-shaped prediction-interval shadow, and one violet commitment
-flag planted at the far, soft edge. Use a low oblique evidence-photo register with a single hard
-directional light, visible grain, long fall-off, and near-black material tones. Keep the point
-estimate crisp and neutral. Reserve the only chromatic accent for the business commitment inside
-the uncertain zone. Measure the shadow against quarter lines so it cannot read as a generic hidden
-truth metaphor. Bottom-anchor one restrained sans caption. No doom, no storm, no cracks, no extra
-symbols, no decorative color. Full editable SVG source is published as sheet.html.
-
+> DESIGN-BUILT (not prompted) - hand-authored HTML/SVG, rendered with Chrome.
+STYLE: graphic measured-shadow poster. A signed point-estimate card sits on a diagonal planning axis and casts a widening prediction-interval fan across a ruled quarterly horizon.
+MARKS: point card = approved forecast value; dark widening fan = uncertainty over time; diagonal grid = forecast horizon; acid-lime marker = where the actual business commitment lands; lamp/assumption set = the model assumptions casting the range.
+PALETTE: warm planning-paper ground, near-black ink and graphite interval bands, one acid-lime accent only for the downstream commitment.
+TYPE: compressed heavy sans for the warning, monospace labels for the forecast system, tabular numerals on the point estimate.
+MESSAGE: approve the range, not just the value.
 
 Inspired by: Constructed-object poster photography and measured forecast fan charts
 

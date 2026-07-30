@@ -1,177 +1,530 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>You approved the number. You inherited the shadow.</title>
-<style>
-  :root {
-    --ink: #0c0b10;
-    --charcoal: #17141d;
-    --graphite: #2c2832;
-    --silver: #d7d2d9;
-    --violet: #a77cff;
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    width: 1600px;
-    height: 2000px;
-    overflow: hidden;
-    background: var(--ink);
-  }
-  body {
-    font-family: "Avenir Next", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  svg { display: block; width: 1600px; height: 2000px; }
-  @media screen {
-    html { width: auto; height: auto; background: var(--ink); }
-    body { width: auto; height: auto; overflow: auto; }
-    svg { width: min(100vw, 1600px); height: auto; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You approved the number. You inherited the shadow.</title>
+  <style>
+    :root {
+      --paper: #f4efe4;
+      --ink: #11110f;
+      --ink-soft: #2a2925;
+      --grid: #9d988d;
+      --grid-soft: #cdc5b7;
+      --accent: #c9ff24;
+      --blue: #2a5f7f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #d6d0c2;
+      color: var(--ink);
+      font-family: "Avenir Next", "Trebuchet MS", Arial, sans-serif;
+      overflow: auto;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 24px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .poster {
+      position: relative;
+      flex: 0 0 auto;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      background: var(--paper);
+      isolation: isolate;
+    }
+
+    @media screen and (max-width: 1128px) {
+      body {
+        justify-content: flex-start;
+      }
+    }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(0deg, rgba(17, 17, 15, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17, 17, 15, 0.035) 1px, transparent 1px);
+      background-size: 54px 54px, 54px 54px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.72), rgba(0,0,0,0.16));
+    }
+
+    svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .system-label {
+      position: absolute;
+      z-index: 5;
+      left: 72px;
+      top: 54px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 15px;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .system-label::before {
+      content: "";
+      width: 84px;
+      height: 10px;
+      background: var(--ink);
+      display: block;
+    }
+
+    .headline {
+      position: absolute;
+      z-index: 8;
+      left: 70px;
+      top: 104px;
+      width: 376px;
+      margin: 0;
+      font-family: "Avenir Next Condensed", "DIN Condensed", "Arial Narrow", sans-serif;
+      font-size: 76px;
+      line-height: 0.86;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      isolation: isolate;
+    }
+
+    .headline::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -24px;
+      top: -22px;
+      width: 452px;
+      height: 428px;
+      background: var(--paper);
+      clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+    }
+
+    .headline .quiet {
+      display: block;
+      font-family: "Avenir Next", "Trebuchet MS", Arial, sans-serif;
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 800;
+      margin-top: 18px;
+    }
+
+    .shadow-word {
+      position: absolute;
+      z-index: 7;
+      left: 454px;
+      top: 526px;
+      width: 850px;
+      transform: rotate(-40deg);
+      transform-origin: 0 0;
+      color: var(--paper);
+      font-family: "Avenir Next Condensed", "DIN Condensed", "Arial Narrow", sans-serif;
+      font-size: 92px;
+      line-height: 0.82;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .shadow-word span {
+      display: block;
+    }
+
+    .point-card {
+      position: absolute;
+      z-index: 9;
+      left: 122px;
+      top: 814px;
+      width: 270px;
+      height: 128px;
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      color: var(--ink);
+      transform: rotate(-40deg);
+      transform-origin: 40px 84px;
+      display: grid;
+      grid-template-rows: 30px 1fr 28px;
+      box-shadow: 11px 11px 0 var(--ink);
+    }
+
+    .point-card .tag,
+    .point-card .sub {
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .point-card .sub {
+      border-top: 2px solid var(--ink);
+      border-bottom: 0;
+      justify-content: space-between;
+    }
+
+    .point-card .value {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 46px;
+      line-height: 1;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .callout {
+      position: absolute;
+      z-index: 10;
+      left: 714px;
+      top: 610px;
+      width: 258px;
+      background: var(--accent);
+      color: var(--ink);
+      border: 3px solid var(--ink);
+      padding: 13px 15px 12px;
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 17px;
+      line-height: 1.12;
+      font-weight: 700;
+      box-shadow: 8px 8px 0 var(--ink);
+      transform: rotate(-8deg);
+    }
+
+    .footer {
+      position: absolute;
+      z-index: 9;
+      left: 70px;
+      right: 70px;
+      bottom: 62px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+      align-items: end;
+      border-top: 3px solid var(--ink);
+      padding-top: 22px;
+    }
+
+    .footer h2 {
+      margin: 0;
+      max-width: 620px;
+      font-size: 44px;
+      line-height: 0.95;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .footer p {
+      margin: 0;
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.28;
+    }
+
+    .micro {
+      position: absolute;
+      z-index: 10;
+      right: 72px;
+      top: 76px;
+      width: 212px;
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.24;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
-<svg viewBox="0 0 1600 2000" role="img" aria-labelledby="poster-title poster-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="poster-title">You approved the number. You inherited the shadow.</title>
-  <desc id="poster-desc">A freestanding 4.23 million dollar forecast casts a widening prediction-interval shadow along a quarterly planning grid. A violet commitment flag stands at the broad, uncertain end.</desc>
+  <main class="poster" aria-label="Poster about point forecasts and prediction intervals">
+    <div class="grain"></div>
+    <div class="system-label">FORECAST APPROVAL RECORD / IK-6</div>
+    <p class="micro">POINT ESTIMATE VISIBLE<br>INTERVAL COMMITTED<br>ASSUMPTIONS CAST THE LIGHT</p>
+    <h1 class="headline">
+      You approved the number.
+      <span class="quiet">but the company lives in the range.</span>
+    </h1>
+    <div class="shadow-word"><span>INHERITED</span><span>THE SHADOW</span></div>
+    <section class="point-card" aria-label="Approved forecast point estimate">
+      <div class="tag">SIGNED POINT</div>
+      <div class="value">$4.23M</div>
+      <div class="sub"><span>Q4 PLAN</span><span>P50 ONLY</span></div>
+    </section>
+    <div class="callout">ACTUAL COMMITMENT SITS HERE</div>
+    <svg class="diagram" viewBox="0 0 1080 1350" role="img" aria-label="A small point estimate casting a widening interval fan across a time horizon grid">
+      <defs>
+        <pattern id="dotfield" width="18" height="18" patternUnits="userSpaceOnUse">
+          <circle cx="2.5" cy="2.5" r="1.6" fill="#f4efe4" opacity="0.28"></circle>
+        </pattern>
+        <pattern id="ruled" width="36" height="36" patternUnits="userSpaceOnUse">
+          <path d="M0 36H36M36 0V36" fill="none" stroke="#f4efe4" stroke-width="1" opacity="0.14"></path>
+        </pattern>
+        <clipPath id="posterClip">
+          <rect x="0" y="0" width="1080" height="1350"></rect>
+        </clipPath>
+      </defs>
+      <g id="backgroundGrid"></g>
+      <g id="fan" clip-path="url(#posterClip)"></g>
+      <g id="measurement"></g>
+      <g id="axis"></g>
+      <g id="marker"></g>
+      <g id="lamp"></g>
+    </svg>
+    <footer class="footer">
+      <h2>Approve the range, not just the value.</h2>
+      <p>A forecast is a distribution. Removing the interval does not remove the risk - it only moves the risk to Monday.</p>
+    </footer>
+  </main>
+  <script>
+    const svgNS = "http://www.w3.org/2000/svg";
+    const origin = { x: 246, y: 896 };
+    const end = { x: 930, y: 270 };
+    const dx = end.x - origin.x;
+    const dy = end.y - origin.y;
+    const len = Math.hypot(dx, dy);
+    const ux = dx / len;
+    const uy = dy / len;
+    const px = -uy;
+    const py = ux;
+    const grid = document.getElementById("backgroundGrid");
+    const fan = document.getElementById("fan");
+    const measurement = document.getElementById("measurement");
+    const axis = document.getElementById("axis");
+    const marker = document.getElementById("marker");
+    const lamp = document.getElementById("lamp");
 
-  <defs>
-    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#25212a"/>
-      <stop offset="0.5" stop-color="#17141d"/>
-      <stop offset="1" stop-color="#0d0c11"/>
-    </linearGradient>
-    <linearGradient id="lightFalloff" x1="0.08" y1="0.96" x2="0.8" y2="0.16">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".15"/>
-      <stop offset=".42" stop-color="#ffffff" stop-opacity=".04"/>
-      <stop offset="1" stop-color="#000000" stop-opacity=".2"/>
-    </linearGradient>
-    <linearGradient id="fanDepth" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#020204" stop-opacity=".9"/>
-      <stop offset=".28" stop-color="#030205" stop-opacity=".78"/>
-      <stop offset=".7" stop-color="#050408" stop-opacity=".58"/>
-      <stop offset="1" stop-color="#07060a" stop-opacity=".22"/>
-    </linearGradient>
-    <linearGradient id="metalFace" x1="0" y1="0" x2=".8" y2="1">
-      <stop offset="0" stop-color="#f2eef3"/>
-      <stop offset=".22" stop-color="#d4cfd6"/>
-      <stop offset=".58" stop-color="#8f8993"/>
-      <stop offset="1" stop-color="#4f4a54"/>
-    </linearGradient>
-    <linearGradient id="metalEdge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#67616b"/>
-      <stop offset=".52" stop-color="#242129"/>
-      <stop offset="1" stop-color="#0c0b0f"/>
-    </linearGradient>
-    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" seed="27" result="noise"/>
-      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
-      <feComponentTransfer in="mono" result="softNoise">
-        <feFuncA type="table" tableValues="0 .13"/>
-      </feComponentTransfer>
-      <feBlend in="SourceGraphic" in2="softNoise" mode="soft-light"/>
-    </filter>
-    <filter id="softFan" x="-15%" y="-15%" width="130%" height="130%">
-      <feGaussianBlur stdDeviation="15"/>
-    </filter>
-    <filter id="farSoft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="34"/>
-    </filter>
-    <filter id="objectShadow" x="-30%" y="-30%" width="180%" height="190%">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
-    <filter id="flagGlow" x="-200%" y="-200%" width="500%" height="500%">
-      <feGaussianBlur stdDeviation="18"/>
-    </filter>
-    <clipPath id="planeClip">
-      <path d="M190 196 L1410 196 L1540 1774 L60 1774 Z"/>
-    </clipPath>
-    <clipPath id="fanClip">
-      <path d="M507 1455 C535 1340 560 1220 610 1092 C720 830 860 610 1000 345 L1535 345 C1250 705 1060 950 920 1175 C840 1315 786 1422 748 1500 Z"/>
-    </clipPath>
-  </defs>
+    function el(name, attrs, parent) {
+      const node = document.createElementNS(svgNS, name);
+      Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
+      parent.appendChild(node);
+      return node;
+    }
 
-  <rect width="1600" height="2000" fill="#09080c"/>
+    function point(t) {
+      return { x: origin.x + dx * t, y: origin.y + dy * t };
+    }
 
-  <!-- The ruled planning surface - a dark physical plane under one hard light. -->
-  <path d="M190 196 L1410 196 L1540 1774 L60 1774 Z" fill="url(#surface)"/>
-  <path d="M190 196 L1410 196 L1540 1774 L60 1774 Z" fill="url(#lightFalloff)" filter="url(#grain)"/>
+    function widthAt(t, mult = 1) {
+      return (28 + 490 * Math.sqrt(Math.max(t, 0))) * mult;
+    }
 
-  <g clip-path="url(#planeClip)" fill="none" stroke="#77717d" stroke-opacity=".22" stroke-width="2">
-    <path d="M128 1510 L1485 1510"/>
-    <path d="M143 1308 L1467 1308"/>
-    <path d="M158 1106 L1450 1106"/>
-    <path d="M173 904 L1434 904"/>
-    <path d="M185 702 L1418 702"/>
-    <path d="M196 500 L1402 500"/>
-    <path d="M205 298 L1387 298"/>
-    <path d="M366 194 L283 1774"/>
-    <path d="M570 194 L529 1774"/>
-    <path d="M800 194 L800 1774"/>
-    <path d="M1030 194 L1071 1774"/>
-    <path d="M1234 194 L1317 1774"/>
-  </g>
+    function edge(t, side, mult = 1) {
+      const c = point(t);
+      const w = widthAt(t, mult);
+      return { x: c.x + px * side * w, y: c.y + py * side * w };
+    }
 
-  <!-- Quarter labels recede away from the viewer. -->
-  <g fill="#a39ca8" font-size="22" font-weight="550" letter-spacing="5" opacity=".72">
-    <text x="90" y="1498">Q1</text>
-    <text x="112" y="1296">Q2</text>
-    <text x="134" y="1094">Q3</text>
-    <text x="155" y="892">Q4</text>
-    <text x="175" y="690">Q5</text>
-    <text x="191" y="488">Q6</text>
-  </g>
-  <text x="225" y="257" fill="#a39ca8" font-size="19" font-weight="550" letter-spacing="5" opacity=".58">FORECAST HORIZON</text>
+    function fanPath(mult = 1, steps = 42) {
+      const a = [];
+      const b = [];
+      for (let i = 0; i <= steps; i += 1) {
+        const t = i / steps;
+        a.push(edge(t, -1, mult));
+        b.unshift(edge(t, 1, mult));
+      }
+      const pts = a.concat(b);
+      return `M ${pts.map(p => `${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(" L ")} Z`;
+    }
 
-  <!-- The interval shadow - measured by the grid, wider and softer with horizon. -->
-  <path d="M510 1450 C540 1320 585 1180 650 1040 C770 790 900 590 980 335 L1545 335 C1250 700 1050 970 920 1190 C838 1330 790 1435 748 1500 Z"
-        fill="#000000" opacity=".22" filter="url(#farSoft)"/>
-  <g clip-path="url(#fanClip)">
-    <rect x="430" y="290" width="1110" height="1250" fill="url(#fanDepth)" filter="url(#softFan)"/>
-    <path d="M520 1452 C570 1265 645 1088 742 914 C850 720 940 548 1050 340 L1425 340 C1160 650 970 910 850 1160 C784 1297 748 1400 720 1490 Z"
-          fill="#010103" opacity=".48" filter="url(#softFan)"/>
-    <path d="M540 1455 C590 1272 660 1095 750 930 C838 770 910 620 995 470 L1270 390 C1040 695 900 926 820 1152 C772 1285 744 1397 726 1490 Z"
-          fill="#000000" opacity=".52" filter="url(#softFan)"/>
-    <g stroke="#b1aab5" stroke-opacity=".18" stroke-width="2">
-      <path d="M486 1510 L1510 1510"/>
-      <path d="M500 1308 L1490 1308"/>
-      <path d="M530 1106 L1470 1106"/>
-      <path d="M590 904 L1455 904"/>
-      <path d="M680 702 L1435 702"/>
-      <path d="M850 500 L1420 500"/>
-    </g>
-  </g>
+    function linePath(points) {
+      return `M ${points.map(p => `${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(" L ")}`;
+    }
 
-  <!-- The business commitment sits in the part nobody printed. -->
-  <circle cx="1290" cy="482" r="36" fill="#a77cff" opacity=".13" filter="url(#flagGlow)"/>
-  <g>
-    <line x1="1290" y1="480" x2="1290" y2="392" stroke="#a77cff" stroke-width="6"/>
-    <path d="M1290 394 L1360 414 L1290 438 Z" fill="#a77cff"/>
-    <ellipse cx="1290" cy="482" rx="21" ry="8" fill="#a77cff"/>
-    <text x="1314" y="373" fill="#a77cff" font-size="17" font-weight="700" letter-spacing="3.5">COMMITTED</text>
-  </g>
+    for (let i = -8; i <= 12; i += 1) {
+      const start = { x: origin.x + px * i * 72 - ux * 120, y: origin.y + py * i * 72 - uy * 120 };
+      const finish = { x: end.x + px * i * 72 + ux * 160, y: end.y + py * i * 72 + uy * 160 };
+      el("path", {
+        d: `M ${start.x} ${start.y} L ${finish.x} ${finish.y}`,
+        stroke: "#9d988d",
+        "stroke-width": "1",
+        opacity: i === 0 ? "0.42" : "0.18",
+        fill: "none"
+      }, grid);
+    }
 
-  <!-- Small crisp point estimate - extruded metal, the apparent deliverable. -->
-  <ellipse cx="622" cy="1515" rx="260" ry="55" fill="#000000" opacity=".72" filter="url(#objectShadow)"/>
-  <g transform="translate(365 1452) skewX(-8)">
-    <text x="20" y="42" fill="url(#metalEdge)" stroke="#111016" stroke-width="8"
-          font-size="185" font-weight="750" letter-spacing="-8">$4.23M</text>
-    <text x="0" y="18" fill="url(#metalFace)" stroke="#e8e4ea" stroke-opacity=".38" stroke-width="2"
-          font-size="185" font-weight="750" letter-spacing="-8">$4.23M</text>
-    <path d="M18 43 L486 43" stroke="#09080c" stroke-width="8" opacity=".75"/>
-  </g>
-  <text x="368" y="1588" fill="#d1cbd4" font-size="20" font-weight="650" letter-spacing="4" opacity=".8">POINT ESTIMATE</text>
+    for (let i = -2; i <= 10; i += 1) {
+      const t = i / 10;
+      const c = point(t);
+      const a = { x: c.x - px * 560, y: c.y - py * 560 };
+      const b = { x: c.x + px * 560, y: c.y + py * 560 };
+      el("path", {
+        d: `M ${a.x} ${a.y} L ${b.x} ${b.y}`,
+        stroke: "#9d988d",
+        "stroke-width": "1",
+        opacity: i % 2 === 0 ? "0.19" : "0.09",
+        fill: "none"
+      }, grid);
+    }
 
-  <!-- Editorial caption - small enough to let the evidence photo lead. -->
-  <line x1="96" y1="1840" x2="1504" y2="1840" stroke="#a77cff" stroke-width="2"/>
-  <text x="96" y="1902" fill="#efebf0" font-size="32" font-weight="600" letter-spacing=".1">
-    YOU APPROVED THE NUMBER. YOU INHERITED THE SHADOW.
-  </text>
-  <text x="1504" y="1950" text-anchor="end" fill="#a77cff" font-size="19" font-weight="650" letter-spacing="3.5">
-    APPROVE THE RANGE - THE LAMP IS A CHOICE.
-  </text>
-</svg>
+    el("path", { d: fanPath(1.08), fill: "#11110f", opacity: "0.96" }, fan);
+    el("path", { d: fanPath(0.74), fill: "#2a2925", opacity: "0.94" }, fan);
+    el("path", { d: fanPath(0.43), fill: "#464137", opacity: "0.94" }, fan);
+    el("path", { d: fanPath(1.08), fill: "url(#dotfield)", opacity: "0.88" }, fan);
+    el("path", { d: fanPath(1.08), fill: "url(#ruled)", opacity: "0.72" }, fan);
+
+    [1.08, 0.74, 0.43].forEach((mult, i) => {
+      const upper = [];
+      const lower = [];
+      for (let n = 0; n <= 44; n += 1) {
+        const t = n / 44;
+        upper.push(edge(t, -1, mult));
+        lower.push(edge(t, 1, mult));
+      }
+      el("path", {
+        d: linePath(upper),
+        stroke: i === 0 ? "#f4efe4" : "#cdc5b7",
+        "stroke-width": i === 0 ? "3" : "1.6",
+        opacity: i === 0 ? "0.82" : "0.54",
+        fill: "none"
+      }, measurement);
+      el("path", {
+        d: linePath(lower),
+        stroke: i === 0 ? "#f4efe4" : "#cdc5b7",
+        "stroke-width": i === 0 ? "3" : "1.6",
+        opacity: i === 0 ? "0.82" : "0.54",
+        fill: "none"
+      }, measurement);
+    });
+
+    for (let i = 2; i <= 28; i += 1) {
+      const t = i / 29;
+      const a = edge(t, -1, 1.08);
+      const b = edge(t, 1, 1.08);
+      el("path", {
+        d: `M ${a.x} ${a.y} L ${b.x} ${b.y}`,
+        stroke: "#f4efe4",
+        "stroke-width": i % 5 === 0 ? "2.2" : "1",
+        opacity: i % 5 === 0 ? "0.42" : "0.18",
+        fill: "none"
+      }, measurement);
+    }
+
+    const axisStart = { x: origin.x - ux * 84, y: origin.y - uy * 84 };
+    const axisEnd = { x: end.x + ux * 72, y: end.y + uy * 72 };
+    el("path", {
+      d: `M ${axisStart.x} ${axisStart.y} L ${axisEnd.x} ${axisEnd.y}`,
+      stroke: "#11110f",
+      "stroke-width": "3",
+      fill: "none"
+    }, axis);
+
+    const ticks = [
+      [0.02, "NOW"],
+      [0.24, "Q1"],
+      [0.45, "Q2"],
+      [0.66, "Q3"],
+      [0.88, "Q4"]
+    ];
+
+    ticks.forEach(([t, label]) => {
+      const c = point(t);
+      const a = { x: c.x - px * 20, y: c.y - py * 20 };
+      const b = { x: c.x + px * 20, y: c.y + py * 20 };
+      el("path", {
+        d: `M ${a.x} ${a.y} L ${b.x} ${b.y}`,
+        stroke: "#11110f",
+        "stroke-width": "3",
+        fill: "none"
+      }, axis);
+      const textPoint = { x: c.x + px * 52, y: c.y + py * 52 };
+      const text = el("text", {
+        x: textPoint.x,
+        y: textPoint.y,
+        fill: t > 0.32 ? "#f4efe4" : "#11110f",
+        "font-family": "SFMono-Regular, Menlo, Consolas, monospace",
+        "font-size": "18",
+        "font-weight": "700",
+        transform: `rotate(-40 ${textPoint.x} ${textPoint.y})`
+      }, axis);
+      text.textContent = label;
+    });
+
+    [
+      [0.43, 0.43, "P50"],
+      [0.62, 0.74, "P80"],
+      [0.80, 1.08, "P95"]
+    ].forEach(([t, mult, label]) => {
+      const p = edge(t, -1, mult);
+      const labelNode = el("text", {
+        x: p.x - px * 24,
+        y: p.y - py * 24,
+        fill: "#f4efe4",
+        "font-family": "SFMono-Regular, Menlo, Consolas, monospace",
+        "font-size": "18",
+        "font-weight": "700",
+        transform: `rotate(-40 ${p.x} ${p.y})`
+      }, measurement);
+      labelNode.textContent = label;
+    });
+
+    const commit = edge(0.91, 0.42, 1.08);
+    el("path", {
+      d: `M ${commit.x - 12} ${commit.y + 8} L 944 617`,
+      stroke: "#c9ff24",
+      "stroke-width": "4",
+      fill: "none",
+      "stroke-linecap": "square"
+    }, marker);
+    el("circle", { cx: commit.x, cy: commit.y, r: "18", fill: "#c9ff24", stroke: "#11110f", "stroke-width": "4" }, marker);
+    el("path", {
+      d: `M ${commit.x} ${commit.y} L ${commit.x + px * 58} ${commit.y + py * 58}`,
+      stroke: "#c9ff24",
+      "stroke-width": "5",
+      fill: "none"
+    }, marker);
+
+    const lampBase = { x: 96, y: 1036 };
+    el("circle", { cx: lampBase.x, cy: lampBase.y, r: "16", fill: "#11110f" }, lamp);
+    el("path", {
+      d: `M ${lampBase.x + 16} ${lampBase.y - 6} L ${origin.x - 20} ${origin.y + 12}`,
+      stroke: "#11110f",
+      "stroke-width": "7",
+      fill: "none",
+      "stroke-linecap": "square"
+    }, lamp);
+    el("path", {
+      d: `M ${lampBase.x + 42} ${lampBase.y - 74} L ${origin.x - 8} ${origin.y - 6}`,
+      stroke: "#11110f",
+      "stroke-width": "2",
+      opacity: "0.6",
+      fill: "none"
+    }, lamp);
+    const lampText = el("text", {
+      x: 78,
+      y: 1088,
+      fill: "#11110f",
+      "font-family": "SFMono-Regular, Menlo, Consolas, monospace",
+      "font-size": "14",
+      "font-weight": "700"
+    }, lamp);
+    lampText.textContent = "ASSUMPTION SET";
+  </script>
 </body>
 </html>
