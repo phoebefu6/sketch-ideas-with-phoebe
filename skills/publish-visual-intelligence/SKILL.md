@@ -7,12 +7,21 @@ description: Crawl configured data and AI sources, extract source-backed insight
 
 Turn trusted source material into reviewable visual ideas and publish only approved work.
 
+## Project role split
+
+- Claude owns research, source synthesis, concept strategy, taste education, and high-level briefs.
+- Codex owns art direction, maker routing, design-build, image generation, critique, QA, publish,
+  and the final visual call.
+- If a concept is weak, generic, unsupported, or visually stale, improve or reject it before
+  building. Do not publish "content" that cannot be called design.
+
 ## Read first
 
+- Read the repository `AGENTS.md`, `PROJECT_MEMORY.md`, and `WORKFLOW.md`.
 - Read `references/sources.md` before crawling.
 - Read `references/notion-schema.md` before querying or writing Notion.
 - Read `references/format-routing.md` before selecting a visual format.
-- Read the repository `WORKFLOW.md`, `taxonomy.yml`, and `templates/` before publishing.
+- Read `taxonomy.yml` and `templates/` before publishing.
 
 ## Choose a mode
 
@@ -26,11 +35,11 @@ Use for scheduled runs.
 4. Query Notion for the fingerprint. Skip existing records.
 5. Extract title, channel, publication time, summary, key topics, evidence, and the strongest visual thesis.
 6. Score the candidate:
-   - data/AI relevance: 0–30
-   - visual potential: 0–25
-   - evidence quality: 0–20
-   - novelty against the gallery: 0–15
-   - freshness: 0–10
+   - data/AI relevance: 0-30
+   - visual potential: 0-25
+   - evidence quality: 0-20
+   - novelty against the gallery: 0-15
+   - freshness: 0-10
 7. Route the candidate using `references/format-routing.md`.
 8. Create a Notion record with `Status = New`.
 9. Never generate an image, create repository files, commit, or push a `New` or `Triaged` item.
@@ -45,20 +54,25 @@ Use manually or during a scheduled run after ingestion.
 3. Re-open the source and verify every material claim. Record timestamps or links in `Evidence`.
 4. Set `Status = Generating`.
 5. Generate the selected format:
-   - use code-native SVG/HTML/PlantUML for deterministic charts, mind maps, and diagrams when appropriate;
-   - use the image-generation workflow for illustrated or raster-first formats;
+   - use design-built HTML/CSS/SVG for posters, infographics, diagrams, cheatsheets, data-art,
+     typographic work, charts, precise labels, precise layouts, and exact text;
+   - use code-native SVG/D3/canvas for generative or data-native visuals;
+   - use the image-generation workflow only for raster-first illustration, painterly scenes,
+     photo-like metaphors, comics, characters, style studies, or edits;
    - preserve exact source-backed wording and minimize text inside generated images.
-6. Inspect the final visual for legibility, factual accuracy, spelling, copyright risk, confidential details, and unsupported likenesses.
+6. Inspect the final visual for design quality, hierarchy, legibility, factual accuracy, spelling,
+   copyright risk, confidential details, and unsupported likenesses.
 7. Run the QA specialist review before publish:
    - every gallery detail view and standalone `sheet.html` page must scroll naturally on desktop and mobile;
    - no screen page may lock `html` or `body` with `overflow: hidden` or a fixed viewport height unless an inner content surface clearly scrolls;
    - long prompts, captions, legends, tables, diagrams, and generated sheets must not be clipped;
    - links, filters, copy actions, thumbnails, and full images must remain usable.
-8. If visual or QA validation fails, set `Status = Error`, write `Last Error`, and do not publish.
-9. If validation passes, create the repository work folder using the publish contract below.
-10. Run `python3 scripts/build.py`, `python3 scripts/qa_pages.py`, validate generated JSON, inspect the thumbnail, and run `git diff --check`.
-11. Commit only the scoped work and generated gallery files, then push according to repository policy.
-12. Set `Status = Published`; populate `Repository Slug`, `GitHub URL`, and the final prompt.
+8. Run the impeccable detector on HTML/SVG artifacts and fix every real finding.
+9. If visual or QA validation fails, set `Status = Error`, write `Last Error`, and do not publish.
+10. If validation passes, create the repository work folder using the publish contract below.
+11. Run `python3 scripts/build.py`, `python3 scripts/qa_pages.py`, validate generated JSON, inspect the thumbnail, and run `git diff --check`.
+12. Commit only the scoped work and generated gallery files, then push according to repository policy.
+13. Set `Status = Published`; populate `Repository Slug`, `GitHub URL`, and the final prompt.
 
 ## Review-first policy
 
@@ -93,6 +107,9 @@ works/YYYY-MM-DD-short-slug/
 Allow the repository build to create `thumb.webp` and generated catalog files. Store the public source URL in `inspired_by` only when safe. Include the final OpenAI prompt and a reusable Midjourney prompt track in `idea.md`.
 
 Standalone HTML pages must be flexible on screen and precise only for export. Put fixed poster, map, or cheatsheet dimensions on a stage/sheet wrapper, keep document scrolling enabled, and run the QA specialist gate before commit.
+
+Design-built works may include `sheet.html` in the work folder as editable source. The public prompt
+for `html-render` work should be a concise design recipe, not a fake image-generation prompt.
 
 ## Automation behavior
 

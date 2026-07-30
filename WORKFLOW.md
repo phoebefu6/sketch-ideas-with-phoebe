@@ -1,99 +1,135 @@
 # Visual Idea Workflow
 
-This repo is a private-to-public pipeline for visual explanations of data and AI ideas.
+This repo is the private-to-public pipeline for Phoebe Fu's visual explanations of data and AI
+ideas. The goal is not just to make images. The goal is to build taste, sharpen ideas, and publish
+visuals that make data people and executives say: "I have seen this problem at work."
 
-## Operating Rule
+## Operating Model
 
-Grill before execution. Each new entry starts with a short intake before prompts, images, or publishing:
+Phoebe now runs this work from the `sketch-ideas-with-phoebe` project.
+
+Role split:
+
+- Claude owns research, concept strategy, taste education, and high-level briefs.
+- Codex owns visual direction, medium, layout, palette, typography, composition, image generation,
+  design-build, critique, QA, publishing, and the final visual call.
+
+Claude briefs should spark, not specify. Codex may reject, repair, or upgrade a brief if it does
+not make visual sense.
+
+## Intake
+
+Grill before execution. Each new entry starts with a short intake or a Claude handoff brief:
 
 - What is the data/AI concept?
 - Who needs to understand it?
+- What misunderstanding, decision, or tension should the visual expose?
 - What should the viewer feel or do after seeing it?
-- What format fits this idea: comic, illustration, infographic, poster, carousel, card, cheatsheet, chart, ironic graph, logo, or style study?
-- What part of the reference is worth learning from: layout, palette, composition, typography, texture, pacing, humor, or metaphor?
-- What must stay private: source URL, screenshot, brand, person, client, or internal context?
-- What must be avoided: living artist imitation, brand mimicry, exact likeness, copyrighted characters, confidential details, or text that must be perfectly typeset?
+- What format fits: comic, illustration, infographic, poster, carousel, card, cheatsheet, chart,
+  ironic graph, map, matrix, zine, typographic, or style study?
+- What part of any reference is worth learning from: layout, palette, composition, typography,
+  texture, pacing, humor, metaphor, or material?
+- What must stay private?
+- What must be avoided?
 
-## Loop
+## Maker Routing
 
-1. Drop a wow reference into chat.
-2. Extract the visual DNA: layout, palette, medium, composition, texture, type feel, pacing, and emotional effect.
-3. Rewrite the content around an original data/AI concept for data people.
-4. Produce two prompt tracks:
-   - Midjourney for Discord/browser.
-   - ChatGPT image/OpenAI image generation for this chat.
-5. Generate candidates.
-6. Choose one final image.
-7. Publish the image, prompt, key concept, and takeaway to GitHub.
+Choose the maker by what the artifact is.
+
+| Artifact type | Maker | Tool |
+|---|---|---|
+| Poster, infographic, diagram, cheatsheet, typographic, chart, matrix, data-art, exact text or layout | Design-build | HTML/CSS/SVG, rendered with Chrome |
+| Rich illustration, painterly scene, comic, character, photo-like metaphor, style study | Image generation | Midjourney, ChatGPT image, Nano Banana |
+| Ornate generative data-art | Code | SVG, D3, p5, or canvas |
+
+Hard rule: if exact labels, hierarchy, grids, axes, or readable typography matter, do not rely on
+text-to-image as the final artifact.
+
+## Taste Loop
+
+Every strong piece should teach Phoebe one reusable taste distinction.
+
+Use `phoebe-design-partner` and the mandatory `impeccable` references before visual work. A final
+artifact must pass the design gate:
+
+- one dominant visual idea;
+- clear mapping from mark to meaning;
+- strong hierarchy;
+- purposeful palette;
+- typography integrated into the composition;
+- no generic AI visual cliches;
+- no pasted-on headline pretending to be design.
+
+If the work is not a design, say so and rebuild.
+
+## Working Loop
+
+1. Read the brief, reference, or concept.
+2. Extract the concept mechanism and decision tension.
+3. Choose the maker route.
+4. Create private previews in `inbox/previews/YYYY-MM-DD-slug/`.
+5. Build 1-5 distinct directions when exploration is needed.
+6. Render, inspect, and run the taste gate.
+7. Phoebe chooses the final.
+8. Publish only after explicit approval.
 
 ## Privacy
 
-The public site should contain the final image, prompt, key concept, takeaway, tool, format, topics, and style notes.
-
 Private reference material belongs in ignored folders:
 
-- `inbox/` for dropped screenshots, URLs, rough notes, and temporary files.
+- `inbox/` for dropped screenshots, rough notes, temporary files, and private previews.
 - `private/` for source attribution, client-sensitive context, and rejected prompt drafts.
 
 Use `inspired_by` in `meta.yml` only when the attribution is safe to publish.
 
 ## Publish Contract
 
-Each work lives in one folder:
+Each public work lives in one folder:
 
 ```text
 works/YYYY-MM-DD-short-slug/
   full.png
   meta.yml
   idea.md
+  sheet.html   # optional source for design-built work
 ```
 
-`full.png` may also be `full.jpg`, `full.jpeg`, or `full.webp`.
+Run before publishing:
 
-Run `python3 scripts/build.py` before publishing. The script creates `thumb.webp`, updates `data/works.js`, updates `data/works.json`, refreshes `CATALOG.md`, and rewrites the README gallery.
+- render and visually inspect the final image;
+- `node /Users/phoebe.fu/.claude/skills/impeccable/scripts/detect.mjs --json <html-or-dir>`;
+- check for placeholders, unfinished notes, typos, clipping, and em dashes;
+- `python3 scripts/build.py`;
+- `python3 scripts/qa_pages.py`;
+- `git diff --check`.
 
-Run `python3 scripts/qa_pages.py` before publishing. The QA specialist gate checks the gallery detail view and every standalone visual subpage for scrollability and content clipping risks.
-
-If a work includes a standalone subpage such as `sheet.html`, keep `html` and `body` scrollable on screen. Fixed poster dimensions should live inside a stage/sheet wrapper, not by locking the viewport with `overflow: hidden`. Let the page grow with the content; use print-only locks only when exporting a PDF/image.
+Standalone HTML pages must be flexible on screen and precise only for export. Keep `html` and
+`body` scrollable on screen. Fixed poster dimensions belong inside a stage/sheet wrapper, not by
+locking the viewport with `overflow: hidden`.
 
 ## Prompt Safety
 
-Mimic style mechanics, not identity. Describe observable design choices instead of copying a living artist, brand system, exact character, exact poster, or copyrighted composition.
+Mimic style mechanics, not identity. Describe observable design choices instead of copying a living
+artist, brand system, exact character, exact poster, or copyrighted composition.
 
-For visual idea-sparking, browse [Midlibrary Art Styles](https://midlibrary.io/art-styles) to expand the vocabulary of possible art directions. Use it to identify mechanics like medium, era, composition, texture, palette, lighting, printing method, and mood. Do not copy an exact artist, brand, copyrighted composition, or living-artist identity.
-
-Good style extraction focuses on:
-
-- composition and framing
-- palette and contrast
-- material and texture
-- line quality and rendering medium
-- rhythm, density, and visual hierarchy
-- camera angle or panel structure
-- mood and metaphor
-
-Avoid:
-
-- "in the style of [living artist]"
-- exact logo or brand mimicry
-- exact celebrity/person likeness
-- copyrighted characters
-- private company/client details
-- hidden source links in public files
+For visual idea-sparking, browse [Midlibrary Art Styles](https://midlibrary.io/art-styles) to expand
+the vocabulary of possible art directions. Use it to identify mechanics like medium, era,
+composition, texture, palette, lighting, printing method, and mood. Do not copy an exact artist,
+brand, copyrighted composition, or living-artist identity.
 
 ## Default Tools
 
-- Midjourney: user runs the prompt through Discord/browser unless browser access is explicitly arranged.
-- ChatGPT image/OpenAI image: generated in this chat with the installed `imagegen` workflow.
-- GitHub: commit and push directly when the final image and metadata are ready.
+- Design-build: Codex authors HTML/CSS/SVG and renders with Chrome.
+- Midjourney: Phoebe or Codex uses Discord/browser for raster-first style or illustration work.
+- ChatGPT image/OpenAI image: use the installed `imagegen` workflow for raster-first work.
+- GitHub: commit and push directly only after Phoebe approves the final.
 
 ## Daily Visual Intelligence
 
-The repository includes `skills/publish-visual-intelligence/` for the automated research-to-visual pipeline.
+The repository includes `skills/publish-visual-intelligence/` for source-backed candidate ingestion
+and approved publishing.
 
 - Run daily at 21:00 Asia/Singapore.
-- Crawl the authenticated YouTube subscriptions feed and any later approved sources.
-- Deduplicate and write source-backed candidates to the [Visual Intelligence Queue](https://app.notion.com/p/09116190123a4a0f8e6f847fb5847e11).
-- Use a review-first gate: automation creates `New` records, but only the user may move them to `Approved`.
-- Generate and publish at most one already-approved record per scheduled run.
+- Create reviewable candidates first.
 - Never generate or publish unapproved candidates.
+- Run the QA specialist gate before publishing.

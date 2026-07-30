@@ -2,7 +2,7 @@ title: You approved the number. You inherited the shadow.
 date: 2026-07-30
 tool: html-render
 format: poster
-topic: [forecasting, uncertainty, executive decision support, prediction intervals]
+topic: [forecasting, uncertainty, executive decision support, prediction intervals, model risk]
 style: measured object shadow
 concept: "A point forecast is only the crisp object in front of the board. The prediction interval is the widening shadow the business actually has to operate inside."
 takeaway: "Ask for the width, not just the value. Removing the interval does not remove the risk - it silently transfers the uncertainty from the forecaster to the operator."
@@ -16,5 +16,5 @@ prompt: |
   the uncertain zone. Measure the shadow against quarter lines so it cannot read as a generic hidden
   truth metaphor. Bottom-anchor one restrained sans caption. No doom, no storm, no cracks, no extra
   symbols, no decorative color. Full editable SVG source is published as sheet.html.
-inspired_by: "Poster House - Sculpting Sound: Günther Kieser's Music Posters; the technique of building and photographing three-dimensional poster elements"
-featured: false
+inspired_by: "Constructed-object poster photography and measured forecast fan charts"
+featured: true
