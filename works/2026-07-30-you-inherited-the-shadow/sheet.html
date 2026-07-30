@@ -25,6 +25,11 @@
     -webkit-font-smoothing: antialiased;
   }
   svg { display: block; width: 1600px; height: 2000px; }
+  @media screen {
+    html { width: auto; height: auto; background: var(--ink); }
+    body { width: auto; height: auto; overflow: auto; }
+    svg { width: min(100vw, 1600px); height: auto; }
+  }
 </style>
 </head>
 <body>
