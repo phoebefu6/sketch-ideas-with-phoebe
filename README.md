@@ -1,13 +1,3 @@
-<!-- phoebe header -->
-
-[![Open the live gallery](https://img.shields.io/badge/%E2%96%B6%20open%20the%20live%20gallery-1f6feb?style=for-the-badge)](https://phoebefu6.github.io/sketch-ideas-with-phoebe/)
-[![Star this repo](https://img.shields.io/github/stars/phoebefu6/sketch-ideas-with-phoebe?style=for-the-badge&label=star%20this%20repo&color=444444)](https://github.com/phoebefu6/sketch-ideas-with-phoebe/stargazers)
-
-### ▶︎ [Open the live gallery →](https://phoebefu6.github.io/sketch-ideas-with-phoebe/)
-
-Free and open. Every build links to its source.
-
-<!-- /phoebe header -->
 # Worth a thousand words
 
 Data and AI, explained in pictures. I lead data teams by day and draw
