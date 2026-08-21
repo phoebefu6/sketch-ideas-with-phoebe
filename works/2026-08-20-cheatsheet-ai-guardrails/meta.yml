@@ -1,0 +1,9 @@
+title: Where Guardrails Go in an AI Application
+date: 2026-08-20
+tool: html-render
+format: cheatsheet
+topic: [ai guardrails, ai safety, llmops, agents, governance]
+style: blueprint ledger
+prompt: "Blueprint Ledger style-DNA - blueprint indigo (#1f3a5f) on warm paper, Georgia display, mono spec labels, single-weight line-art on a ruled grid. Hero is a hand-authored inline SVG schematic, not diffusion: a greyed UNGUARDED baseline lane across the top, then three bands - input guard, the LLM application with dashed guard capsules at retrieval and tool call, and output guard - with a stream-guard capsule on the return wire and fail branches labelled block, redact, reask. Rendered with Chrome headless at A4 portrait."
+takeaway: "Alignment lowers the base rate, guardrails cap the tail, evals tell you whether either works. A system prompt does none of the three - and on Bedrock the managed guardrail never reads the tool call."
+featured: false

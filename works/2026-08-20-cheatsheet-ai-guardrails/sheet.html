@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Where Guardrails Go in an AI Application</title>
+<style>
+/* ============ STYLE-DNA: Blueprint Ledger (002) ============ */
+:root {
+  --ink: #141821;
+  --paper: #fdfdfb;
+  --accent: #1f3a5f;
+  --accent-soft: #eaf0f7;
+  --rule: #d5dde8;
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --fs-base: 10.1px;
+  --lh: 1.34;
+  --gap: 9px;
+}
+/* ============ LOCKED LAYOUT ============ */
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 794px; }
+body {
+  width: 794px; height: 1123px; overflow: hidden;
+  background: var(--paper); color: var(--ink);
+  font: var(--fs-base)/var(--lh) var(--font-body);
+  padding: 22px 26px 16px; display: flex; flex-direction: column;
+}
+@media screen {
+  html { width: auto; min-width: 794px; min-height: 100%; overflow: auto; }
+  body { height: auto; min-height: 1123px; overflow: visible; }
+  main.cols { flex: 0 0 auto; column-fill: auto; overflow: visible; }
+}
+header.sheet { display: flex; gap: 16px; align-items: flex-end; border-bottom: 3px solid var(--ink); padding-bottom: 8px; margin-bottom: var(--gap); }
+header.sheet .titleblock { flex: 1; }
+header.sheet .kicker { font: 700 8.5px/1 var(--font-body); letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
+header.sheet h1 { font: 800 26px/1.02 var(--font-display); letter-spacing: -0.5px; }
+header.sheet .subtitle { font-size: 9.5px; color: #6b6168; margin-top: 3px; }
+.hero { height: 272px; overflow: hidden; margin-bottom: var(--gap); border: 1.5px solid var(--ink); }
+.hero svg { width: 100%; height: 100%; display: block; }
+main.cols { flex: 1; column-count: 3; column-gap: calc(var(--gap) + 2px); column-fill: auto; overflow: hidden; }
+section { break-inside: auto; margin-bottom: var(--gap); }
+h2 { font: 700 10.5px/1.2 var(--font-body); letter-spacing: 0.8px; text-transform: uppercase; color: var(--paper); background: var(--accent); padding: 3px 6px; margin-bottom: 4px; break-after: avoid; }
+table, pre, .callout, li { break-inside: avoid; }
+h3 { font: 700 calc(var(--fs-base) + 0.3px)/1.25 var(--font-body); color: var(--accent); margin: 4px 0 2px; }
+p { margin-bottom: 3px; }
+ul { padding-left: 11px; margin-bottom: 3px; }
+li { margin-bottom: 1.5px; }
+strong { color: var(--accent); }
+code, pre { font-family: var(--font-mono); font-size: calc(var(--fs-base) - 1px); background: var(--accent-soft); }
+code { padding: 0.5px 3px; }
+pre { padding: 4px 6px; margin-bottom: 4px; border-left: 2.5px solid var(--accent); overflow: hidden; white-space: pre-wrap; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 4px; font-size: calc(var(--fs-base) - 0.8px); }
+th { text-align: left; border-bottom: 1.5px solid var(--ink); padding: 2px 3px; font-weight: 700; }
+td { border-bottom: 0.5px solid var(--rule); padding: 2px 3px; vertical-align: top; }
+.callout { border: 1.5px solid var(--accent); background: var(--accent-soft); padding: 5px 7px; margin-bottom: 4px; }
+.callout .label { font: 700 8px/1 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+footer.sheet { border-top: 2px solid var(--ink); margin-top: 3px; padding-top: 4px; display: flex; justify-content: space-between; font-size: 8.5px; color: #6b6168; }
+footer.sheet .legend em { font-style: normal; color: var(--accent); }
+</style>
+</head>
+<body>
+  <header class="sheet">
+    <div class="titleblock">
+      <div class="kicker">WORTH A THOUSAND WORDS · CHEATSHEET 002</div>
+      <h1>Where Guardrails Go in an AI Application</h1>
+      <div class="subtitle">Five places a guard can sit, what each one costs, and the numbers vendors do not lead with · 2026-08-20</div>
+    </div>
+  </header>
+
+  <div class="hero">
+<svg viewBox="0 0 742 272" xmlns="http://www.w3.org/2000/svg">
+  <rect width="742" height="272" fill="#eaf0f7"/>
+  <g stroke="#c9d6e4" stroke-width="0.4">
+    <path d="M0 24H742M0 48H742M0 72H742M0 96H742M0 120H742M0 144H742M0 168H742M0 192H742M0 216H742M0 240H742M0 264H742"/>
+    <path d="M24 0V272M48 0V272M72 0V272M96 0V272M120 0V272M144 0V272M168 0V272M192 0V272M216 0V272M240 0V272M264 0V272M288 0V272M312 0V272M336 0V272M360 0V272M384 0V272M408 0V272M432 0V272M456 0V272M480 0V272M504 0V272M528 0V272M552 0V272M576 0V272M600 0V272M624 0V272M648 0V272M672 0V272M696 0V272M720 0V272"/>
+  </g>
+  <defs>
+    <marker id="ar" markerWidth="7" markerHeight="6" refX="6.5" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#1f3a5f"/>
+    </marker>
+    <marker id="arg" markerWidth="7" markerHeight="6" refX="6.5" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#6b7a8b"/>
+    </marker>
+  </defs>
+
+  <!-- UNGUARDED BASELINE -->
+  <g font-family="ui-monospace, Menlo, monospace">
+    <text x="10" y="20" font-size="7.5" font-weight="700" fill="#5c6b7d" letter-spacing="1.2">UNGUARDED</text>
+    <g fill="none" stroke="#6b7a8b" stroke-width="1">
+      <rect x="86" y="8" width="46" height="15" rx="1.5"/>
+      <rect x="152" y="8" width="52" height="15" rx="1.5"/>
+      <rect x="224" y="8" width="42" height="15" rx="1.5"/>
+      <rect x="286" y="8" width="48" height="15" rx="1.5"/>
+      <rect x="354" y="8" width="46" height="15" rx="1.5"/>
+    </g>
+    <g stroke="#6b7a8b" stroke-width="1" marker-end="url(#arg)">
+      <path d="M132 15.5H145"/><path d="M204 15.5H217"/><path d="M266 15.5H279"/><path d="M334 15.5H347"/>
+    </g>
+    <g font-size="6.5" font-weight="700" fill="#5c6b7d" text-anchor="middle">
+      <text x="109" y="18">USER</text><text x="178" y="18">PROMPT</text><text x="245" y="18">LLM</text>
+      <text x="310" y="18">OUTPUT</text><text x="377" y="18">USER</text>
+    </g>
+    <text x="416" y="18" font-size="7" fill="#5c6b7d">one path, zero checks - every leak, injection and hallucination ships</text>
+  </g>
+  <path d="M0 32H742" stroke="#1f3a5f" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <!-- USER -->
+  <g fill="none" stroke="#1f3a5f" stroke-width="1.6"><rect x="12" y="145" width="62" height="28" rx="2"/></g>
+  <text x="43" y="163" font-family="ui-monospace, Menlo, monospace" font-size="8.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">USER</text>
+  <path d="M74 152H82V62H98" fill="none" stroke="#1f3a5f" stroke-width="1.3" marker-end="url(#ar)"/>
+
+  <!-- 5 - STREAM guard on the return wire -->
+  <rect x="8" y="195" width="80" height="26" rx="13" fill="#fdfdfb" stroke="#1f3a5f" stroke-width="1.3" stroke-dasharray="4,2.5"/>
+  <text x="48" y="206" font-family="ui-monospace, Menlo, monospace" font-size="7.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">5 · STREAM</text>
+  <text x="48" y="215" font-family="-apple-system, sans-serif" font-size="6.5" fill="#5c6b7d" text-anchor="middle">chunk level</text>
+  <g fill="none" stroke="#1f3a5f" stroke-width="1.3">
+    <path d="M98 234H48V225" marker-end="url(#ar)"/>
+    <path d="M48 195V177" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- BAND 1: INPUT GUARD -->
+  <rect x="98" y="42" width="562" height="58" fill="none" stroke="#1f3a5f" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <rect x="98" y="42" width="120" height="13" fill="#1f3a5f"/>
+  <text x="104" y="52" font-family="ui-monospace, Menlo, monospace" font-size="8" font-weight="700" fill="#eaf0f7" letter-spacing="1">1 · INPUT GUARD</text>
+  <g fill="#fdfdfb" stroke="#1f3a5f" stroke-width="1">
+    <rect x="108" y="62" width="130" height="30"/><rect x="246" y="62" width="130" height="30"/>
+    <rect x="384" y="62" width="130" height="30"/><rect x="522" y="62" width="130" height="30"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" font-weight="700" fill="#1f3a5f" text-anchor="middle">
+    <text x="173" y="76">PII / PHI</text><text x="311" y="76">INJECTION</text>
+    <text x="449" y="76">OFF-TOPIC</text><text x="587" y="76">JAILBREAK</text>
+  </g>
+  <g font-family="-apple-system, sans-serif" font-size="6.8" fill="#5c6b7d" text-anchor="middle">
+    <text x="173" y="86">names, ids, card numbers</text><text x="311" y="86">direct + indirect, in docs</text>
+    <text x="449" y="86">scope, competitor, abuse</text><text x="587" y="86">roleplay, encoding, ciphers</text>
+  </g>
+  <path d="M158 100V126" fill="none" stroke="#1f3a5f" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="163" y="117" font-family="ui-monospace, Menlo, monospace" font-size="6.5" font-weight="700" fill="#1f3a5f">PASS</text>
+
+  <!-- BAND 2: LLM APPLICATION -->
+  <rect x="98" y="126" width="562" height="58" fill="none" stroke="#1f3a5f" stroke-width="1.6"/>
+  <rect x="98" y="126" width="150" height="13" fill="#1f3a5f"/>
+  <text x="104" y="136" font-family="ui-monospace, Menlo, monospace" font-size="8" font-weight="700" fill="#eaf0f7" letter-spacing="1">LLM APPLICATION</text>
+  <g fill="#dbe6f2" stroke="#1f3a5f" stroke-width="1">
+    <rect x="108" y="146" width="86" height="28" rx="2"/><rect x="298" y="146" width="86" height="28" rx="2"/>
+    <rect x="488" y="146" width="86" height="28" rx="2"/>
+  </g>
+  <g fill="#fdfdfb" stroke="#1f3a5f" stroke-width="1.3" stroke-dasharray="4,2.5">
+    <rect x="203" y="146" width="86" height="28" rx="14"/><rect x="393" y="146" width="86" height="28" rx="14"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" font-weight="700" fill="#1f3a5f" text-anchor="middle">
+    <text x="151" y="163">PROMPT</text><text x="341" y="163">MODEL</text><text x="531" y="163">OUTPUT</text>
+    <text x="246" y="160">2 · RETRIEVAL</text><text x="436" y="160">3 · EXECUTION</text>
+  </g>
+  <g font-family="-apple-system, sans-serif" font-size="6.5" fill="#5c6b7d" text-anchor="middle">
+    <text x="246" y="169">chunks in</text><text x="436" y="169">tool args + results</text>
+  </g>
+  <g fill="none" stroke="#1f3a5f" stroke-width="1.3" marker-end="url(#ar)">
+    <path d="M194 160H197"/><path d="M289 160H292"/><path d="M384 160H387"/><path d="M479 160H482"/>
+  </g>
+  <g font-family="-apple-system, sans-serif" font-size="6.8" fill="#5c6b7d">
+    <text x="586" y="157">dashed capsule</text><text x="586" y="166">= guard sits here</text>
+  </g>
+  <path d="M600 184V210" fill="none" stroke="#1f3a5f" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="546" y="201" font-family="ui-monospace, Menlo, monospace" font-size="6.5" font-weight="700" fill="#1f3a5f">DRAFT</text>
+
+  <!-- BAND 3: OUTPUT GUARD -->
+  <rect x="98" y="210" width="562" height="58" fill="none" stroke="#1f3a5f" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <rect x="98" y="210" width="128" height="13" fill="#1f3a5f"/>
+  <text x="104" y="220" font-family="ui-monospace, Menlo, monospace" font-size="8" font-weight="700" fill="#eaf0f7" letter-spacing="1">4 · OUTPUT GUARD</text>
+  <g fill="#fdfdfb" stroke="#1f3a5f" stroke-width="1">
+    <rect x="108" y="230" width="130" height="30"/><rect x="246" y="230" width="130" height="30"/>
+    <rect x="384" y="230" width="130" height="30"/><rect x="522" y="230" width="130" height="30"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" font-weight="700" fill="#1f3a5f" text-anchor="middle">
+    <text x="173" y="244">GROUNDEDNESS</text><text x="311" y="244">TOXIC / NSFW</text>
+    <text x="449" y="244">PII LEAK</text><text x="587" y="244">SCHEMA</text>
+  </g>
+  <g font-family="-apple-system, sans-serif" font-size="6.8" fill="#5c6b7d" text-anchor="middle">
+    <text x="173" y="254">supported by the chunks?</text><text x="311" y="254">harm, self-harm, hate</text>
+    <text x="449" y="254">secrets, keys, hidden context</text><text x="587" y="254">json, types, unsafe code</text>
+  </g>
+
+  <!-- FAIL BRANCHES -->
+  <g fill="none" stroke="#1f3a5f" stroke-width="1.3" marker-end="url(#ar)">
+    <path d="M660 71H676"/><path d="M660 239H676"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="6.5" font-weight="700" fill="#1f3a5f">
+    <text x="680" y="62">BLOCK</text><text x="680" y="72">REDACT</text><text x="680" y="82">NOOP</text>
+    <text x="680" y="230">REASK</text><text x="680" y="240">FIX</text><text x="680" y="250">REFRAIN</text>
+  </g>
+</svg>
+  </div>
+
+  <main class="cols">
+
+    <section>
+      <h2>Three Things, Often Confused</h2>
+      <ul>
+        <li><strong>Alignment</strong> - training time. In the weights. The provider's call, not yours.</li>
+        <li><strong>Guardrail</strong> - request time. In the path. Can <em>change or stop</em> the response.</li>
+        <li><strong>Eval</strong> - build time. Measures. Stops nothing.</li>
+      </ul>
+      <p>Alignment lowers the base rate, guardrails cap the tail, evals tell you whether either works. A system prompt does none of the three. ◦</p>
+    </section>
+
+    <section>
+      <h2>Five Places A Guard Sits</h2>
+      <p>NeMo's rail taxonomy is the most complete public one:</p>
+      <ul>
+        <li><strong>1 Input</strong> - the user turn.</li>
+        <li><strong>2 Retrieval</strong> - chunks before they enter the prompt. Indirect injection lives here.</li>
+        <li><strong>3 Execution</strong> - tool args out, tool results back. The only guard that stops real-world damage.</li>
+        <li><strong>4 Output</strong> - the draft before the user sees it.</li>
+        <li><strong>5 Stream</strong> - chunk level, sliding window (NeMo: 200-token chunks, 50 carried for context).</li>
+      </ul>
+      <p><strong>Dialog rails</strong> - should this action run at all - are the sixth, and the layer most stacks lack.</p>
+    </section>
+
+    <section>
+      <h2>The Tool Surface Is Blind</h2>
+      <p>Bedrock guardrails do <strong>not</strong> inspect <code>toolUse.input</code>, <code>toolResult</code>, or <code>toolSpec</code>. PII in a model-generated tool call is neither blocked nor masked. Hence <code>InvokeGuardrailChecks</code> (June 2026): a score-only check you call yourself before a tool runs.</p>
+      <p>OpenAI Agents SDK mirrors the trap - input guardrails run only for the <strong>first</strong> agent, output guardrails only for the <strong>last</strong>. Every intermediate handoff is bare.</p>
+    </section>
+
+    <section>
+      <h2>Order Guards By Cost</h2>
+      <pre>word filter / regex   ~0ms  free
+PromptGuard 2 22M     19ms  .942 AUC
+PromptGuard 2 86M     92ms  .995 AUC
+CodeShield tier 1     60ms  96% prec
+CodeShield tier 2    300ms
+grounding / LLM judge  full generation</pre>
+      <p>Anthropic's two-stage cascade - light classifier on all traffic, ensemble only on escalation - cut overhead from <strong>23.7% to about 1%</strong>, a 40x saving, while refusals on harmless queries fell to 0.05%.</p>
+      <p>Cheap and deterministic first, independent guards in parallel. Never put an LLM judge in front of a regex.</p>
+    </section>
+
+    <section>
+      <h2>What Guards Actually Cost</h2>
+      <p>Bedrock, per 1,000 text units (~1,000 chars):</p>
+      <table>
+        <tr><td>Content filters</td><td>$0.15</td></tr>
+        <tr><td>Denied topics</td><td>$0.15</td></tr>
+        <tr><td>Sensitive info (PII)</td><td>$0.10</td></tr>
+        <tr><td>Contextual grounding</td><td>$0.10</td></tr>
+        <tr><td>Automated reasoning</td><td>$0.17</td></tr>
+        <tr><td>Word filters, regex</td><td><strong>free</strong></td></tr>
+      </table>
+      <p>Stack four and you are at <strong>$0.50 per 1,000 text units before a single model token</strong> - on short chat turns, more than the model. Spend the free filters first.</p>
+    </section>
+
+    <section>
+      <h2>On Fail: The Real Action Set</h2>
+      <p>Guardrails AI enumerates it best: <code>EXCEPTION</code> (fail closed), <code>REASK</code>, <code>FIX</code>, <code>FIX_REASK</code>, <code>FILTER</code> (drop the failing field, structured data only), <code>REFRAIN</code> (return nothing), <code>NOOP</code> (log only), <code>CUSTOM</code>.</p>
+      <p>Ship every new guard on <strong>NOOP</strong> - Bedrock's <code>action: NONE</code> returns score, confidence and threshold; Model Armor calls it Inspect Only. Cap <code>REASK</code> at 1-2: uncapped retries are OWASP LLM06 Unbounded Consumption, and they loop hardest on adversarial input.</p>
+    </section>
+
+    <section>
+      <h2>The Toolbox</h2>
+      <table>
+        <tr><th>Tool</th><th>Shape</th></tr>
+        <tr><td>Guardrails AI 0.11</td><td>lib + REST server, 65 hub validators</td></tr>
+        <tr><td>NeMo Guardrails 0.23</td><td>Colang; only stack with dialog + retrieval + streaming rails</td></tr>
+        <tr><td>Llama Guard 4, Prompt Guard 2, CodeShield</td><td>open weights, Llama 4 licence</td></tr>
+        <tr><td>Bedrock Guardrails</td><td>managed; formal-verification grounding</td></tr>
+        <tr><td>Azure Content Safety</td><td>Prompt Shields; grounding with correction</td></tr>
+        <tr><td>Google Model Armor</td><td>GA, model-agnostic, project floor settings</td></tr>
+        <tr><td>Presidio</td><td>PII; community-owned now, left Microsoft</td></tr>
+        <tr><td>LLM Guard</td><td>35 scanners; no release since May 2025 - check maintenance</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Numbers Nobody Leads With</h2>
+      <ul>
+        <li><strong>Llama Guard 4 12B</strong>, English: <strong>69% recall at 11% FPR</strong> - it misses ~3 in 10 unsafe items and flags ~1 in 9 safe ones. Multilingual recall drops to <strong>43%</strong>.</li>
+        <li><strong>Prompt Guard 1</strong> scored .987 AUC but only <strong>21.2% TPR at 1% FPR</strong>. v2 86M scores 97.5%. AUC alone is nearly useless - ask for TPR at your operating FPR.</li>
+        <li><strong>LlamaFirewall on AgentDojo</strong>: attack success 17.6% to 1.8%, utility 0.477 to 0.427. Ninety percent of the attack gone for ~5 points of capability. The honest price.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Documented Traps</h2>
+      <ul>
+        <li>Bedrock logs blocked content as <strong>plain text</strong>. PII masking does not apply to invocation logs, and the trace <code>match</code> field holds the original value <em>by design</em>.</li>
+        <li>Bedrock contextual grounding <strong>does not support conversational use cases</strong>. Teams ship it on RAG chat anyway.</li>
+        <li><code>ASYNCHRONOUS</code> streaming returns chunks before scanning, and PII masking is silently unavailable in that mode.</li>
+        <li>English-only cliffs: Azure groundedness, protected material, custom categories; Bedrock Classic tier. A suite validated in English is not validated.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Standards To Map Against</h2>
+      <ul>
+        <li><strong>OWASP GenAI LLM Top 10, 2026</strong>: LLM01 injection, LLM02 sensitive info, LLM03 excessive agency, LLM06 unbounded consumption, LLM08 hidden context exposure, LLM10 output handling - six of ten are guardrail territory. ◦</li>
+        <li><strong>NIST AI 600-1</strong> - 12 GenAI risk categories, 200+ actions.</li>
+        <li><strong>ISO/IEC 42001</strong> - 38 Annex A controls; the Statement of Applicability makes an unmonitored guard an audit finding.</li>
+        <li><strong>EU AI Act</strong> - Article 50 transparency <strong>2 Aug 2026</strong>, Annex III high-risk <strong>2 Dec 2027</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="callout">
+      <div class="label">If you remember one thing</div>
+      <p>Guardrails do not make a model safe. They make a <strong>system accountable</strong>. Put the guard where the damage happens - for agents that is the tool call, which is exactly where the managed guardrail is not looking.</p>
+    </section>
+
+  </main>
+
+  <footer class="sheet">
+    <div class="legend">◦ = <em>from model knowledge, verify</em> · everything else source-backed (vendor docs, model cards, standards bodies)</div>
+    <div>phoebefu6.github.io/sketch-ideas-with-phoebe · Phoebe Fu</div>
+  </footer>
+</body>
+</html>
