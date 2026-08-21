@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Blind Spot</title>
+<style>
+/* ===== STYLE-DNA: 008 dark spec poster (Modern Metro register) =====
+   Hero assembly is the generated raster. Every character is set here. */
+:root{
+  --void:#07090C;
+  --wht:#F2F4F7;
+  --mut:#8A929C;      /* 6.33:1 on void */
+  --cy:#4FC3E8;       /* sealed / guarded */
+  --cy-hi:#5AD1F5;
+  --am:#E8912F;       /* breached */
+  --hair:rgba(242,244,247,.16);
+  --sans:-apple-system,"Helvetica Neue","Helvetica",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+}
+@page{size:900px 1200px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:900px}
+body{
+  width:900px;height:1200px;overflow:hidden;position:relative;
+  background:var(--void) url("hero.png") center/cover no-repeat;
+  color:var(--wht);font:11px/1.4 var(--sans);
+  -webkit-font-smoothing:antialiased;
+}
+.a{position:absolute}
+
+/* ---------- masthead ---------- */
+.mast{left:4%;top:2.2%;width:62%}
+.kick{font:600 8.5px/1 var(--mono);letter-spacing:3.2px;color:var(--cy);text-transform:uppercase}
+h1{font:700 52px/0.92 var(--sans);letter-spacing:-2.2px;margin:7px 0 0}
+.deck{font:400 11px/1.42 var(--sans);color:var(--mut);margin-top:8px;max-width:400px}
+.deck b{color:var(--wht);font-weight:600}
+.stamp{right:4%;top:2.6%;text-align:right;font:600 8px/1.6 var(--mono);letter-spacing:1.6px;color:var(--mut);text-transform:uppercase}
+.stamp em{font-style:normal;color:var(--am)}
+
+/* ---------- station rows, aligned to each disc ---------- */
+.st{left:4%;width:26.5%;transform:translateY(-50%);text-align:right}
+.st .rn{font:600 8px/1 var(--mono);letter-spacing:1.8px;color:var(--mut)}
+.st .nm{font:600 14.5px/1.1 var(--sans);letter-spacing:-.4px;margin-top:3px}
+.st .stt{font:600 7.6px/1 var(--mono);letter-spacing:1.7px;margin-top:4px;color:var(--cy)}
+.st .no{font:400 9.4px/1.34 var(--sans);color:var(--mut);margin-top:4px}
+.st .lead{position:absolute;right:-30px;top:50%;width:26px;border-top:1px solid var(--cy);opacity:.55}
+.st.brk .stt{color:var(--am)}
+.st.brk .nm{color:var(--am)}
+.st.brk .lead{border-top:1px solid var(--am);opacity:.9;width:26px}
+
+/* ---------- right-hand spec modules ---------- */
+.mod{left:68.5%;width:27.5%}
+.mod .mh{font:600 8px/1.25 var(--mono);letter-spacing:1.9px;color:var(--cy);text-transform:uppercase;
+         padding-top:6px;border-top:1px solid var(--hair)}
+.mod.warn .mh{color:var(--am)}
+.mod .mb{font:400 9.6px/1.42 var(--sans);color:var(--mut);margin-top:5px}
+.mod .mb b{color:var(--wht);font-weight:600}
+.mod code{font:600 9px var(--mono);color:var(--cy-hi);letter-spacing:-.2px}
+.mod.warn code{color:var(--am)}
+.mod .big{font:700 27px/1 var(--sans);letter-spacing:-1.3px;color:var(--wht);margin-top:6px}
+.mod .big s{text-decoration:none;color:var(--mut);font-size:15px;letter-spacing:-.5px}
+
+.fix{left:4%;width:26.5%;top:83.4%;text-align:right}
+.fix .fh{font:600 8px/1.25 var(--mono);letter-spacing:1.9px;color:var(--am);text-transform:uppercase;padding-top:6px;border-top:1px solid var(--hair)}
+.fix .fb{font:400 9.4px/1.4 var(--sans);color:var(--mut);margin-top:5px}
+.fix .fb b{color:var(--wht);font-weight:600}
+/* ---------- bottom statement ---------- */
+.foot{left:4%;right:4%;bottom:3.0%}
+.foot .rule{border-top:1px solid var(--hair);margin-bottom:10px}
+.foot .big{font:700 25px/1.06 var(--sans);letter-spacing:-1.15px}
+.foot .big em{font-style:normal;color:var(--am)}
+.foot .sub{font:400 10.4px/1.45 var(--sans);color:var(--mut);margin-top:7px;max-width:520px}
+.foot .cred{position:absolute;right:0;bottom:1px;text-align:right;font:600 7.4px/1.7 var(--mono);letter-spacing:1.3px;color:var(--mut);text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="a mast">
+  <div class="kick">Guardrails &middot; Field Report 001</div>
+  <h1>THE BLIND SPOT</h1>
+  <div class="deck">You bought a managed guardrail. <b>It does not look at the tool call</b> - the only station where an agent can actually cause harm.</div>
+</div>
+<div class="a stamp">Five stations<br>Four sealed<br><em>One open bore</em></div>
+
+<!-- STATIONS, aligned to the discs -->
+<div class="a st" style="top:20.4%">
+  <div class="rn">STATION I</div><div class="nm">INPUT</div>
+  <div class="stt">SEALED</div>
+  <div class="no">The user's turn, before the model sees it.</div>
+  <div class="lead"></div>
+</div>
+<div class="a st" style="top:34.5%">
+  <div class="rn">STATION II</div><div class="nm">RETRIEVAL</div>
+  <div class="stt">SEALED</div>
+  <div class="no">Chunks screened before they enter the prompt.</div>
+  <div class="lead"></div>
+</div>
+<div class="a st brk" style="top:49.0%">
+  <div class="rn">STATION III</div><div class="nm">EXECUTION</div>
+  <div class="stt">UNGUARDED</div>
+  <div class="no">Tool arguments out, tool results back. Nothing inspects this.</div>
+  <div class="lead"></div>
+</div>
+<div class="a st" style="top:63.5%">
+  <div class="rn">STATION IV</div><div class="nm">OUTPUT</div>
+  <div class="stt">SEALED</div>
+  <div class="no">The draft, screened before it is shown.</div>
+  <div class="lead"></div>
+</div>
+<div class="a st" style="top:77.3%">
+  <div class="rn">STATION V</div><div class="nm">STREAM</div>
+  <div class="stt">SEALED</div>
+  <div class="no">Chunk-level checks on the way out.</div>
+  <div class="lead"></div>
+</div>
+
+<!-- SPEC MODULES -->
+<div class="a mod warn" style="top:19.0%">
+  <div class="mh">What the guard never reads</div>
+  <div class="mb"><code>toolUse.input</code> &middot; <code>toolResult</code> &middot; <code>toolSpec</code><br>
+  Bedrock content filters and sensitive-information filters both skip all three. <b>PII in a tool call is neither blocked nor masked.</b></div>
+</div>
+<div class="a mod" style="top:37.5%">
+  <div class="mh">Why the API had to exist</div>
+  <div class="mb"><code>InvokeGuardrailChecks</code>, June 2026. Resource-less, score-only, and <b>you</b> must call it - before the tool runs.</div>
+</div>
+<div class="a mod" style="top:52.5%">
+  <div class="mh">The mirror trap</div>
+  <div class="mb">OpenAI Agents SDK fires input guards only for the <b>first</b> agent and output guards only for the <b>last</b>. Every handoff between them is bare.</div>
+</div>
+<div class="a mod" style="top:68.0%">
+  <div class="mh">Best open guard, assayed</div>
+  <div class="big">69%<s> recall</s> &middot; 11%<s> FPR</s></div>
+  <div class="mb">Llama Guard 4, English. <b>Three in ten unsafe items pass unseen</b>, and one in nine safe ones is refused. Multilingual recall falls to 43%.</div>
+</div>
+
+<div class="a fix">
+  <div class="fh">Where to wire it</div>
+  <div class="fb">Validate tool <b>arguments</b> before execution and tool <b>results</b> before they re-enter context. Least-privilege scopes. Human approval on anything irreversible.</div>
+</div>
+
+<!-- FOOT -->
+<div class="a foot">
+  <div class="rule"></div>
+  <div class="big">Four sealed stations. <em>One open bore.</em></div>
+  <div class="sub">The guardrail you bought is watching the text. On an agent, the damage happens at the tool - and that is the one station it was never wired to see.</div>
+  <div class="cred">Worth a Thousand Words<br>phoebefu6.github.io/<br>sketch-ideas-with-phoebe</div>
+</div>
+
+</body>
+</html>

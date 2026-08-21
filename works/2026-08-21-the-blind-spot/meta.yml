@@ -1,0 +1,10 @@
+title: The Blind Spot
+date: 2026-08-21
+tool: codex-imagegen + html-render
+format: poster
+topic: [ai guardrails, agents, tool calling, ai safety, llmops]
+style: dark spec poster
+prompt: "Cinematic product photography of a precision-machined exploded assembly in a deep near-black void. Five turned discs on one axis - anodised graphite aluminium, brushed titanium collars, black ceramic inserts, concentric machining marks. FOUR are sealed, each with a continuous cold-cyan seam of light around its circumference. THE THIRD FROM TOP IS BREACHED: a clean circular void punched through, chamfered edges, nothing inside, no cyan seam, inner bore rimmed in hot amber with the glow spilling onto its neighbours. The hole is the focal point. 100mm macro at f/8, one high softbox left plus two rim strips, faint volumetric haze, true blacks, no lifted greys. Palette strictly near-black, graphite, brushed steel, cold cyan, one hot amber. Generous empty black margins top, bottom and both sides, reserved for type. Absolutely no lettering, numerals, engraved marks, serials, logos or dial markings anywhere - all type is composited afterwards in HTML."
+takeaway: "You bought a managed guardrail. It does not read toolUse.input, toolResult or toolSpec - so the one station where an agent can actually cause harm is the one nothing inspects."
+inspired_by: "Modern Metro and Meta Quest 3 spec-poster references"
+featured: true
