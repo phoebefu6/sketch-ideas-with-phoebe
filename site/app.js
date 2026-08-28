@@ -50,6 +50,27 @@
   countUp(document.getElementById("stat-works"), works.length);
   countUp(document.getElementById("stat-styles"), styleCount);
 
+  /* ---------- start-here shelf (featured works, curated by hand in meta.yml) ---------- */
+
+  (function buildShelf() {
+    const section = document.getElementById("shelf-section");
+    const shelf = document.getElementById("shelf");
+    if (!section || !shelf) return;
+    const featured = works.filter(w => w.featured && w.page);
+    if (featured.length < 2) return;
+    featured.slice(0, 5).forEach(work => {
+      const card = document.createElement("a");
+      card.className = "shelf-card";
+      card.href = work.page;
+      card.innerHTML =
+        '<span class="shelf-thumb"><img loading="eager" src="' + work.thumb + '" alt="' + escapeHtml(work.title) + '"></span>' +
+        '<span class="shelf-name">' + escapeHtml(work.title) + '</span>' +
+        '<span class="shelf-take">' + escapeHtml(work.takeaway || work.concept || "") + '</span>';
+      shelf.appendChild(card);
+    });
+    section.hidden = false;
+  })();
+
   /* ---------- filters ---------- */
 
   function buildChips(containerId, key, values, labelFn) {
@@ -243,6 +264,11 @@
       meta.appendChild(span);
     }
     document.getElementById("lb-prompt").textContent = work.prompt || "(prompt lost to history)";
+    const storyLink = document.getElementById("lb-story");
+    if (storyLink) {
+      if (work.page) { storyLink.href = work.page; storyLink.hidden = false; }
+      else storyLink.hidden = true;
+    }
     lbCopy.textContent = "Copy prompt";
     lbCopy.classList.remove("copied");
     lightbox.hidden = false;

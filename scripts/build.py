@@ -12,11 +12,14 @@ Run: python3 scripts/build.py
 
 from __future__ import annotations
 
+import html as html_mod
 import json
+import re
 import sys
 import hashlib
 from pathlib import Path
 
+import markdown
 import yaml
 from PIL import Image
 
@@ -102,6 +105,7 @@ def scan_works() -> list[dict]:
                 "featured": bool(meta.get("featured", False)),
                 "full": versioned_path(full),
                 "thumb": versioned_path(folder / THUMB_NAME),
+                "page": f"works/{folder.name}/",
                 "w": width,
                 "h": height,
             }
@@ -163,6 +167,78 @@ def write_catalog(works: list[dict], taxonomy: dict) -> None:
     (ROOT / "CATALOG.md").write_text("\n".join(lines))
 
 
+SITE_URL = "https://phoebefu6.github.io/sketch-ideas-with-phoebe/"
+
+TOOL_LABELS = {
+    "midjourney": "Midjourney",
+    "chatgpt": "ChatGPT image",
+    "chatgpt-image": "ChatGPT image",
+    "dalle": "DALL-E",
+    "openai": "OpenAI image",
+    "nano-banana": "Nano Banana",
+}
+
+
+def render_story(folder: Path) -> str:
+    """Render idea.md (minus its duplicate top-level title) as the case-study body."""
+    idea_path = folder / "idea.md"
+    if not idea_path.exists():
+        return ""
+    text = idea_path.read_text()
+    text = re.sub(r"\A#\s+[^\n]*\n", "", text)  # drop the h1; the page has its own
+    body = markdown.markdown(text, extensions=["fenced_code", "tables"])
+    return f'<section class="work-story"><h2>The making of</h2>{body}</section>'
+
+
+def write_work_pages(works: list[dict], taxonomy: dict) -> None:
+    template = (ROOT / "templates" / "work_page.html").read_text()
+    formats = taxonomy.get("formats", {})
+    style_href = "../../" + versioned_path(ROOT / "site" / "style.css")
+    for i, w in enumerate(works):
+        folder = WORKS_DIR / w["id"]
+        esc = html_mod.escape
+        fmt = formats.get(w["format"], {}).get("label", w["format"])
+        dateline = " · ".join(x for x in (fmt, w["date"], w["style"]) if x)
+        chips = [TOOL_LABELS.get(w["tool"], w["tool"])] + w["topic"]
+        if w["inspired_by"]:
+            chips.append("inspired by " + w["inspired_by"])
+        chips_html = "".join(f"<span>{esc(c)}</span>" for c in chips)
+        newer = works[i - 1] if i > 0 else None
+        older = works[i + 1] if i + 1 < len(works) else None
+        pager = []
+        if older:
+            pager.append(
+                f'<a class="pager-link pager-prev" href="../{older["id"]}/">'
+                f'<span class="pager-dir">&larr; Older</span><span class="pager-title">{esc(older["title"])}</span></a>'
+            )
+        if newer:
+            pager.append(
+                f'<a class="pager-link pager-next" href="../{newer["id"]}/">'
+                f'<span class="pager-dir">Newer &rarr;</span><span class="pager-title">{esc(newer["title"])}</span></a>'
+            )
+        description = w["takeaway"] or w["concept"] or w["title"]
+        page = template
+        for token, value in {
+            "__TITLE_ATTR__": esc(w["title"]),
+            "__TITLE__": esc(w["title"]),
+            "__DESCRIPTION__": esc(description[:280]),
+            "__PAGE_URL__": SITE_URL + w["page"],
+            "__OG_IMAGE__": SITE_URL + w["full"].split("?")[0],
+            "__STYLE_HREF__": style_href,
+            "__HERO_SRC__": "../../" + w["full"],
+            "__IMG_W__": str(w["w"]),
+            "__IMG_H__": str(w["h"]),
+            "__DATELINE__": esc(dateline),
+            "__TAKEAWAY__": esc(w["takeaway"] or w["concept"]),
+            "__CHIPS__": chips_html,
+            "__STORY__": render_story(folder),
+            "__PROMPT__": esc(w["prompt"] or "(prompt lost to history)"),
+            "__PAGER__": "\n    ".join(pager),
+        }.items():
+            page = page.replace(token, value)
+        (folder / "index.html").write_text(page)
+
+
 def stamp_assets() -> None:
     """Cache-bust asset URLs in index.html so browsers never mix site versions."""
     import re
@@ -216,7 +292,7 @@ def write_readme(works: list[dict], taxonomy: dict) -> None:
         "## How this repo works",
         "",
         "- `works/` holds one folder per image: the original, `meta.yml`, optional `idea.md`, and an auto thumbnail.",
-        "- `scripts/build.py` regenerates thumbnails, `data/works.js`, `CATALOG.md`, and this README.",
+        "- `scripts/build.py` regenerates thumbnails, `data/works.js`, per-work case-study pages, `CATALOG.md`, and this README.",
         "- `scripts/qa_pages.py` checks gallery/detail pages and standalone visual sheets before publish.",
         "- Private inspiration notes live in ignored folders like `inbox/` or `private/`.",
         "- New work = drop one folder, run the build, push. Nothing else is ever edited by hand.",
@@ -236,6 +312,7 @@ def main() -> None:
     write_data(works, taxonomy)
     write_readme(works, taxonomy)
     write_catalog(works, taxonomy)
+    write_work_pages(works, taxonomy)
     stamp_assets()
     styles = {work["style"] for work in works if work["style"]}
     print(f"Built: {len(works)} works, {len(styles)} styles → data/works.js, README.md")

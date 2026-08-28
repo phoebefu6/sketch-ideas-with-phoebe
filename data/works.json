@@ -109,6 +109,7 @@
       "featured": true,
       "full": "works/2026-08-21-the-blind-spot/full.png?v=6e8e7bc0",
       "thumb": "works/2026-08-21-the-blind-spot/thumb.webp?v=b60dcfad",
+      "page": "works/2026-08-21-the-blind-spot/",
       "w": 1800,
       "h": 2400
     },
@@ -133,6 +134,7 @@
       "featured": false,
       "full": "works/2026-08-20-cheatsheet-ai-guardrails/full.png?v=e9a8bc39",
       "thumb": "works/2026-08-20-cheatsheet-ai-guardrails/thumb.webp?v=0ef26e87",
+      "page": "works/2026-08-20-cheatsheet-ai-guardrails/",
       "w": 1588,
       "h": 2246
     },
@@ -157,6 +159,7 @@
       "featured": true,
       "full": "works/2026-07-30-you-inherited-the-shadow/full.png?v=7be86693",
       "thumb": "works/2026-07-30-you-inherited-the-shadow/thumb.webp?v=37dbfc10",
+      "page": "works/2026-07-30-you-inherited-the-shadow/",
       "w": 2160,
       "h": 2700
     },
@@ -180,6 +183,7 @@
       "featured": true,
       "full": "works/2026-07-28-accuracy-mask/full.png?v=8f336812",
       "thumb": "works/2026-07-28-accuracy-mask/thumb.webp?v=da939dd0",
+      "page": "works/2026-07-28-accuracy-mask/",
       "w": 1122,
       "h": 1402
     },
@@ -203,6 +207,7 @@
       "featured": true,
       "full": "works/2026-07-19-average-customer-myth/full.png?v=dc5c943d",
       "thumb": "works/2026-07-19-average-customer-myth/thumb.webp?v=d0f1a13b",
+      "page": "works/2026-07-19-average-customer-myth/",
       "w": 1003,
       "h": 1568
     },
@@ -225,6 +230,7 @@
       "featured": false,
       "full": "works/2026-07-18-strawberry-tokens/full.png?v=dfa97872",
       "thumb": "works/2026-07-18-strawberry-tokens/thumb.webp?v=b7ea77ea",
+      "page": "works/2026-07-18-strawberry-tokens/",
       "w": 1122,
       "h": 1402
     },
@@ -247,6 +253,7 @@
       "featured": false,
       "full": "works/2026-07-18-ai-landscape-transit-map/full.png?v=f71935f2",
       "thumb": "works/2026-07-18-ai-landscape-transit-map/thumb.webp?v=50b42254",
+      "page": "works/2026-07-18-ai-landscape-transit-map/",
       "w": 3200,
       "h": 2240
     },
@@ -270,6 +277,7 @@
       "featured": false,
       "full": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/full.png?v=10e0e462",
       "thumb": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/thumb.webp?v=534c68e8",
+      "page": "works/2026-07-16-cheatsheet-rag-finetune-prompttune/",
       "w": 1588,
       "h": 2246
     },
@@ -293,6 +301,7 @@
       "featured": true,
       "full": "works/2026-07-15-minds-of-modern-ai/full.png?v=e9b7f10c",
       "thumb": "works/2026-07-15-minds-of-modern-ai/thumb.webp?v=b62bcfba",
+      "page": "works/2026-07-15-minds-of-modern-ai/",
       "w": 864,
       "h": 1821
     }

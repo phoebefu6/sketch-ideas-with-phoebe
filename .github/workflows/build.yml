@@ -27,7 +27,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install pillow pyyaml
+        run: pip install pillow pyyaml markdown
 
       - name: Build gallery
         run: python scripts/build.py

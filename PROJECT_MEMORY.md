@@ -66,7 +66,7 @@ Lesson: a familiar metaphor becomes fresh when it is measured. "Shadow" alone is
 
 - Real Codex repo: `/Users/phoebe.fu/Documents/Codex/sketch-ideas-with-phoebe`
 - Live gallery: `https://phoebefu6.github.io/sketch-ideas-with-phoebe/`
-- Claude briefs: `/Users/phoebe.fu/Documents/Claude_Work/sketch-ideas-with-phoebe/briefs`
+- Claude briefs: `/Users/phoebe.fu/Documents/Codex/sketch-ideas-with-phoebe/private/briefs`
 - Private previews: `/Users/phoebe.fu/Documents/Codex/sketch-ideas-with-phoebe/inbox/previews`
 - Style DB: `/Users/phoebe.fu/Documents/Claude_Work/project/sketch_ideas/style_db`
 

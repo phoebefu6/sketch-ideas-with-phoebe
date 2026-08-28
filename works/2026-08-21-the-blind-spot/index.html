@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Blind Spot - Worth a thousand words</title>
+<meta name="description" content="You bought a managed guardrail. It does not read toolUse.input, toolResult or toolSpec - so the one station where an agent can actually cause harm is the one nothing inspects.">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-21-the-blind-spot/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Blind Spot">
+<meta property="og:description" content="You bought a managed guardrail. It does not read toolUse.input, toolResult or toolSpec - so the one station where an agent can actually cause harm is the one nothing inspects.">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-21-the-blind-spot/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-21-the-blind-spot/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=8fca472c">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-08-21-the-blind-spot/full.png?v=6e8e7bc0" alt="The Blind Spot" width="1800" height="2400">
+  </figure>
+
+  <article class="work-body">
+    <h1>The Blind Spot</h1>
+    <p class="work-dateline">Poster · 2026-08-21 · dark spec poster</p>
+    <p class="work-takeaway">You bought a managed guardrail. It does not read toolUse.input, toolResult or toolSpec - so the one station where an agent can actually cause harm is the one nothing inspects.</p>
+    <div class="lb-meta work-chips"><span>codex-imagegen + html-render</span><span>ai guardrails</span><span>agents</span><span>tool calling</span><span>ai safety</span><span>llmops</span><span>inspired by Modern Metro and Meta Quest 3 spec-poster references</span></div>
+
+    <section class="work-story"><h2>The making of</h2><h2>Key Concept</h2>
+<p>Guardrail diagrams almost always answer "where can a guard sit?" - a list of five
+stations, all treated as equally solved. That framing is comfortable and wrong. On an
+agent, four of those stations are routinely covered by a managed service and one is not,
+and the uncovered one is the only station that can reach outside the conversation and do
+something irreversible.</p>
+<p>Amazon Bedrock Guardrails do not inspect <code>toolUse.input</code> (the arguments the model
+generates), <code>toolResult</code> (whatever your tool hands back), or <code>toolSpec</code> (your own tool
+definitions). Content filters skip them and sensitive-information filters skip them, so
+PII in a tool call is neither blocked nor masked. AWS shipped <code>InvokeGuardrailChecks</code> in
+June 2026 precisely because of that gap: a resource-less, score-only check that you have
+to call yourself, before the tool runs. The OpenAI Agents SDK has the mirror trap - input
+guardrails fire only for the first agent in a chain and output guardrails only for the
+last, leaving every intermediate handoff bare.</p>
+<p>So the tension is not "add guardrails." It is: the thing you bought is watching the text,
+and the damage happens at the tool.</p>
+<h2>Explanation</h2>
+<p>The poster refuses the list. Instead of five labelled stations it shows five machined
+modules exploded on one axis, and it makes the viewer's eye land on an absence.</p>
+<p>Four discs are sealed, each ringed by a continuous cold-cyan seam - the visual grammar of
+a closed instrument. The third is punched clean through: a chamfered circular bore with
+nothing in it, no seam light, rimmed in hot amber, the glow spilling onto its neighbours.
+You can see straight through the assembly at exactly the point that is supposed to be
+protected. The hole is the hero, and every label reinforces it - four read SEALED in cyan,
+one reads UNGUARDED in amber.</p>
+<p>The right-hand column carries the evidence rather than decoration: the three Bedrock
+fields that get skipped, why the June 2026 API had to exist, the first-agent/last-agent
+trap, and the assay of the best open guard - Llama Guard 4 at 69% recall and 11% false
+positives on English, meaning three in ten unsafe items pass unseen and one in nine safe
+ones is refused. Multilingual recall falls to 43%. Guards cap the tail; they do not close
+it. The lower-left block prescribes the fix so the piece argues rather than only accuses.</p>
+<p>The reusable taste distinction: <strong>when the story is a gap, draw the gap.</strong> Rendering the
+missing thing as a void is stronger than labelling the present things as fine.</p>
+<h2>Hybrid Recipe</h2>
+<p>The hero is raster; every character is hand-set. Diffusion cannot set type, so it was
+never asked to - the prompt forbids all lettering and reserves large empty black margins,
+then the spec layer is composited in HTML and rendered with Chrome headless. That keeps
+the illustration cinematic and the typography exact.</p>
+<p>Registration matters more than it looks. With <code>object-fit: cover</code> on a background hero,
+the label positions are percentages of the plate, and the five disc centres sit at 20.4%,
+34.5%, 49.0%, 63.5% and 77.3% of height with the assembly spanning x 33.1% to 65.6%.
+Everything else is margin, deliberately reserved at generation time.</p>
+<h3>Hero prompt (codex image_gen, 3:4)</h3>
+<p>See <code>prompt.md</code> for the exact text. The two load-bearing parts are the breach description
+and the negative list - every script and numeral form has to be refused individually, or
+the model letters the machined faces.</p>
+<h3>Type layer</h3>
+<p>Near-black <code>#07090C</code> ground, <code>#F2F4F7</code> body, <code>#8A929C</code> muted, cold cyan <code>#4FC3E8</code> for
+sealed, hot amber <code>#E8912F</code> for the breach. All five clear WCAG AA on the ground. Tight
+Helvetica-grotesque display with monospace spec labels - the Modern Metro vocabulary.
+Source in <code>poster.html</code>.</p></section>
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">Cinematic product photography of a precision-machined exploded assembly in a deep near-black void. Five turned discs on one axis - anodised graphite aluminium, brushed titanium collars, black ceramic inserts, concentric machining marks. FOUR are sealed, each with a continuous cold-cyan seam of light around its circumference. THE THIRD FROM TOP IS BREACHED: a clean circular void punched through, chamfered edges, nothing inside, no cyan seam, inner bore rimmed in hot amber with the glow spilling onto its neighbours. The hole is the focal point. 100mm macro at f/8, one high softbox left plus two rim strips, faint volumetric haze, true blacks, no lifted greys. Palette strictly near-black, graphite, brushed steel, cold cyan, one hot amber. Generous empty black margins top, bottom and both sides, reserved for type. Absolutely no lettering, numerals, engraved marks, serials, logos or dial markings anywhere - all type is composited afterwards in HTML.</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-08-20-cheatsheet-ai-guardrails/"><span class="pager-dir">&larr; Older</span><span class="pager-title">Where Guardrails Go in an AI Application</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>

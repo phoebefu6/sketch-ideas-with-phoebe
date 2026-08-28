@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAG vs Fine-tuning vs Prompt-tuning - Worth a thousand words</title>
+<meta name="description" content="Fine-tuning teaches a skill; RAG supplies facts. Default to prompt + RAG - fine-tune only the pipelines that prove they need it.">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-07-16-cheatsheet-rag-finetune-prompttune/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RAG vs Fine-tuning vs Prompt-tuning">
+<meta property="og:description" content="Fine-tuning teaches a skill; RAG supplies facts. Default to prompt + RAG - fine-tune only the pipelines that prove they need it.">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-07-16-cheatsheet-rag-finetune-prompttune/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-07-16-cheatsheet-rag-finetune-prompttune/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=8fca472c">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-07-16-cheatsheet-rag-finetune-prompttune/full.png?v=10e0e462" alt="RAG vs Fine-tuning vs Prompt-tuning" width="1588" height="2246">
+  </figure>
+
+  <article class="work-body">
+    <h1>RAG vs Fine-tuning vs Prompt-tuning</h1>
+    <p class="work-dateline">Cheatsheet · 2026-07-16 · blueprint ledger</p>
+    <p class="work-takeaway">Fine-tuning teaches a skill; RAG supplies facts. Default to prompt + RAG - fine-tune only the pipelines that prove they need it.</p>
+    <div class="lb-meta work-chips"><span>html-render</span><span>llm optimization</span><span>rag</span><span>fine-tuning</span><span>ai strategy</span></div>
+
+    
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">Blueprint Ledger style-DNA - deep blueprint indigo (#1f3a5f) on warm paper, Georgia display + mono spec labels, thin ruled hairlines. Hero: four LLM levers as blueprint line-art (prompt box, RAG retrieval circle, fine-tune dial, soft-prompt vectors). Rendered SVG, not diffusion.</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-07-15-minds-of-modern-ai/"><span class="pager-dir">&larr; Older</span><span class="pager-title">The minds of modern AI</span></a>
+    <a class="pager-link pager-next" href="../2026-07-18-ai-landscape-transit-map/"><span class="pager-dir">Newer &rarr;</span><span class="pager-title">The AI landscape</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>

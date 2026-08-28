@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI landscape - Worth a thousand words</title>
+<meta name="description" content="The whole field is one connected network - and the breakthroughs happen at the interchanges (embeddings, transformers), all riding on data. Most people never leave their home station.">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-07-18-ai-landscape-transit-map/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The AI landscape">
+<meta property="og:description" content="The whole field is one connected network - and the breakthroughs happen at the interchanges (embeddings, transformers), all riding on data. Most people never leave their home station.">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-07-18-ai-landscape-transit-map/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-07-18-ai-landscape-transit-map/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=8fca472c">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-07-18-ai-landscape-transit-map/full.png?v=f71935f2" alt="The AI landscape" width="3200" height="2240">
+  </figure>
+
+  <article class="work-body">
+    <h1>The AI landscape</h1>
+    <p class="work-dateline">Map · 2026-07-18 · transit map (Vignelli)</p>
+    <p class="work-takeaway">The whole field is one connected network - and the breakthroughs happen at the interchanges (embeddings, transformers), all riding on data. Most people never leave their home station.</p>
+    <div class="lb-meta work-chips"><span>html-render</span><span>ai</span><span>machine learning</span><span>foundations</span><span>inspired by Massimo Vignelli transit maps</span></div>
+
+    
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">DESIGN-BUILT (not prompted) - hand-authored SVG, rendered headless.
+STYLE: transit map, Vignelli discipline - cream ground, one bold colour per line, uniform station dots, stadium interchange markers, 45/90 geometry, Helvetica.
+LINES: Machine Learning · Deep Learning · Language · Vision · Generative &amp; Agents · Data &amp; MLOps (the full-width foundation everything rides on).
+INTERCHANGES (where fields connect): Neural Networks = ML + Deep Learning · Embeddings = Deep Learning + Language · Transformers = Language + Vision + Generative.
+Full editable SVG source is published alongside this work as sheet.html.
+</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-07-16-cheatsheet-rag-finetune-prompttune/"><span class="pager-dir">&larr; Older</span><span class="pager-title">RAG vs Fine-tuning vs Prompt-tuning</span></a>
+    <a class="pager-link pager-next" href="../2026-07-18-strawberry-tokens/"><span class="pager-dir">Newer &rarr;</span><span class="pager-title">The model can&#x27;t spell strawberry</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>
