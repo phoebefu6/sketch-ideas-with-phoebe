@@ -89,6 +89,31 @@
   },
   "works": [
     {
+      "id": "2026-09-02-bus-factor-comic",
+      "title": "You have a Sam",
+      "date": "2026-09-02",
+      "tool": "image-gen",
+      "format": "comic",
+      "topic": [
+        "key person risk",
+        "data teams",
+        "knowledge management",
+        "leadership",
+        "bus factor"
+      ],
+      "style": "craft-handmade comic strip",
+      "inspired_by": "Redesign of 2026-08-29-bus-factor-timetable after the insider-register failed a cold first read - same concept, beginner-clear register",
+      "concept": "The bus factor taught as a 4-panel story instead of assumed as vocabulary: meet the single point of failure, watch them board the literal bus, feel the panic, then land the definition when the reader has already lived the problem.",
+      "prompt": "GENERATED via baoyu-infographic (comic-strip layout x craft-handmade style), backend codex-imagegen. Full reproducible prompt in prompts/infographic.md.\n4-panel 2x2 story: (1) only Sam knows how the pricing system works; (2) Sam boards a literal yellow bus - the metaphor made visible; (3) red ERROR light, nobody can run it; (4) deadpan definition card - bus factor = how many people can leave before a system stops, raise it: document - pair - rotate.\nPALETTE: warm craft pastels on cream paper, single red accent spent once on the error light.\nCompanion piece to 2026-08-29-bus-factor-timetable: the timetable rewards insiders, this one teaches the term from zero.",
+      "takeaway": "Bus factor = the number of people who can leave before a system stops. If the answer is 1, you don't have a system - you have a Sam. Raise it: document, pair, rotate.",
+      "featured": false,
+      "full": "works/2026-09-02-bus-factor-comic/full.png?v=fb4c292b",
+      "thumb": "works/2026-09-02-bus-factor-comic/thumb.webp?v=df35323c",
+      "page": "works/2026-09-02-bus-factor-comic/",
+      "w": 1448,
+      "h": 1086
+    },
+    {
       "id": "2026-08-29-bus-factor-timetable",
       "title": "One driver per route",
       "date": "2026-08-29",
