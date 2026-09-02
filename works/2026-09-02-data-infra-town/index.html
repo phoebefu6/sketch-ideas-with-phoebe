@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where does your data live? - Worth a thousand words</title>
+<meta name="description" content="Lake stores raw, warehouse stores structured, mart serves one team, lakehouse puts warehouse comfort on raw storage, mesh splits ownership across domains. The names were the map all along - the real architecture question is who owns the water quality.">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-02-data-infra-town/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Where does your data live?">
+<meta property="og:description" content="Lake stores raw, warehouse stores structured, mart serves one team, lakehouse puts warehouse comfort on raw storage, mesh splits ownership across domains. The names were the map all along - the real architecture question is who owns the water quality.">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-02-data-infra-town/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-02-data-infra-town/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=8fca472c">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-09-02-data-infra-town/full.png?v=6ff2e8de" alt="Where does your data live?" width="1536" height="1024">
+  </figure>
+
+  <article class="work-body">
+    <h1>Where does your data live?</h1>
+    <p class="work-dateline">Infographic · 2026-09-02 · hand-drawn storybook town map</p>
+    <p class="work-takeaway">Lake stores raw, warehouse stores structured, mart serves one team, lakehouse puts warehouse comfort on raw storage, mesh splits ownership across domains. The names were the map all along - the real architecture question is who owns the water quality.</p>
+    <div class="lb-meta work-chips"><span>image-gen</span><span>data architecture</span><span>data lake</span><span>data warehouse</span><span>data mart</span><span>data lakehouse</span><span>data mesh</span><span>inspired by Taste rule from IK-15 (build the object the concept is named after) applied to a whole vocabulary at once; style traits from Phoebe&#x27;s hand-drawn flowchart reference</span></div>
+
+    <section class="work-story"><h2>The making of</h2><h2>Key Concept</h2>
+<p>Data infrastructure vocabulary is a geography lesson nobody draws: lake, warehouse, mart,
+lakehouse, mesh. Five architectures that get compared in feature tables - rows of "schema
+on read" vs "schema on write" - when their own names already encode the real differences:
+what each one stores, how structured it is, and who owns it.</p>
+<p>The tension: these words are used daily by people who could not place them on a map, and
+vendor decks profit from the fog. Taken literally, the metaphors are honest. A lake really
+is where everything lands raw. A mart really is a small shop serving one neighborhood. A
+lakehouse really is a house standing in the water.</p>
+<h2>Explanation</h2>
+<p>One hand-drawn town, five locations, and the spatial relationships do the teaching:</p>
+<ul>
+<li><strong>DATA LAKE</strong> - a pond with mismatched raw objects afloat: a file, a photo, a scroll,
+  a music note. Nothing shelved, nothing labeled. Store first, decide later.</li>
+<li><strong>DATA WAREHOUSE</strong> - the big central building with identical boxes in ordered rows.
+  Structure is the product; everything inside was cleaned to earn its shelf.</li>
+<li><strong>DATA MART</strong> - the corner shop <em>beside</em> the warehouse, deliberately smaller. A mart
+  is a subset with a customer: one team's curated slice.</li>
+<li><strong>DATA LAKEHOUSE</strong> - the house on stilts standing in the lake itself, tidy shelves
+  visible through the window. The adjacency IS the definition: warehouse comfort built
+  directly on raw lake storage.</li>
+<li><strong>DATA MESH</strong> - the only "architecture" that is not a building. Four garden plots,
+  each with its own well and its own gardener, connected by pipes. Ownership is drawn,
+  not captioned: in the first four a central team owns the water; in the mesh, every
+  domain does - and the pipes are the contracts.</li>
+</ul>
+<p>The closing question the visual plants: not "which one is best" but "who owns the water
+quality" - the actual axis the five architectures disagree on.</p>
+<h2>Recipe</h2>
+<ul>
+<li><strong>Pipeline</strong>: baoyu-infographic - isometric-map layout x craft-handmade style, blended
+  with traits extracted from Phoebe's pasted hand-drawn reference (macaron pastels, wobble
+  outlines, doodle stars, casual lettering). Backend codex-imagegen. Prompts preserved in
+  <code>prompts/</code>.</li>
+<li><strong>Iteration lesson banked</strong>: the backend emits 3:2 regardless of the requested 4:3, so
+  the LinkedIn 1.35:1 centre-crop trims the SIDES - v1's left-edge labels got clipped
+  ("store" became "tore"). v2 wrote the safe-area instruction for a side-crop: every label
+  at least 12% of the width inboard. Verify the crop, not the master.</li>
+<li><strong>Taste rule applied</strong>: "when a concept is named after an object, build the object"
+  (banked on IK-15) - here scaled from one metaphor to a whole vocabulary sharing one
+  scene, so the differences between terms become visible as geography.</li>
+</ul></section>
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">GENERATED via baoyu-infographic (isometric-map layout x craft-handmade/hand-drawn-edu blend), backend codex-imagegen. Full reproducible prompts in prompts/ (v2 shipped; v1 kept - labels clipped by the 1.35:1 side-crop).
+ONE TOWN, FIVE ARCHITECTURES, names taken literally: DATA LAKE = pond with raw mismatched objects afloat (file, photo, scroll, music note); DATA WAREHOUSE = big tidy building, identical boxes on shelves; DATA MART = small corner shop beside it, one team&#x27;s curated boxes; DATA LAKEHOUSE = house on stilts standing in the lake, tidy shelves inside; DATA MESH = four garden plots, each with its own well and owner, joined by pipes.
+PALETTE: macaron pastels on cream, wobble outlines, doodle stars - style traits lifted from Phoebe&#x27;s pasted reference flowchart.
+MESSAGE: spatial relationships carry the semantics - adjacency, size and ownership are the actual differences between the five architectures.</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-09-02-bus-factor-comic/"><span class="pager-dir">&larr; Older</span><span class="pager-title">You have a Sam</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>

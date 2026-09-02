@@ -4,21 +4,21 @@ Data and AI, explained in pictures. I lead data teams by day and draw
 what's hard to say - complicated business, data, and data people,
 simplified into images anyone can act on. Every prompt published.
 
-**11 works · 10 styles · 4 tools · every prompt is yours to copy**
+**12 works · 11 styles · 4 tools · every prompt is yours to copy**
 
 🖼️ **[Enter the gallery →](https://phoebefu6.github.io/sketch-ideas-with-phoebe/)**
 
 ## Latest
 
-<table><tr><td width="33%"><img src="works/2026-09-02-bus-factor-comic/thumb.webp?v=df35323c" alt="You have a Sam" width="100%"></td><td width="33%"><img src="works/2026-08-29-bus-factor-timetable/thumb.webp?v=d55ec7bd" alt="One driver per route" width="100%"></td><td width="33%"><img src="works/2026-08-21-the-blind-spot/thumb.webp?v=b60dcfad" alt="The Blind Spot" width="100%"></td></tr><tr><td align="center"><sub><b>You have a Sam</b> · image-gen</sub></td><td align="center"><sub><b>One driver per route</b> · html-render</sub></td><td align="center"><sub><b>The Blind Spot</b> · codex-imagegen + html-render</sub></td></tr></table>
+<table><tr><td width="33%"><img src="works/2026-09-02-data-infra-town/thumb.webp?v=c375b0d0" alt="Where does your data live?" width="100%"></td><td width="33%"><img src="works/2026-09-02-bus-factor-comic/thumb.webp?v=df35323c" alt="You have a Sam" width="100%"></td><td width="33%"><img src="works/2026-08-29-bus-factor-timetable/thumb.webp?v=d55ec7bd" alt="One driver per route" width="100%"></td></tr><tr><td align="center"><sub><b>Where does your data live?</b> · image-gen</sub></td><td align="center"><sub><b>You have a Sam</b> · image-gen</sub></td><td align="center"><sub><b>One driver per route</b> · html-render</sub></td></tr></table>
 
-<table><tr><td width="33%"><img src="works/2026-08-20-cheatsheet-ai-guardrails/thumb.webp?v=0ef26e87" alt="Where Guardrails Go in an AI Application" width="100%"></td><td width="33%"><img src="works/2026-07-30-you-inherited-the-shadow/thumb.webp?v=37dbfc10" alt="You approved the number. You inherited the shadow." width="100%"></td><td width="33%"><img src="works/2026-07-28-accuracy-mask/thumb.webp?v=da939dd0" alt="The accuracy mask" width="100%"></td></tr><tr><td align="center"><sub><b>Where Guardrails Go in an AI Application</b> · html-render</sub></td><td align="center"><sub><b>You approved the number. You inherited the shadow.</b> · html-render</sub></td><td align="center"><sub><b>The accuracy mask</b> · chatgpt</sub></td></tr></table>
+<table><tr><td width="33%"><img src="works/2026-08-21-the-blind-spot/thumb.webp?v=b60dcfad" alt="The Blind Spot" width="100%"></td><td width="33%"><img src="works/2026-08-20-cheatsheet-ai-guardrails/thumb.webp?v=0ef26e87" alt="Where Guardrails Go in an AI Application" width="100%"></td><td width="33%"><img src="works/2026-07-30-you-inherited-the-shadow/thumb.webp?v=37dbfc10" alt="You approved the number. You inherited the shadow." width="100%"></td></tr><tr><td align="center"><sub><b>The Blind Spot</b> · codex-imagegen + html-render</sub></td><td align="center"><sub><b>Where Guardrails Go in an AI Application</b> · html-render</sub></td><td align="center"><sub><b>You approved the number. You inherited the shadow.</b> · html-render</sub></td></tr></table>
 
-<table><tr><td width="33%"><img src="works/2026-07-19-average-customer-myth/thumb.webp?v=d0f1a13b" alt="The average customer is a myth" width="100%"></td><td width="33%"><img src="works/2026-07-18-strawberry-tokens/thumb.webp?v=b7ea77ea" alt="The model can't spell strawberry" width="100%"></td><td width="33%"><img src="works/2026-07-18-ai-landscape-transit-map/thumb.webp?v=50b42254" alt="The AI landscape" width="100%"></td></tr><tr><td align="center"><sub><b>The average customer is a myth</b> · chatgpt</sub></td><td align="center"><sub><b>The model can't spell strawberry</b> · chatgpt</sub></td><td align="center"><sub><b>The AI landscape</b> · html-render</sub></td></tr></table>
+<table><tr><td width="33%"><img src="works/2026-07-28-accuracy-mask/thumb.webp?v=da939dd0" alt="The accuracy mask" width="100%"></td><td width="33%"><img src="works/2026-07-19-average-customer-myth/thumb.webp?v=d0f1a13b" alt="The average customer is a myth" width="100%"></td><td width="33%"><img src="works/2026-07-18-strawberry-tokens/thumb.webp?v=b7ea77ea" alt="The model can't spell strawberry" width="100%"></td></tr><tr><td align="center"><sub><b>The accuracy mask</b> · chatgpt</sub></td><td align="center"><sub><b>The average customer is a myth</b> · chatgpt</sub></td><td align="center"><sub><b>The model can't spell strawberry</b> · chatgpt</sub></td></tr></table>
 
 ## Formats
 
-- **Infographic** (1) - A complex data/AI concept, explained in one image.
+- **Infographic** (2) - A complex data/AI concept, explained in one image.
 - **Chart** (0) - One chart, one idea - single-chart experiments, d3.js spirit. Never a dashboard.
 - **Data portrait** (1) - One number or stat as the hero - the two-second rule made visible.
 - **Diagram** (0) - A system, pipeline, or architecture drawn as designed art, not a boxes-and-arrows dump.
