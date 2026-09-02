@@ -43,6 +43,10 @@ quality" - the actual axis the five architectures disagree on.
   the LinkedIn 1.35:1 centre-crop trims the SIDES - v1's left-edge labels got clipped
   ("store" became "tore"). v2 wrote the safe-area instruction for a side-crop: every label
   at least 12% of the width inboard. Verify the crop, not the master.
+- **Hybrid enrichment**: after Phoebe's "too short of words" note, the shipped full.png became
+  raster hero + hand-set HTML explainer panel (`poster.html`, headless Chrome) - six cards with
+  what-it-is / best-at / where-it-goes-wrong per architecture. Words that must be exact are never
+  left to diffusion; the maker-routing hard rule applied mid-work.
 - **Taste rule applied**: "when a concept is named after an object, build the object"
   (banked on IK-15) - here scaled from one metaphor to a whole vocabulary sharing one
   scene, so the differences between terms become visible as geography.

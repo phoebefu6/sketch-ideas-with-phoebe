@@ -105,14 +105,14 @@
       "style": "hand-drawn storybook town map",
       "inspired_by": "Taste rule from IK-15 (build the object the concept is named after) applied to a whole vocabulary at once; style traits from Phoebe's hand-drawn flowchart reference",
       "concept": "The five data architectures drawn as the literal town their names describe, so the geography teaches the differences: what each stores, how structured it is, and who owns it - visible in one look, no definitions required.",
-      "prompt": "GENERATED via baoyu-infographic (isometric-map layout x craft-handmade/hand-drawn-edu blend), backend codex-imagegen. Full reproducible prompts in prompts/ (v2 shipped; v1 kept - labels clipped by the 1.35:1 side-crop).\nONE TOWN, FIVE ARCHITECTURES, names taken literally: DATA LAKE = pond with raw mismatched objects afloat (file, photo, scroll, music note); DATA WAREHOUSE = big tidy building, identical boxes on shelves; DATA MART = small corner shop beside it, one team's curated boxes; DATA LAKEHOUSE = house on stilts standing in the lake, tidy shelves inside; DATA MESH = four garden plots, each with its own well and owner, joined by pipes.\nPALETTE: macaron pastels on cream, wobble outlines, doodle stars - style traits lifted from Phoebe's pasted reference flowchart.\nMESSAGE: spatial relationships carry the semantics - adjacency, size and ownership are the actual differences between the five architectures.",
+      "prompt": "GENERATED via baoyu-infographic (isometric-map layout x craft-handmade/hand-drawn-edu blend), backend codex-imagegen. Full reproducible prompts in prompts/ (v2 shipped; v1 kept - labels clipped by the 1.35:1 side-crop).\nONE TOWN, FIVE ARCHITECTURES, names taken literally: DATA LAKE = pond with raw mismatched objects afloat (file, photo, scroll, music note); DATA WAREHOUSE = big tidy building, identical boxes on shelves; DATA MART = small corner shop beside it, one team's curated boxes; DATA LAKEHOUSE = house on stilts standing in the lake, tidy shelves inside; DATA MESH = four garden plots, each with its own well and owner, joined by pipes.\nPALETTE: macaron pastels on cream, wobble outlines, doodle stars - style traits lifted from Phoebe's pasted reference flowchart.\nMESSAGE: spatial relationships carry the semantics - adjacency, size and ownership are the actual differences between the five architectures.\nENRICHED 2026-09-02 (Phoebe: 'too short of words'): full.png is now a hybrid - raster hero on top + hand-set HTML explainer panel below (poster.html, headless Chrome render): six cards (5 architectures x what-it-is / best-at / where-it-goes-wrong, + the ownership question). Raster-only version kept as infographic-v2.png; LinkedIn crop stays hero-only.",
       "takeaway": "Lake stores raw, warehouse stores structured, mart serves one team, lakehouse puts warehouse comfort on raw storage, mesh splits ownership across domains. The names were the map all along - the real architecture question is who owns the water quality.",
       "featured": false,
-      "full": "works/2026-09-02-data-infra-town/full.png?v=6ff2e8de",
-      "thumb": "works/2026-09-02-data-infra-town/thumb.webp?v=c375b0d0",
+      "full": "works/2026-09-02-data-infra-town/full.png?v=694b9739",
+      "thumb": "works/2026-09-02-data-infra-town/thumb.webp?v=90928ecf",
       "page": "works/2026-09-02-data-infra-town/",
       "w": 1536,
-      "h": 1024
+      "h": 2259
     },
     {
       "id": "2026-09-02-bus-factor-comic",

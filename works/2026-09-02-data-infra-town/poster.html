@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Where does your data live?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF4E2;
+    --ink: #23413d;
+    --teal: #2E6E63;
+    --lake: #DCEEF7;
+    --warehouse: #DDEBE0;
+    --mart: #F7DEE3;
+    --lakehouse: #F3E6D8;
+    --mesh: #E7E0F2;
+    --question: #FDF6D8;
+    --line: #23413d;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1536px; background: var(--cream); font-family: 'Nunito', sans-serif; color: var(--ink); }
+  .hero img { display: block; width: 1536px; height: auto; }
+
+  .words { padding: 34px 56px 20px; }
+  .words-title { font-family: 'Caveat', cursive; font-weight: 700; font-size: 52px; text-align: center; color: var(--ink); }
+  .words-sub { text-align: center; font-size: 21px; font-weight: 600; color: var(--teal); margin: 2px 0 26px; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card { border: 2.5px solid var(--line); border-radius: 18px; padding: 22px 24px 18px; position: relative; box-shadow: 4px 4px 0 rgba(35,65,61,.14); }
+  .card h2 { font-family: 'Caveat', cursive; font-weight: 700; font-size: 34px; letter-spacing: .5px; margin-bottom: 2px; }
+  .card .tag { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--teal); margin-bottom: 10px; }
+  .card p { font-size: 18.5px; line-height: 1.5; margin-bottom: 9px; }
+  .card p b { font-weight: 800; }
+  .card p:last-child { margin-bottom: 0; }
+  .lake { background: var(--lake); }
+  .warehouse { background: var(--warehouse); }
+  .mart { background: var(--mart); }
+  .lakehouse { background: var(--lakehouse); }
+  .mesh { background: var(--mesh); }
+  .question { background: var(--question); }
+  .question h2 { font-size: 36px; }
+  .question p { font-size: 19px; }
+
+  .footer { display: flex; justify-content: space-between; align-items: baseline; padding: 22px 56px 30px; font-size: 15px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--teal); }
+</style>
+</head>
+<body>
+  <div class="hero"><img src="infographic-v2.png" alt=""></div>
+
+  <div class="words">
+    <div class="words-title">The town, explained</div>
+    <div class="words-sub">what each one stores - what it is best at - where it goes wrong</div>
+
+    <div class="grid">
+      <div class="card lake">
+        <h2>Data Lake</h2>
+        <div class="tag">the pond - schema on read</div>
+        <p><b>What it is:</b> one big store where data lands raw, in its native format - files, logs, images, events. Structure is applied later, at query time.</p>
+        <p><b>Best at:</b> data science and ML, and keeping everything cheaply before you know what questions you will ask.</p>
+        <p><b>Where it goes wrong:</b> with no owner and no catalog, the lake silts up into a data swamp - everything is in there, nothing can be found.</p>
+      </div>
+
+      <div class="card warehouse">
+        <h2>Data Warehouse</h2>
+        <div class="tag">the big building - schema on write</div>
+        <p><b>What it is:</b> the central store of cleaned, modeled, structured data. Every box earned its shelf before it got in.</p>
+        <p><b>Best at:</b> BI, reporting, and trusted KPIs - one agreed version of the numbers the board sees.</p>
+        <p><b>Where it goes wrong:</b> slow to change. Every new source needs modeling work up front, so the backlog becomes the bottleneck.</p>
+      </div>
+
+      <div class="card mart">
+        <h2>Data Mart</h2>
+        <div class="tag">the corner shop - one team's slice</div>
+        <p><b>What it is:</b> a small, subject-specific cut of the warehouse - a finance mart, a marketing mart - curated for one team's questions.</p>
+        <p><b>Best at:</b> fast, focused self-service for one department without wading through the whole estate.</p>
+        <p><b>Where it goes wrong:</b> marts multiply and drift. Five marts, five definitions of "revenue" - and a quarter of arguing about whose is right.</p>
+      </div>
+
+      <div class="card lakehouse">
+        <h2>Data Lakehouse</h2>
+        <div class="tag">the house on stilts - both at once</div>
+        <p><b>What it is:</b> warehouse-grade tables and transactions built directly on cheap lake storage - one copy of the data serving both worlds.</p>
+        <p><b>Best at:</b> teams that want BI and ML on the same platform without copying data between a lake and a warehouse.</p>
+        <p><b>Where it goes wrong:</b> "one platform" does not remove the work - it still needs the modeling discipline of a warehouse, or it is just a lake with a nicer roof.</p>
+      </div>
+
+      <div class="card mesh">
+        <h2>Data Mesh</h2>
+        <div class="tag">the gardens - an operating model, not a technology</div>
+        <p><b>What it is:</b> each domain owns and serves its data as a product - its own well, its own gardener - connected by shared contracts and standards.</p>
+        <p><b>Best at:</b> large orgs where the central data team has become the bottleneck for every request.</p>
+        <p><b>Where it goes wrong:</b> without real ownership and enforced standards, "everyone owns their data" becomes nobody owning any of it.</p>
+      </div>
+
+      <div class="card question">
+        <h2>The question that actually matters</h2>
+        <p>Not "which one is best" - they solve different problems, and most companies run three at once.</p>
+        <p>The real axis is <b>who owns the water quality</b>. In the lake, warehouse, mart and lakehouse, a central team does. In the mesh, every gardener does.</p>
+        <p>Pick the architecture whose ownership model your org can actually staff - the diagram is the easy part.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Worth a Thousand Words</span>
+    <span>sketch-ideas-with-phoebe - 2026-09-02</span>
+  </div>
+</body>
+</html>
