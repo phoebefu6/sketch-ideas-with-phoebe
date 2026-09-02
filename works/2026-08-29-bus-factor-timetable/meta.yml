@@ -1,0 +1,11 @@
+title: One driver per route
+date: 2026-08-29
+tool: html-render
+format: poster
+topic: [key person risk, data teams, mlops, leadership, knowledge management]
+style: municipal deadpan print
+prompt: "DESIGN-BUILT (not prompted) - hand-authored HTML/CSS, rendered with headless Chrome at 4:5.\nSTYLE: municipal deadpan print - the straight-faced-nonsense register translated from photography to print. A completely ordinary bus timetable that happens to be about your data estate.\nMARKS: route = a critical data/AI system; QUALIFIED DRIVERS column = the bus factor (the column of 1s is the gut-punch); LAST departure 17:31 = the knowledge leaving the building every evening; the red SERVICE WITHDRAWN stamp = the resignation that already happened, used exactly once.\nPALETTE: paper cream, near-black ink, signage yellow for the authority band (register realism, carries no data meaning), one meaning accent - withdrawal red.\nTYPE: Archivo Black masthead, Archivo Narrow body, IBM Plex Mono for times and small print, tabular numerals throughout.\nMESSAGE: a route only one person can drive is not a service - it is a favour."
+takeaway: "Every critical system has a bus factor - the number of people who can leave before it stops. On most data teams that number is 1, and the knowledge departs daily at 17:31. Count yours before a resignation counts it for you."
+concept: "Key-person risk drawn as the thing it is named after: a municipal bus timetable where every critical route has exactly one qualified driver, and one route is already stamped SERVICE WITHDRAWN because the sole driver resigned."
+inspired_by: "SV-015 Straight-Faced Nonsense (deadpan register) x municipal timetable print vernacular"
+featured: false
