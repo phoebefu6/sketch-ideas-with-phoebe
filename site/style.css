@@ -422,3 +422,47 @@ main { max-width: 1320px; margin: 0 auto; padding: 24px 24px 96px; }
   .shelf-thumb img { transition: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- crowd-favourites voting ---------- */
+.vote-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #C93B54;
+  font: 500 13px/1 "Inter", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  transition: transform 0.12s ease;
+}
+.vote-btn:hover { transform: scale(1.08); }
+.vote-btn.pop { animation: vote-pop 0.3s ease; }
+.vote-num { color: #111; font-variant-numeric: tabular-nums; }
+.vote-num:empty { display: none; }
+@keyframes vote-pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+.shelf-thumb { position: relative; }
+.shelf-votes {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #C93B54;
+  font: 500 12px/1.2 "Inter", sans-serif;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+@media (prefers-reduced-motion: reduce) {
+  .vote-btn, .vote-btn.pop { transition: none; animation: none; }
+}

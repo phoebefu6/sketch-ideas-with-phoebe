@@ -50,26 +50,49 @@
   countUp(document.getElementById("stat-works"), works.length);
   countUp(document.getElementById("stat-styles"), styleCount);
 
-  /* ---------- start-here shelf (featured works, curated by hand in meta.yml) ---------- */
+  /* ---------- crowd-favourites shelf (vote-ranked; newest 5 until votes exist) ---------- */
 
-  (function buildShelf() {
+  const V = typeof VOTES !== "undefined" ? VOTES : { load: () => Promise.resolve({}), vote: () => {}, count: () => 0, any: () => false, enabled: false };
+
+  function buildShelf() {
     const section = document.getElementById("shelf-section");
     const shelf = document.getElementById("shelf");
     if (!section || !shelf) return;
-    const featured = works.filter(w => w.featured && w.page);
-    if (featured.length < 2) return;
-    featured.slice(0, 5).forEach(work => {
+    const pageWorks = works.filter(w => w.page);
+    if (pageWorks.length < 2) return;
+    let picks;
+    if (V.any()) {
+      picks = pageWorks.slice().sort((a, b) => (V.count(b.id) - V.count(a.id)) || (a.date < b.date ? 1 : -1)).slice(0, 5);
+      const sub = document.querySelector(".shelf-sub");
+      if (sub) sub.textContent = "Ranked by your votes - tap the heart on any work below to change the order.";
+    } else {
+      picks = pageWorks.slice(0, 5); /* works.js is newest-first */
+    }
+    shelf.innerHTML = "";
+    picks.forEach(work => {
       const card = document.createElement("a");
       card.className = "shelf-card";
       card.href = work.page;
+      const n = V.count(work.id);
       card.innerHTML =
-        '<span class="shelf-thumb"><img loading="eager" src="' + work.thumb + '" alt="' + escapeHtml(work.title) + '"></span>' +
+        '<span class="shelf-thumb"><img loading="eager" src="' + work.thumb + '" alt="' + escapeHtml(work.title) + '">' +
+        (n > 0 ? '<span class="shelf-votes">&#9829; ' + n + "</span>" : "") + "</span>" +
         '<span class="shelf-name">' + escapeHtml(work.title) + '</span>' +
         '<span class="shelf-take">' + escapeHtml(work.takeaway || work.concept || "") + '</span>';
       shelf.appendChild(card);
     });
     section.hidden = false;
-  })();
+  }
+
+  buildShelf();
+  V.load().then(() => { buildShelf(); refreshVoteCounts(); });
+
+  function refreshVoteCounts() {
+    document.querySelectorAll(".vote-btn").forEach(btn => {
+      const n = V.count(btn.dataset.id);
+      btn.querySelector(".vote-num").textContent = n > 0 ? n : "";
+    });
+  }
 
   /* ---------- filters ---------- */
 
@@ -158,13 +181,31 @@
     tile.setAttribute("aria-label", work.title);
     tile.style.width = Math.round(height * ratio) + "px";
     tile.style.height = Math.round(height) + "px";
+    const voteN = V.count(work.id);
     tile.innerHTML =
       '<img loading="' + (index < 8 ? "eager" : "lazy") + '" src="' + work.thumb + '" alt="' + escapeHtml(work.title) + '">' +
+      (V.enabled
+        ? '<button class="vote-btn" data-id="' + work.id + '" aria-label="Vote for ' + escapeHtml(work.title) + '">&#9829;<span class="vote-num">' + (voteN > 0 ? voteN : "") + "</span></button>"
+        : "") +
       '<figcaption class="wash"><span class="wash-take">' +
       escapeHtml(work.takeaway || work.title) +
       '</span><span class="wash-meta">' + escapeHtml(formatLabel(work.format)) + " · " +
       escapeHtml(toolLabels[work.tool] || work.tool) + "</span></figcaption>";
-    tile.addEventListener("click", () => openLightbox(index));
+    tile.addEventListener("click", event => {
+      const btn = event.target.closest(".vote-btn");
+      if (btn) {
+        event.stopPropagation();
+        V.vote(btn.dataset.id);
+        btn.querySelector(".vote-num").textContent = V.count(btn.dataset.id);
+        btn.classList.remove("pop");
+        void btn.offsetWidth; /* restart the pop animation on repeat votes */
+        btn.classList.add("pop");
+        if (!reducedMotion) spark(event.clientX, event.clientY);
+        buildShelf();
+        return;
+      }
+      openLightbox(index);
+    });
     tile.addEventListener("keydown", e => {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(index); }
     });

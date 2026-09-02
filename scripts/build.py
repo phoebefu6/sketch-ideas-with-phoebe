@@ -245,7 +245,7 @@ def stamp_assets() -> None:
 
     index_path = ROOT / "index.html"
     html = index_path.read_text()
-    for asset in ("site/style.css", "site/app.js", "data/works.js"):
+    for asset in ("site/style.css", "site/app.js", "site/votes.js", "data/works.js"):
         digest = hashlib.md5((ROOT / asset).read_bytes()).hexdigest()[:8]
         html = re.sub(rf'{re.escape(asset)}(\?v=\w+)?', f"{asset}?v={digest}", html)
     index_path.write_text(html)
