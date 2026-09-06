@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The journey of a question</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== hybrid: xianxia painted hero + hand-set editorial serif =====
+   Hero is the generated raster; every character is set here. */
+:root{
+  --ink:#2A251D;
+  --soft:#5C544A;
+  --cinnabar:#A93A26;
+  --gold:#8A6B2F;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@page{size:1086px 1448px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1086px}
+body{
+  width:1086px;height:1448px;overflow:hidden;position:relative;
+  background:#EDE7DA url("hero.png") center/cover no-repeat;
+  color:var(--ink);font:14px/1.4 var(--serif);
+  -webkit-font-smoothing:antialiased;
+}
+.a{position:absolute}
+
+/* masthead - top-left cloud */
+.mast{left:4.2%;top:2.4%;width:46%}
+.mast .kick{font:500 11px/1 var(--mono);letter-spacing:3px;color:var(--cinnabar);text-transform:uppercase}
+h1{font:700 46px/0.98 var(--serif);letter-spacing:.2px;margin-top:9px;color:var(--ink)}
+.mast .deck{font:italic 500 16.5px/1.35 var(--serif);color:var(--soft);margin-top:9px;max-width:340px}
+
+/* station annotations */
+.st{width:24%}
+.st .num{font:500 10.5px/1 var(--mono);letter-spacing:2.6px;color:var(--cinnabar);text-transform:uppercase}
+.st .nm{font:700 21px/1.05 var(--serif);margin-top:5px;letter-spacing:.3px}
+.st .tx{font:500 14.5px/1.42 var(--serif);color:var(--soft);margin-top:6px}
+.st .tx b{color:var(--ink);font-weight:600}
+.st.r{text-align:right}
+.st .lead{position:absolute;top:12px;width:44px;border-top:1.2px solid var(--gold);opacity:.85}
+.st.r .lead{left:-52px}
+.st.l .lead{right:-52px}
+
+/* placements - registration to the painting */
+.st .nm, .st .tx, .st .num{text-shadow:0 0 10px rgba(237,231,218,.95), 0 0 22px rgba(237,231,218,.8)}
+.s4{right:3.5%;top:6.2%}
+.s3{right:3.5%;top:36%}
+.s2{left:4.5%;top:60.5%}
+.s1{right:3.5%;top:79%}
+
+/* terminal line - bottom-left cloud, bookend to the masthead */
+.term{left:4.2%;bottom:8.8%;width:30%;text-align:left}
+.term p{font:600 23px/1.22 var(--serif);letter-spacing:.4px;color:var(--ink);
+  text-shadow:0 0 10px rgba(237,231,218,.95), 0 0 24px rgba(237,231,218,.85)}
+.term p b{color:var(--cinnabar);font-weight:700}
+.term .cr{font:500 8.5px/1.6 var(--mono);letter-spacing:1.8px;color:var(--soft);text-transform:uppercase;margin-top:8px;
+  text-shadow:0 0 8px rgba(237,231,218,.95)}
+</style>
+</head>
+<body>
+
+<div class="a mast">
+  <p class="kick">One prompt · four stations · repeated for every word</p>
+  <h1>The journey<br>of a question</h1>
+  <p class="deck">What actually happens between pressing Enter and the first word of the answer.</p>
+</div>
+
+<div class="a st r s4">
+  <span class="lead"></span>
+  <p class="num">Station IV · Sampling</p>
+  <p class="nm">The Summit</p>
+  <p class="tx">One word is chosen at a time - <b>dice weighted by everything below</b>. Then the whole climb repeats for the next word.</p>
+</div>
+
+<div class="a st r s3">
+  <span class="lead"></span>
+  <p class="num">Station III · Attention</p>
+  <p class="nm">The Hall</p>
+  <p class="tx">Inside, <b>every token weighs every other</b>. The hall decides what matters to what - this is where context becomes meaning.</p>
+</div>
+
+<div class="a st l s2">
+  <span class="lead"></span>
+  <p class="num">Station II · Embeddings</p>
+  <p class="nm">The Cloud-Sea</p>
+  <p class="tx">Each token crosses as coordinates in a vast space. <b>Meaning is a neighborhood</b>, not a definition.</p>
+</div>
+
+<div class="a st r s1">
+  <span class="lead"></span>
+  <p class="num">Station I · The tokenizer</p>
+  <p class="nm">The Gate</p>
+  <p class="tx">Your words are never admitted. They are <b>exchanged for tokens at the gate</b> - the baskets stay outside.</p>
+</div>
+
+<div class="a term">
+  <p>The answer was never<br>looked up.<br><b>It was grown.</b></p>
+  <p class="cr">Worth a thousand words<br>sketch-ideas-with-phoebe<br>2026-08-29</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The everything drawer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== hybrid: flat-lay raster + museum specimen tags hand-set in HTML ===== */
+:root{
+  --paper:#EFE6CE;
+  --ink:#2B2620;
+  --soft:#5A5245;
+  --red:#A63A2B;
+  --brass:#C9A96A;
+  --narrow:"Archivo Narrow",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@page{size:1086px 1448px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1086px}
+body{
+  width:1086px;height:1448px;overflow:hidden;position:relative;
+  background:#241C12 url("hero.png") center/cover no-repeat;
+  color:var(--ink);font:13px/1.35 var(--narrow);
+  -webkit-font-smoothing:antialiased;
+}
+.a{position:absolute}
+
+/* title plate on the drawer rail */
+.plate{left:50%;top:1.4%;transform:translateX(-50%);
+  background:linear-gradient(180deg,#E9DDC2,#D9C9A6);
+  border:1.5px solid #8A7347;box-shadow:0 2px 6px rgba(0,0,0,.45), inset 0 0 0 3px rgba(138,115,71,.25);
+  padding:10px 26px 9px;text-align:center;border-radius:2px}
+.plate h1{font:700 24px/1 var(--narrow);letter-spacing:2.5px;text-transform:uppercase;color:var(--ink)}
+.plate p{font:500 10.5px/1 var(--mono);letter-spacing:1.6px;color:var(--soft);margin-top:6px;text-transform:uppercase}
+
+/* specimen tags */
+.tag{background:var(--paper);border:1px solid #9C8B68;border-radius:2px;
+  box-shadow:0 2px 5px rgba(0,0,0,.5);padding:8px 12px 7px;max-width:215px}
+.tag::before{content:"";position:absolute;left:8px;top:-4px;width:7px;height:7px;border-radius:50%;
+  background:#241C12;border:2px solid #9C8B68}
+.tag .h{font:700 12.5px/1.15 var(--narrow);text-transform:uppercase;letter-spacing:.8px}
+.tag .b{font:500 11.5px/1.35 var(--narrow);color:var(--soft);margin-top:3px}
+.tag .b b{color:var(--ink);font-weight:600}
+
+/* the three voids - stamped inside the taped slots */
+.void{text-align:center;transform:rotate(-1.6deg)}
+.void .vh{font:700 15px/1.15 var(--narrow);letter-spacing:1.4px;text-transform:uppercase;color:#E8DFC8;
+  text-shadow:0 1px 2px rgba(0,0,0,.55)}
+.void .vs{display:inline-block;margin-top:6px;border:2px solid var(--red);color:#D96A55;
+  font:600 10.5px/1 var(--mono);letter-spacing:1.8px;text-transform:uppercase;padding:5px 10px 4px;
+  background:rgba(20,14,8,.25)}
+
+/* tag placements */
+.t-weights{left:2.6%;top:37%}
+.t-cards{left:33%;top:8.6%}
+.t-wire{left:2.6%;top:83%}
+.t-tape{right:2.8%;top:59.5%}
+
+/* void placements (inside the taped rectangles) */
+.v1{left:37.5%;top:30.2%;width:16%}
+.v2{left:31.5%;top:53.5%;width:22%}
+.v3{left:59.5%;top:81.5%;width:17%}
+
+/* terminal strip */
+.term{left:50%;bottom:1.6%;transform:translateX(-50%);white-space:nowrap;
+  background:rgba(20,14,8,.72);border:1px solid rgba(201,169,106,.5);
+  padding:10px 22px 9px;text-align:center;border-radius:2px}
+.term p{font:600 17px/1.2 var(--narrow);letter-spacing:.5px;color:#EDE4CC}
+.term p b{color:#E9B44C}
+.term .cr{font:500 8px/1.5 var(--mono);letter-spacing:1.6px;color:#B9AB8C;text-transform:uppercase;margin-top:5px}
+</style>
+</head>
+<body>
+
+<div class="a plate">
+  <h1>The everything drawer</h1>
+  <p>Contents of one large language model · laid out in full</p>
+</div>
+
+<div class="a tag t-weights">
+  <p class="h">Weights</p>
+  <p class="b">Billions of small numbers, tuned during training. <b>This is all there is</b> - the whole drawer is just these.</p>
+</div>
+
+<div class="a tag t-cards">
+  <p class="h">Training traces</p>
+  <p class="b"><b>Compressed impressions</b> of the text it read - never the text itself. Nothing here can be looked up.</p>
+</div>
+
+<div class="a tag t-wire">
+  <p class="h">Connections</p>
+  <p class="b">How the numbers talk to each other. Meaning lives in the wiring, not in any single part.</p>
+</div>
+
+<div class="a tag t-tape">
+  <p class="h">Output tape</p>
+  <p class="b">Answers leave <b>one token at a time</b>, each pulled through everything else in the drawer.</p>
+</div>
+
+<div class="a void v1">
+  <p class="vh">Facts database</p>
+  <span class="vs">Never fitted</span>
+</div>
+
+<div class="a void v2">
+  <p class="vh">Memory of your last visit</p>
+  <span class="vs">Never fitted</span>
+</div>
+
+<div class="a void v3">
+  <p class="vh">Intent</p>
+  <span class="vs">Never fitted</span>
+</div>
+
+<div class="a term">
+  <p>There is no mind in the drawer. <b>It works anyway.</b></p>
+  <p class="cr">Worth a thousand words · sketch-ideas-with-phoebe · 2026-08-29</p>
+</div>
+
+</body>
+</html>

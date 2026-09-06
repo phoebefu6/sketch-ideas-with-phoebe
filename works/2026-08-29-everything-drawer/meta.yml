@@ -1,0 +1,11 @@
+title: The everything drawer
+date: 2026-08-29
+tool: codex-imagegen + html-render
+format: infographic
+topic: [llm, foundations, model weights, memory, hallucination, ai literacy]
+style: specimen flat-lay
+prompt: "HYBRID - photographic flat-lay hero (codex image_gen, all lettering refused) + museum specimen tags hand-set in HTML, rendered headless.\nHERO: overhead deep-focus flat lay of one immense wooden specimen drawer filled corner to corner - thousands of brass weights and watch parts, copper wire coils, softened punch cards, tangled paper tape - half knolled, half collapsed, dusty warm cast, one soft light. Exactly THREE taped-off empty rectangles with bare green felt showing: the reserved landing zones for the piece's argument. Full prompt in prompts/01-hero-drawer.md.\nTYPE: Archivo Narrow specimen tags + mono small print; a brass title plate on the drawer rail; stamped red NEVER FITTED labels inside the three voids.\nMARKS: the objects = billions of weights (this is all there is); punch cards = compressed impressions of training text, never the text; the three taped voids = FACTS DATABASE, MEMORY OF YOUR LAST VISIT, INTENT - never fitted. Composed absence carries the argument.\nMESSAGE: there is no mind in the drawer - it works anyway."
+takeaway: "Open 'the model' and there is no facts database, no memory of your last visit, no intent - only billions of tuned numbers and their wiring. Everything people assume is in there is a taped-off empty slot. And it works anyway."
+concept: "An LLM's contents laid out as a museum flat-lay - what is actually in the drawer, and three taped voids for what everyone assumes is in there but never was."
+inspired_by: "SV-032 Everything Drawer (Grace Baldwin's reverent junk-drawer flat-lays)"
+featured: false

@@ -84,6 +84,94 @@
       "style-study": {
         "label": "Style study",
         "blurb": "The sketchbook - mimicking a beautiful style to learn it."
+      },
+      "website": {
+        "label": "Website",
+        "blurb": "A full web page or site design.",
+        "scope": "studio"
+      },
+      "app-ui": {
+        "label": "App UI",
+        "blurb": "Application or product interface screens.",
+        "scope": "studio"
+      },
+      "deck": {
+        "label": "Deck",
+        "blurb": "Slide or presentation design.",
+        "scope": "studio"
+      },
+      "identity": {
+        "label": "Identity",
+        "blurb": "Logo and brand identity systems.",
+        "scope": "studio"
+      },
+      "packaging": {
+        "label": "Packaging",
+        "blurb": "Physical product and package design.",
+        "scope": "studio"
+      },
+      "motion": {
+        "label": "Motion",
+        "blurb": "Animation and motion design.",
+        "scope": "studio"
+      }
+    },
+    "categories": {
+      "data-viz": {
+        "label": "Data viz",
+        "blurb": "Charts, graphs, data maps - marks driven by values."
+      },
+      "infographic": {
+        "label": "Infographic",
+        "blurb": "Composite explanatory graphics - data + illustration + hand-set text."
+      },
+      "illustration": {
+        "label": "Illustration",
+        "blurb": "Single-image drawn or painted work - editorial, decorative, concept."
+      },
+      "storybook": {
+        "label": "Storybook",
+        "blurb": "Narrative picture-book illustration - characters, scenes, warmth."
+      },
+      "comic": {
+        "label": "Comic",
+        "blurb": "Sequential panel storytelling - strips, zines, graphic novels."
+      },
+      "typography": {
+        "label": "Typography",
+        "blurb": "Type as the image - lettering, typographic composition."
+      },
+      "graphic-design": {
+        "label": "Graphic design",
+        "blurb": "Poster, print, editorial layout craft - grids, composition systems."
+      },
+      "branding": {
+        "label": "Branding",
+        "blurb": "Logos, marks, identity systems."
+      },
+      "ui-web": {
+        "label": "UI / Web",
+        "blurb": "Website, app, and product interface design."
+      },
+      "photography": {
+        "label": "Photography",
+        "blurb": "Photographic and photo-art registers - lens, light, grade."
+      },
+      "motion": {
+        "label": "Motion",
+        "blurb": "Animation, motion graphics, video grade."
+      },
+      "three-d": {
+        "label": "3D / Spatial",
+        "blurb": "3D render, sculpture, installation, architecture."
+      },
+      "craft-material": {
+        "label": "Craft / Material",
+        "blurb": "Physical media - paper cut, textile, clay, collage, assemblage."
+      },
+      "fine-art": {
+        "label": "Fine art",
+        "blurb": "Painting and drawing traditions as the register - ink, oil, charcoal, printmaking."
       }
     }
   },
@@ -138,6 +226,58 @@
       "page": "works/2026-09-02-bus-factor-comic/",
       "w": 1448,
       "h": 1086
+    },
+    {
+      "id": "2026-08-29-journey-of-a-question",
+      "title": "The journey of a question",
+      "date": "2026-08-29",
+      "tool": "codex-imagegen + html-render",
+      "format": "infographic",
+      "topic": [
+        "llm",
+        "tokenization",
+        "embeddings",
+        "attention",
+        "inference",
+        "foundations"
+      ],
+      "style": "cloud-sea xianxia scroll",
+      "inspired_by": "SV-011 Cloud Sea Xianxia x the illustrated-journey shape of The Minds of Modern AI",
+      "concept": "The inference pipeline drawn as a four-station pilgrimage up a xianxia mountain - tokenizer gate, embedding cloud-sea, attention hall, sampling summit.",
+      "prompt": "HYBRID - painted raster hero (codex image_gen, all lettering refused) + every character hand-set in HTML, rendered headless.\nHERO: vertical xianxia panorama - a pilgrimage mountain through a sea of cloud, four stations on one winding path: a cinnabar paifang gate with travelers' baskets abandoned before it, a lantern-strung rope bridge over a cloud-sea strait, a vast lantern-lit great hall in the cliff, a lone summit pavilion at dawn. Cloud banks left and right reserved for annotations. Palette: cinnabar, jade, ink, snow, weathered gold - painted with visible brushwork, no render gloss. Full prompt in prompts/01-hero-journey.md.\nTYPE: Cormorant Garamond editorial serif + mono station labels, cinnabar accents, four station annotations alternating down the cloud banks.\nMARKS: gate = tokenizer (words exchanged, baskets stay outside); bridge over cloud-sea = embeddings (meaning is a neighborhood); great hall = attention (every token weighs every other); summit = sampling (one weighted die-roll per word, then the climb repeats).\nMESSAGE: the answer was never looked up - it was grown.",
+      "takeaway": "Between Enter and the answer there is no lookup - your words are exchanged for tokens at the gate, cross meaning-space as coordinates, get weighed against each other in the attention hall, and one word is grown at a time at the summit. The whole climb repeats for every word.",
+      "featured": false,
+      "full": "works/2026-08-29-journey-of-a-question/full.png?v=8239a827",
+      "thumb": "works/2026-08-29-journey-of-a-question/thumb.webp?v=1fdf1b0b",
+      "page": "works/2026-08-29-journey-of-a-question/",
+      "w": 2172,
+      "h": 2896
+    },
+    {
+      "id": "2026-08-29-everything-drawer",
+      "title": "The everything drawer",
+      "date": "2026-08-29",
+      "tool": "codex-imagegen + html-render",
+      "format": "infographic",
+      "topic": [
+        "llm",
+        "foundations",
+        "model weights",
+        "memory",
+        "hallucination",
+        "ai literacy"
+      ],
+      "style": "specimen flat-lay",
+      "inspired_by": "SV-032 Everything Drawer (Grace Baldwin's reverent junk-drawer flat-lays)",
+      "concept": "An LLM's contents laid out as a museum flat-lay - what is actually in the drawer, and three taped voids for what everyone assumes is in there but never was.",
+      "prompt": "HYBRID - photographic flat-lay hero (codex image_gen, all lettering refused) + museum specimen tags hand-set in HTML, rendered headless.\nHERO: overhead deep-focus flat lay of one immense wooden specimen drawer filled corner to corner - thousands of brass weights and watch parts, copper wire coils, softened punch cards, tangled paper tape - half knolled, half collapsed, dusty warm cast, one soft light. Exactly THREE taped-off empty rectangles with bare green felt showing: the reserved landing zones for the piece's argument. Full prompt in prompts/01-hero-drawer.md.\nTYPE: Archivo Narrow specimen tags + mono small print; a brass title plate on the drawer rail; stamped red NEVER FITTED labels inside the three voids.\nMARKS: the objects = billions of weights (this is all there is); punch cards = compressed impressions of training text, never the text; the three taped voids = FACTS DATABASE, MEMORY OF YOUR LAST VISIT, INTENT - never fitted. Composed absence carries the argument.\nMESSAGE: there is no mind in the drawer - it works anyway.",
+      "takeaway": "Open 'the model' and there is no facts database, no memory of your last visit, no intent - only billions of tuned numbers and their wiring. Everything people assume is in there is a taped-off empty slot. And it works anyway.",
+      "featured": false,
+      "full": "works/2026-08-29-everything-drawer/full.png?v=91386048",
+      "thumb": "works/2026-08-29-everything-drawer/thumb.webp?v=d1dadb2c",
+      "page": "works/2026-08-29-everything-drawer/",
+      "w": 2172,
+      "h": 2896
     },
     {
       "id": "2026-08-29-bus-factor-timetable",

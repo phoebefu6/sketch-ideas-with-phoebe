@@ -1,0 +1,11 @@
+title: The journey of a question
+date: 2026-08-29
+tool: codex-imagegen + html-render
+format: infographic
+topic: [llm, tokenization, embeddings, attention, inference, foundations]
+style: cloud-sea xianxia scroll
+prompt: "HYBRID - painted raster hero (codex image_gen, all lettering refused) + every character hand-set in HTML, rendered headless.\nHERO: vertical xianxia panorama - a pilgrimage mountain through a sea of cloud, four stations on one winding path: a cinnabar paifang gate with travelers' baskets abandoned before it, a lantern-strung rope bridge over a cloud-sea strait, a vast lantern-lit great hall in the cliff, a lone summit pavilion at dawn. Cloud banks left and right reserved for annotations. Palette: cinnabar, jade, ink, snow, weathered gold - painted with visible brushwork, no render gloss. Full prompt in prompts/01-hero-journey.md.\nTYPE: Cormorant Garamond editorial serif + mono station labels, cinnabar accents, four station annotations alternating down the cloud banks.\nMARKS: gate = tokenizer (words exchanged, baskets stay outside); bridge over cloud-sea = embeddings (meaning is a neighborhood); great hall = attention (every token weighs every other); summit = sampling (one weighted die-roll per word, then the climb repeats).\nMESSAGE: the answer was never looked up - it was grown."
+takeaway: "Between Enter and the answer there is no lookup - your words are exchanged for tokens at the gate, cross meaning-space as coordinates, get weighed against each other in the attention hall, and one word is grown at a time at the summit. The whole climb repeats for every word."
+concept: "The inference pipeline drawn as a four-station pilgrimage up a xianxia mountain - tokenizer gate, embedding cloud-sea, attention hall, sampling summit."
+inspired_by: "SV-011 Cloud Sea Xianxia x the illustrated-journey shape of The Minds of Modern AI"
+featured: false

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The everything drawer - Worth a thousand words</title>
+<meta name="description" content="Open &#x27;the model&#x27; and there is no facts database, no memory of your last visit, no intent - only billions of tuned numbers and their wiring. Everything people assume is in there is a taped-off empty slot. And it works anyway.">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-29-everything-drawer/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The everything drawer">
+<meta property="og:description" content="Open &#x27;the model&#x27; and there is no facts database, no memory of your last visit, no intent - only billions of tuned numbers and their wiring. Everything people assume is in there is a taped-off empty slot. And it works anyway.">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-29-everything-drawer/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-29-everything-drawer/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=e64d8a77">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-08-29-everything-drawer/full.png?v=91386048" alt="The everything drawer" width="2172" height="2896">
+  </figure>
+
+  <article class="work-body">
+    <h1>The everything drawer</h1>
+    <p class="work-dateline">Infographic · 2026-08-29 · specimen flat-lay</p>
+    <p class="work-takeaway">Open &#x27;the model&#x27; and there is no facts database, no memory of your last visit, no intent - only billions of tuned numbers and their wiring. Everything people assume is in there is a taped-off empty slot. And it works anyway.</p>
+    <div class="lb-meta work-chips"><span>codex-imagegen + html-render</span><span>llm</span><span>foundations</span><span>model weights</span><span>memory</span><span>hallucination</span><span>ai literacy</span><span>inspired by SV-032 Everything Drawer (Grace Baldwin&#x27;s reverent junk-drawer flat-lays)</span></div>
+
+    <section class="work-story"><h2>The making of</h2><h2>Key Concept</h2>
+<p>People argue about whether "the model knows things," "remembers them," "wants things" - and
+the argument stays stuck because nobody opens the drawer. So open it: an LLM's entire
+contents, laid out in full, is billions of numerical weights and the wiring between them.
+That is the complete inventory. No facts database. No memory of your last conversation. No
+intent. The three things everyone assumes are in there were never fitted - and the system
+works anyway, which is the genuinely strange part worth sitting with.</p>
+<h2>Explanation</h2>
+<p>The piece borrows the reverence of a museum flat-lay - the entire contents of one immense
+specimen drawer photographed overhead, every object sharp, half knolled into rows and half
+collapsed into piles. Watch-part weights stand in for the model's weights ("billions of
+small numbers - this is all there is"), softened punch cards for training traces
+("compressed impressions of the text it read - never the text itself"), copper wire for
+connections ("meaning lives in the wiring, not in any single part"), paper tape for output
+("one token at a time").</p>
+<p>The argument is carried by what is NOT there. Three rectangles are taped off on the drawer
+felt, empty, each stamped in the piece's only red: <strong>FACTS DATABASE - never fitted. MEMORY
+OF YOUR LAST VISIT - never fitted. INTENT - never fitted.</strong> This is the wall's
+composed-absence move (an omission looks like a mistake; a measured absence reads as
+evidence): the voids were reserved at generation time, taped like museum lots awaiting
+specimens that never existed.</p>
+<p>Why it matters practically: every one of the three voids is a product decision someone bolts
+on later - retrieval for facts, session state for memory, guardrails and objectives for
+intent. Knowing they are add-ons, not innards, is the difference between evaluating a model
+and evaluating a system.</p>
+<p>Terminal line, set like a collection label: <strong>there is no mind in the drawer. It works anyway.</strong></p>
+<h2>Recipe</h2>
+<p>HYBRID. Hero: codex image_gen, portrait 3:4, first attempt - full prompt in
+<code>prompts/01-hero-drawer.md</code>. The load-bearing instruction is the three taped empty
+rectangles "large enough to hold something that is not there," plus the corner-to-corner
+no-empty-background rule and the individually-refused lettering list. The drawer rail with
+brass handles was requested as a plain top strip - it became the natural mount for the
+title plate.</p>
+<p>Type layer: museum register - aged-paper specimen tags (Archivo Narrow headings, pinned with
+a drawn grommet), a brass-gradient title plate on the rail, IBM Plex Mono small print, and
+stamped red <code>#A63A2B</code> NEVER FITTED chips inside the voids. Hand-authored HTML
+(<code>poster.html</code>), rendered headless Chrome at 1086x1448 @2x. Two registration rounds - the
+first void's label needed one nudge down into its tape.</p></section>
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">HYBRID - photographic flat-lay hero (codex image_gen, all lettering refused) + museum specimen tags hand-set in HTML, rendered headless.
+HERO: overhead deep-focus flat lay of one immense wooden specimen drawer filled corner to corner - thousands of brass weights and watch parts, copper wire coils, softened punch cards, tangled paper tape - half knolled, half collapsed, dusty warm cast, one soft light. Exactly THREE taped-off empty rectangles with bare green felt showing: the reserved landing zones for the piece&#x27;s argument. Full prompt in prompts/01-hero-drawer.md.
+TYPE: Archivo Narrow specimen tags + mono small print; a brass title plate on the drawer rail; stamped red NEVER FITTED labels inside the three voids.
+MARKS: the objects = billions of weights (this is all there is); punch cards = compressed impressions of training text, never the text; the three taped voids = FACTS DATABASE, MEMORY OF YOUR LAST VISIT, INTENT - never fitted. Composed absence carries the argument.
+MESSAGE: there is no mind in the drawer - it works anyway.</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-08-29-bus-factor-timetable/"><span class="pager-dir">&larr; Older</span><span class="pager-title">One driver per route</span></a>
+    <a class="pager-link pager-next" href="../2026-08-29-journey-of-a-question/"><span class="pager-dir">Newer &rarr;</span><span class="pager-title">The journey of a question</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>

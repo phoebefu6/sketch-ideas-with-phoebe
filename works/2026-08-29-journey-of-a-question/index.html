@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The journey of a question - Worth a thousand words</title>
+<meta name="description" content="Between Enter and the answer there is no lookup - your words are exchanged for tokens at the gate, cross meaning-space as coordinates, get weighed against each other in the attention hall, and one word is grown at a time at the summit. The whole climb repeats for every word.">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-29-journey-of-a-question/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The journey of a question">
+<meta property="og:description" content="Between Enter and the answer there is no lookup - your words are exchanged for tokens at the gate, cross meaning-space as coordinates, get weighed against each other in the attention hall, and one word is grown at a time at the summit. The whole climb repeats for every word.">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-29-journey-of-a-question/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-08-29-journey-of-a-question/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=e64d8a77">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-08-29-journey-of-a-question/full.png?v=8239a827" alt="The journey of a question" width="2172" height="2896">
+  </figure>
+
+  <article class="work-body">
+    <h1>The journey of a question</h1>
+    <p class="work-dateline">Infographic · 2026-08-29 · cloud-sea xianxia scroll</p>
+    <p class="work-takeaway">Between Enter and the answer there is no lookup - your words are exchanged for tokens at the gate, cross meaning-space as coordinates, get weighed against each other in the attention hall, and one word is grown at a time at the summit. The whole climb repeats for every word.</p>
+    <div class="lb-meta work-chips"><span>codex-imagegen + html-render</span><span>llm</span><span>tokenization</span><span>embeddings</span><span>attention</span><span>inference</span><span>foundations</span><span>inspired by SV-011 Cloud Sea Xianxia x the illustrated-journey shape of The Minds of Modern AI</span></div>
+
+    <section class="work-story"><h2>The making of</h2><h2>Key Concept</h2>
+<p>Ask most people what happens when they press Enter on a prompt and the honest answer is "it
+looks something up." It doesn't. There is no lookup anywhere in the pipeline. A question is
+tokenized, embedded, weighed by attention, and then the answer is <em>generated</em> - sampled one
+token at a time, each choice conditioned on everything before it. The single most useful
+correction to anyone's mental model of an LLM is: <strong>the answer was never looked up, it was
+grown.</strong> Retrieval exists only when you bolt it on from outside.</p>
+<h2>Explanation</h2>
+<p>The pipeline is drawn as a pilgrimage - four stations on one winding path up a mountain
+through a sea of cloud, read bottom to top like the climb itself.</p>
+<p><strong>Station I, the Gate (tokenizer).</strong> A cinnabar paifang at the mountain's foot. Travelers
+pass through carrying nothing; their baskets sit abandoned in a row outside. Your words are
+never admitted - they are exchanged for tokens at the gate, and everything the model does
+from here on happens to the tokens, not to your words.</p>
+<p><strong>Station II, the Cloud-Sea (embeddings).</strong> A lantern-strung rope bridge across a strait of
+cloud. Each token crosses as coordinates in a vast space where meaning is a neighborhood,
+not a definition - things that mean similar things live near each other.</p>
+<p><strong>Station III, the Hall (attention).</strong> The vast lantern-lit great hall built into the cliff.
+Inside, every token weighs every other; the hall decides what matters to what. This is where
+context becomes meaning.</p>
+<p><strong>Station IV, the Summit (sampling).</strong> A small pavilion alone above the cloud, one figure at
+a stone table in dawn light. One word is chosen at a time - dice weighted by everything
+below - and then the entire climb repeats for the next word.</p>
+<p>The composition carries the argument: there is no library on this mountain, no archive, no
+shelf to consult. Only a path, a crossing, a weighing, and a choice - repeated for every
+word you read.</p>
+<p>The shape deliberately continues the wall's illustrated-journey lineage (The Minds of Modern
+AI) with the craft upgraded: that piece let the image model paint its own lettering; here the
+hero was generated with all lettering refused and every character is hand-set, so the
+painting stays cinematic and the type stays exact.</p>
+<h2>Recipe</h2>
+<p>HYBRID. Hero: codex image_gen, portrait 3:4, first attempt - full prompt in
+<code>prompts/01-hero-journey.md</code>. The two load-bearing parts are the four-station scene list
+(each station described as architecture, not as a concept) and the reserved zones - big calm
+cloud banks left and right, soft bands top and bottom, all named explicitly. Every script,
+character and numeral form refused individually.</p>
+<p>Type layer: Cormorant Garamond (editorial serif, italic deck) + IBM Plex Mono station
+labels, cinnabar <code>#A93A26</code> accents, gold hairline leaders, soft cloud-toned text halos for
+readability on the painting. Hand-authored HTML (<code>poster.html</code>), rendered headless Chrome at
+1086x1448 @2x. Four registration rounds: the summit annotation originally collided with the
+masthead (moved to the top-right sun cloud), and the terminal line drowned in the dark
+baskets twice before landing in the light cloud column, hard-broken into three short lines.</p></section>
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">HYBRID - painted raster hero (codex image_gen, all lettering refused) + every character hand-set in HTML, rendered headless.
+HERO: vertical xianxia panorama - a pilgrimage mountain through a sea of cloud, four stations on one winding path: a cinnabar paifang gate with travelers&#x27; baskets abandoned before it, a lantern-strung rope bridge over a cloud-sea strait, a vast lantern-lit great hall in the cliff, a lone summit pavilion at dawn. Cloud banks left and right reserved for annotations. Palette: cinnabar, jade, ink, snow, weathered gold - painted with visible brushwork, no render gloss. Full prompt in prompts/01-hero-journey.md.
+TYPE: Cormorant Garamond editorial serif + mono station labels, cinnabar accents, four station annotations alternating down the cloud banks.
+MARKS: gate = tokenizer (words exchanged, baskets stay outside); bridge over cloud-sea = embeddings (meaning is a neighborhood); great hall = attention (every token weighs every other); summit = sampling (one weighted die-roll per word, then the climb repeats).
+MESSAGE: the answer was never looked up - it was grown.</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-08-29-everything-drawer/"><span class="pager-dir">&larr; Older</span><span class="pager-title">The everything drawer</span></a>
+    <a class="pager-link pager-next" href="../2026-09-02-bus-factor-comic/"><span class="pager-dir">Newer &rarr;</span><span class="pager-title">You have a Sam</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>
