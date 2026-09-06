@@ -39,12 +39,6 @@ simplified into images anyone can act on. Every prompt published.
 - **Illustration** (1) - Data and AI ideas as scenes and characters.
 - **Logo** (0) - Marks and identity for data/AI things.
 - **Style study** (0) - The sketchbook - mimicking a beautiful style to learn it.
-- **Website** (0) - A full web page or site design.
-- **App UI** (0) - Application or product interface screens.
-- **Deck** (0) - Slide or presentation design.
-- **Identity** (0) - Logo and brand identity systems.
-- **Packaging** (0) - Physical product and package design.
-- **Motion** (0) - Animation and motion design.
 
 ## How this repo works
 
