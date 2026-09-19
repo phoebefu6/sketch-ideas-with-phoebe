@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The price of a word</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===== SV-052 Victorian Atlas Revival - FIRST outing, design-built =====
+   core_locked: engraved hatching fills / aged paper ground / serif smallcaps labels /
+   ornamental rules and plate furniture. Two muted plate colours, no flat modern colour block.
+   COLOUR MEANING (one fill, one meaning, stated in the legend on the sheet):
+     madder = a PUBLISHED cumulative abnormal return
+     indigo = a count of the word being said. Not a payment.
+   Everything structural - rules, ticks, borders, hatch geometry - is iron-gall ink and
+   carries no data meaning. Bodoni Moda wears the era; EB Garamond carries the data.
+   The top edge of every block is DASHED: it is a published endpoint, not a path. */
+:root{
+  --paper:#f2e8d5;
+  --paper-plate:#f8f1e1;
+  --ink:#332f28;
+  --ink-soft:#7d7466;
+  --hair:#bcb09a;
+  --madder:#a63324;
+  --indigo:#3d5568;
+  --display:"Bodoni Moda","Didot","Bodoni MT",Georgia,serif;
+  --text:"EB Garamond","Iowan Old Style",Georgia,"Times New Roman",serif;
+}
+@page{size:1000px 1250px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1000px}
+body{width:1000px;height:1250px;overflow:hidden;position:relative;background:var(--paper);
+  color:var(--ink);font:15px/1.42 var(--text);font-variant-numeric:oldstyle-nums;
+  -webkit-font-smoothing:antialiased}
+#grain{position:absolute;inset:0;opacity:.075;pointer-events:none;mix-blend-mode:multiply}
+#vign{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 80% 70% at 50% 44%,rgba(0,0,0,0) 56%,rgba(96,74,40,.15) 100%)}
+
+.spec{position:absolute;top:36px;font:500 10px/1 var(--text);letter-spacing:2.4px;
+  text-transform:uppercase;color:var(--ink-soft)}
+.spec.l{left:56px} .spec.r{right:56px;text-align:right}
+
+.cartouche{position:absolute;left:56px;top:62px;width:888px;text-align:center}
+.orn{display:block;margin:0 auto}
+h1{font:700 57px/1 var(--display);letter-spacing:1.5px;text-transform:uppercase;margin:7px 0 0}
+.deck{margin-top:10px;font:500 11px/1 var(--text);letter-spacing:3.4px;text-transform:uppercase;
+  color:var(--ink-soft)}
+.thesis{margin-top:11px;font:italic 400 17px/1.4 var(--text)}
+.dbl{margin-top:12px;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);height:4px}
+
+.plates{position:absolute;left:56px;top:222px;width:888px;display:flex;gap:48px}
+
+.bracket{position:absolute;left:56px;top:656px;width:888px;text-align:center}
+.bracket .rule{border-top:1px solid var(--hair);margin:0 150px}
+.bracket .line{margin-top:11px;font:700 27px/1.14 var(--display)}
+.bracket .sub{margin-top:7px;font:italic 400 15px/1.4 var(--text);color:var(--ink-soft)}
+
+.lower{position:absolute;left:56px;top:736px;width:888px;display:flex;gap:34px;align-items:flex-start}
+.findings{width:384px;padding-top:4px}
+.findings h3{font:600 10.5px/1 var(--text);letter-spacing:2.6px;text-transform:uppercase;
+  color:var(--ink-soft);padding-bottom:7px;border-bottom:1px solid var(--hair)}
+.findings li{list-style:none;margin-top:10px;padding-left:16px;position:relative;
+  font:400 14.4px/1.36 var(--text)}
+.findings li:before{content:"\2014";position:absolute;left:0;color:var(--hair)}
+.findings .refuse{margin-top:13px;padding:9px 11px;border:1px solid var(--hair);
+  font:italic 400 12.8px/1.35 var(--text);color:var(--ink-soft)}
+
+.legend{position:absolute;left:56px;top:1068px;width:888px;display:flex;gap:24px;
+  border-top:1px solid var(--ink);padding-top:10px}
+.key{display:flex;gap:9px;align-items:flex-start;width:280px}
+.key svg.sw{flex:none;margin-top:3px}
+.key p{font:400 12.4px/1.32 var(--text)}
+.key b{font-weight:600}
+
+.takeaway{position:absolute;left:56px;top:1126px;width:888px;text-align:center}
+.takeaway .t{font:700 24px/1.2 var(--display)}
+.src{position:absolute;left:56px;bottom:26px;width:888px;text-align:center;
+  font:400 10.4px/1.5 var(--text);color:var(--ink-soft)}
+
+svg text{font-family:var(--text);fill:var(--ink);font-variant-numeric:oldstyle-nums}
+.plate-bg{fill:var(--paper-plate)}
+.plate-rule-outer{fill:none;stroke:var(--ink);stroke-width:1.6}
+.plate-rule-inner{fill:none;stroke:var(--hair);stroke-width:.8}
+.plate-no{font-size:10.5px;letter-spacing:2.8px;text-transform:uppercase;fill:var(--ink-soft)}
+.plate-title{font-family:var(--display);font-size:20px;font-weight:400}
+.plate-sub{font-size:12.4px;fill:var(--ink-soft);font-style:italic}
+.plate-note{font-size:11.2px;fill:var(--ink-soft);font-style:italic}
+.hair{stroke:var(--hair);stroke-width:.8}
+.grid{stroke:var(--hair);stroke-width:.6;stroke-dasharray:2 4}
+.axis{stroke:var(--ink);stroke-width:1.2}
+.tick{stroke:var(--ink);stroke-width:1}
+.ytick{font-size:11px;text-anchor:end;fill:var(--ink-soft)}
+.xtick{font-size:11px;text-anchor:middle;fill:var(--ink-soft)}
+.xname{font-size:9.6px;letter-spacing:1.8px;text-transform:uppercase;fill:var(--ink-soft);text-anchor:middle}
+.axname{font-size:9.6px;letter-spacing:1.8px;text-transform:uppercase;fill:var(--ink-soft)}
+.edge{stroke:var(--madder);stroke-width:1.2}
+.edge-open{stroke:var(--madder);stroke-width:1.6;stroke-dasharray:5 4}
+.edge3{fill:none;stroke:var(--indigo);stroke-width:1.2}
+.day0{stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3}
+.day0lab{font-size:9.6px;letter-spacing:1.6px;text-transform:uppercase;fill:var(--ink-soft);text-anchor:middle}
+.patch{fill:var(--paper-plate);stroke:var(--ink);stroke-width:.9}
+.stamp{font-family:var(--display);font-size:29px;font-weight:700;fill:var(--madder);text-anchor:middle}
+.stamp3{font-family:var(--display);font-size:21px;font-weight:700;fill:var(--indigo);text-anchor:middle}
+</style>
+</head>
+<body>
+<svg id="grain" width="1000" height="1250"><filter id="f"><feTurbulence type="fractalNoise"
+  baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/>
+  </filter><rect width="1000" height="1250" filter="url(#f)"/></svg>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <pattern id="hatchR" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <rect width="7" height="7" fill="#f8f1e1"/><line x1="0" y1="0" x2="0" y2="7" stroke="#a63324" stroke-width="1.15"/>
+  </pattern>
+  <pattern id="hatchL" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+    <rect width="7" height="7" fill="#f8f1e1"/><line x1="0" y1="0" x2="0" y2="7" stroke="#a63324" stroke-width="1.15"/>
+  </pattern>
+  <pattern id="hatchV" width="7" height="7" patternUnits="userSpaceOnUse">
+    <rect width="7" height="7" fill="#f8f1e1"/><line x1="0" y1="0" x2="0" y2="7" stroke="#3d5568" stroke-width="1.15"/>
+  </pattern>
+</defs></svg>
+
+<div class="spec l">Worth a Thousand Words &middot; Chart No. 01</div>
+<div class="spec r">Plates I&ndash;III &middot; 1998&ndash;2024</div>
+
+<div class="cartouche">
+  <svg class="orn" width="188" height="11" viewBox="0 0 188 11"><g stroke="#bcb09a" fill="none"
+    stroke-width="1"><line x1="0" y1="5.5" x2="76" y2="5.5"/><line x1="112" y1="5.5" x2="188" y2="5.5"/>
+    <path d="M86 5.5 L94 1 L102 5.5 L94 10 Z"/></g><circle cx="94" cy="5.5" r="1.4" fill="#bcb09a"/></svg>
+  <h1>The Price of a Word</h1>
+  <div class="deck">What the market paid for a name it could not verify</div>
+  <div class="thesis">Three measured plates on one question: is the market pricing the business, or the word?</div>
+  <div class="dbl"></div>
+</div>
+
+<div class="plates">
+<svg class="plate" width="420" height="420" viewBox="0 0 420 420">
+  <rect class="plate-bg" x="0.5" y="0.5" width="419" height="419"/>
+  <rect class="plate-rule-outer" x="3.5" y="3.5" width="413" height="413"/>
+  <rect class="plate-rule-inner" x="8.5" y="8.5" width="403" height="403"/>
+  <text class="plate-no" x="24" y="40">Plate I</text>
+  <line class="hair" x1="24" y1="49" x2="396" y2="49"/>
+  <text class="plate-title" x="24" y="75">Addition of &ldquo;.com&rdquo; to the name</text>
+  <text class="plate-sub" x="24" y="95">95 firms &middot; June 1998 &ndash; July 1999 &middot; published 10-day window</text>
+  <text class="axname" x="24" y="109">per cent</text>
+
+  <line class="grid" x1="64" y1="308.0" x2="396" y2="308.0"/>
+  <text class="ytick" x="56" y="312.0">0</text>
+  <line class="grid" x1="64" y1="260.5" x2="396" y2="260.5"/>
+  <text class="ytick" x="56" y="264.5">20</text>
+  <line class="grid" x1="64" y1="213.0" x2="396" y2="213.0"/>
+  <text class="ytick" x="56" y="217.0">40</text>
+  <line class="grid" x1="64" y1="165.5" x2="396" y2="165.5"/>
+  <text class="ytick" x="56" y="169.5">60</text>
+  <line class="grid" x1="64" y1="118.0" x2="396" y2="118.0"/>
+  <text class="ytick" x="56" y="122.0">80</text>
+  <line class="axis" x1="64" y1="114" x2="64" y2="308"/>
+  <line class="axis" x1="64" y1="308" x2="396" y2="308"/>
+  <line class="tick" x1="64.0" y1="308" x2="64.0" y2="313"/><text class="xtick" x="64.0" y="327">-6</text><line class="tick" x1="144.5" y1="308" x2="144.5" y2="313"/><text class="xtick" x="144.5" y="327">-3</text><line class="tick" x1="225.0" y1="308" x2="225.0" y2="313"/><text class="xtick" x="225.0" y="327">0</text><line class="tick" x1="305.5" y1="308" x2="305.5" y2="313"/><text class="xtick" x="305.5" y="327">+3</text><line class="tick" x1="386.0" y1="308" x2="386.0" y2="313"/><text class="xtick" x="386.0" y="327">+6</text>
+  <text class="xname" x="225" y="342">days surrounding the announcement</text>
+
+  <rect x="90.8" y="132.2" width="268.3" height="175.8" fill="url(#hatchR)"/>
+  <line class="edge" x1="90.8" y1="132.2" x2="90.8" y2="308"/>
+  <line class="edge" x1="359.2" y1="132.2" x2="359.2" y2="308"/>
+  <line class="edge-open" x1="90.8" y1="132.2" x2="359.2" y2="132.2"/>
+  <line class="day0" x1="225.0" y1="114" x2="225.0" y2="308"/>
+  <text class="day0lab" x="225.0" y="109">the name changes</text>
+
+  <rect class="patch" x="180.0" y="146.2" width="90" height="40"/>
+  <text class="stamp" x="225.0" y="176.2">+74%</text>
+  <text class="plate-note" x="24" y="373">The effect was similar across all four involvement categories &mdash;</text>
+  <text class="plate-note" x="24" y="388">including firms whose core business was not internet-related.</text>
+</svg>
+<svg class="plate" width="420" height="420" viewBox="0 0 420 420">
+  <rect class="plate-bg" x="0.5" y="0.5" width="419" height="419"/>
+  <rect class="plate-rule-outer" x="3.5" y="3.5" width="413" height="413"/>
+  <rect class="plate-rule-inner" x="8.5" y="8.5" width="403" height="403"/>
+  <text class="plate-no" x="24" y="40">Plate II</text>
+  <line class="hair" x1="24" y1="49" x2="396" y2="49"/>
+  <text class="plate-title" x="24" y="75">Deletion of &ldquo;.com&rdquo; from the name</text>
+  <text class="plate-sub" x="24" y="95">67 firms &middot; after the mid-2000 crash &middot; published 60-day window</text>
+  <text class="axname" x="24" y="109">per cent</text>
+
+  <line class="grid" x1="64" y1="308.0" x2="396" y2="308.0"/>
+  <text class="ytick" x="56" y="312.0">0</text>
+  <line class="grid" x1="64" y1="260.5" x2="396" y2="260.5"/>
+  <text class="ytick" x="56" y="264.5">20</text>
+  <line class="grid" x1="64" y1="213.0" x2="396" y2="213.0"/>
+  <text class="ytick" x="56" y="217.0">40</text>
+  <line class="grid" x1="64" y1="165.5" x2="396" y2="165.5"/>
+  <text class="ytick" x="56" y="169.5">60</text>
+  <line class="grid" x1="64" y1="118.0" x2="396" y2="118.0"/>
+  <text class="ytick" x="56" y="122.0">80</text>
+  <line class="axis" x1="64" y1="114" x2="64" y2="308"/>
+  <line class="axis" x1="64" y1="308" x2="396" y2="308"/>
+  <line class="tick" x1="64.0" y1="308" x2="64.0" y2="313"/><text class="xtick" x="64.0" y="327">-36</text><line class="tick" x1="144.5" y1="308" x2="144.5" y2="313"/><text class="xtick" x="144.5" y="327">-18</text><line class="tick" x1="225.0" y1="308" x2="225.0" y2="313"/><text class="xtick" x="225.0" y="327">0</text><line class="tick" x1="305.5" y1="308" x2="305.5" y2="313"/><text class="xtick" x="305.5" y="327">+18</text><line class="tick" x1="386.0" y1="308" x2="386.0" y2="313"/><text class="xtick" x="386.0" y="327">+36</text>
+  <text class="xname" x="225" y="342">days surrounding the announcement</text>
+
+  <rect x="90.8" y="156.0" width="268.3" height="152.0" fill="url(#hatchL)"/>
+  <line class="edge" x1="90.8" y1="156.0" x2="90.8" y2="308"/>
+  <line class="edge" x1="359.2" y1="156.0" x2="359.2" y2="308"/>
+  <line class="edge-open" x1="90.8" y1="156.0" x2="359.2" y2="156.0"/>
+  <line class="day0" x1="225.0" y1="114" x2="225.0" y2="308"/>
+  <text class="day0lab" x="225.0" y="109">the name changes</text>
+
+  <rect class="patch" x="180.0" y="170.0" width="90" height="40"/>
+  <text class="stamp" x="225.0" y="200.0">+64%</text>
+  <text class="plate-note" x="24" y="373">Same register of firms, opposite action. Mind the day scale:</text>
+  <text class="plate-note" x="24" y="388">this window is six times wider than Plate I&rsquo;s.</text>
+</svg></div>
+
+<div class="bracket">
+  <div class="rule"></div>
+  <div class="line">The same word. Opposite actions. Both paid.</div>
+  <div class="sub">Adding &ldquo;.com&rdquo; was worth 74 per cent. Deleting it was worth 64 per cent. The word was the asset in both directions.</div>
+</div>
+
+<div class="lower">
+  
+<svg class="plate3" width="470" height="320" viewBox="0 0 470 320">
+  <rect class="plate-bg" x="0.5" y="0.5" width="469" height="319"/>
+  <rect class="plate-rule-outer" x="3.5" y="3.5" width="463" height="313"/>
+  <rect class="plate-rule-inner" x="8.5" y="8.5" width="453" height="303"/>
+  <text class="plate-no" x="24" y="40">Plate III</text>
+  <line class="hair" x1="24" y1="49" x2="446" y2="49"/>
+  <text class="plate-title" x="24" y="75">Mention of &ldquo;AI&rdquo; on the earnings call</text>
+  <text class="plate-sub" x="24" y="95">Share of U.S. public firms &middot; 2016 Q1 &ndash; 2024 Q2</text>
+  <text class="axname" x="24" y="109">per cent</text>
+  <line class="grid" x1="62" y1="238.0" x2="446" y2="238.0"/>
+  <text class="ytick" x="54" y="242.0">0</text>
+  <line class="grid" x1="62" y1="214.0" x2="446" y2="214.0"/>
+  <text class="ytick" x="54" y="218.0">5</text>
+  <line class="grid" x1="62" y1="190.0" x2="446" y2="190.0"/>
+  <text class="ytick" x="54" y="194.0">10</text>
+  <line class="grid" x1="62" y1="166.0" x2="446" y2="166.0"/>
+  <text class="ytick" x="54" y="170.0">15</text>
+  <line class="grid" x1="62" y1="142.0" x2="446" y2="142.0"/>
+  <text class="ytick" x="54" y="146.0">20</text>
+  <line class="grid" x1="62" y1="118.0" x2="446" y2="118.0"/>
+  <text class="ytick" x="54" y="122.0">25</text>
+  <line class="axis" x1="62" y1="114" x2="62" y2="238"/>
+  <line class="axis" x1="62" y1="238" x2="446" y2="238"/>
+  
+  <rect x="112" y="235.0" width="100" height="3.0" fill="url(#hatchV)"/>
+  <rect class="edge3" x="112" y="235.0" width="100" height="3.0"/>
+  <text class="stamp3" x="162" y="223.0">~0%</text>
+  <text class="xtick" x="162" y="257">2016 Q1</text>
+  <rect x="296" y="142.0" width="100" height="96.0" fill="url(#hatchV)"/>
+  <rect class="edge3" x="296" y="142.0" width="100" height="96.0"/>
+  <text class="stamp3" x="346" y="130.0">~20%</text>
+  <text class="xtick" x="346" y="257">2024 Q2</text>
+  <text class="plate-note" x="24" y="273">Two published endpoints, drawn as two quarters.</text>
+  <text class="plate-note" x="24" y="288">No path between them is reproduced here.</text>
+</svg>
+  <div class="findings">
+    <h3>The same instrument, a new word</h3>
+    <ul>
+      <li><b>Walk</b> &mdash; AI expertise measured from employee resumes &mdash; predicts later AI patent quantity and quality.</li>
+      <li><b>Talk</b> &mdash; investment claims made on the earnings call &mdash; does not. Within a firm, past talk does not forecast future walk.</li>
+      <li>The market <b>rewards talk in the short run and discounts it in the long run</b>. Walk earns large, persistent gains only over longer horizons.</li>
+    </ul>
+    <div class="refuse">Plate III carries no madder. The 2016&ndash;2024 study reports direction, not a published abnormal return, so no return is stamped here. The receipts for this word are not in yet.</div>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="key"><svg class="sw" width="26" height="16" viewBox="0 0 26 16"><rect width="26" height="16" fill="url(#hatchR)"/><rect x=".5" y=".5" width="25" height="15" fill="none" stroke="#a63324" stroke-width="1"/></svg>
+    <p><b>Madder.</b> A published cumulative abnormal return. Stamped twice on this sheet and nowhere else.</p></div>
+  <div class="key"><svg class="sw" width="26" height="16" viewBox="0 0 26 16"><rect width="26" height="16" fill="url(#hatchV)"/><rect x=".5" y=".5" width="25" height="15" fill="none" stroke="#3d5568" stroke-width="1"/></svg>
+    <p><b>Indigo.</b> A count of the word being said. Not a payment.</p></div>
+  <div class="key" style="width:264px"><svg class="sw" width="26" height="16" viewBox="0 0 26 16"><rect width="26" height="16" fill="url(#hatchL)"/><rect x=".5" y=".5" width="25" height="15" fill="none" stroke="#a63324" stroke-width="1"/></svg>
+    <p><b>Hatch leans with the change:</b> right for a word added, left for a word removed.</p></div>
+</div>
+
+<div class="takeaway"><div class="t">The market has never required the thing. It prices the sentence.</div></div>
+
+<div class="src">
+  Plate I: Cooper, Dimitrov &amp; Rau, &ldquo;A Rose.com by Any Other Name&rdquo;, <i>Journal of Finance</i> 56(6), 2001, 2371&ndash;2388. &nbsp;
+  Plate II: Cooper, Khorana, Osobov, Patel &amp; Rau, &ldquo;Valuation effects of name changes in the dot.com decline&rdquo;, <i>Journal of Corporate Finance</i>, 2004.<br>
+  Plate III: B. Li, &ldquo;AI Washing&rdquo;, University of Florida working paper, August 2025. &nbsp; Figures are quoted as published; a dashed top edge marks an endpoint, never a path. Nothing here is investment advice, and no company is named.
+</div>
+<div id="vign"></div>
+</body>
+</html>

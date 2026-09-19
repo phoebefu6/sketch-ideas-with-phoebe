@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You sent 40 turns. The API billed 820. - Worth a thousand words</title>
+<meta name="description" content="The Messages API is stateless - nothing is remembered, so every turn re-sends the whole conversation as input tokens. Forty requests therefore bill T(40) = 820 turn-blocks, 20.5x what per-turn math predicts, and your first message is billed all 40 times. Only the diagonal is new.">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-07-820-billed-turns/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="You sent 40 turns. The API billed 820.">
+<meta property="og:description" content="The Messages API is stateless - nothing is remembered, so every turn re-sends the whole conversation as input tokens. Forty requests therefore bill T(40) = 820 turn-blocks, 20.5x what per-turn math predicts, and your first message is billed all 40 times. Only the diagonal is new.">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-07-820-billed-turns/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-07-820-billed-turns/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=e64d8a77">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-09-07-820-billed-turns/full.png?v=8bb9e46f" alt="You sent 40 turns. The API billed 820." width="2000" height="2500">
+  </figure>
+
+  <article class="work-body">
+    <h1>You sent 40 turns. The API billed 820.</h1>
+    <p class="work-dateline">Data portrait · 2026-09-07 · two-color acid</p>
+    <p class="work-takeaway">The Messages API is stateless - nothing is remembered, so every turn re-sends the whole conversation as input tokens. Forty requests therefore bill T(40) = 820 turn-blocks, 20.5x what per-turn math predicts, and your first message is billed all 40 times. Only the diagonal is new. Caching re-prices the replay at 0.1x; it does not stop it - cap the history and summarise old turns.</p>
+    <div class="lb-meta work-chips"><span>html-render</span><span>foundations</span><span>llm</span><span>tokens</span><span>context window</span><span>api cost</span><span>applied ai</span><span>prompt caching</span><span>inspired by WL-001 (reservoir) promoted as IK-18 · WOW-TRACKER taste rule 4, which names this row as the example of the dramatic number a data-portrait needs · mechanism verified against platform.claude.com/docs (Messages API statelessness, Opus 5 pricing and prompt-caching multipliers) · SV-034 Two-Color Acid style DNA</span></div>
+
+    <section class="work-story"><h2>The making of</h2><h2>Key concept</h2>
+<p>A chat with a model looks like a conversation. The invoice is a triangle.</p>
+<p>The Claude Messages API is <strong>stateless</strong>: it remembers nothing between calls, so the caller
+re-sends the entire prior conversation with every request. Request 1 carries 1 turn. Request 40
+carries 40. Draw that honestly and you get a lower-triangular matrix - and the count in it is not
+40, it is <strong>820</strong>.</p>
+<pre><code>T(N) = N(N+1)/2        T(40) = 40 x 41 / 2 = 820
+820 / 40 = 20.5x       820 - 40 = 780 blocks of pure replay
+</code></pre>
+<p>Three things the picture says that the sentence cannot:</p>
+<ul>
+<li><strong>The left column is solid.</strong> That is your first message. You wrote it once. It was billed forty
+  times, because it was on the wire in every single request.</li>
+<li><strong>The diagonal is the only new text in the whole image</strong> - 40 blocks out of 820. Everything to
+  the left of it is text the model has already been sent.</li>
+<li><strong>The multiplier grows with the chat.</strong> It is <code>(N+1)/2</code>, so the cost per turn is worst exactly
+  when the conversation is going well and you keep going.</li>
+</ul>
+<p>A bonus for anyone who has trained a transformer, deliberately left off the poster: this is the
+same lower-triangular shape as a causal attention mask. The billing shape and the attention shape
+are the same triangle.</p>
+<h2>Explanation</h2>
+<p><strong>Why it compounds.</strong> Statelessness is a design choice, not a bug - it is what makes the API
+horizontally scalable and reproducible. The cost consequence is arithmetic: N requests, each
+carrying one more turn than the last, bill the triangular number of turn-blocks rather than N of
+them. Nobody chose 820. Every turn only added one.</p>
+<p><strong>What it costs.</strong> The prices are sourced; the conversation shape is not, so it is stamped
+ILLUSTRATIVE on the sheet. At 1,000 tokens a turn, those 820 blocks are 820,000 input tokens -
+USD 4.10 on Claude Opus 5 at USD 5.00 per MTok. Per-turn math predicts 40,000 tokens and 20 cents.
+Same conversation, 20.5x the bill, and output tokens are billed on top. Re-run it with your own
+tokens-per-turn; the shape does not change.</p>
+<p><strong>What this piece refuses to claim.</strong> That prompt caching fixes it. Caching <strong>re-prices</strong> the
+replay - a cache hit bills 0.1x base input (50 cents per MTok on Opus 5) - but the replay still
+happens, each new block still costs a 1.25x write, and the default cache lives five minutes, which
+is shorter than most human pauses in a real chat. "Just turn on caching" is the comfortable half
+of the answer. The other half is capping the history you send and summarising old turns instead of
+re-sending them.</p>
+<h2>Recipe</h2>
+<p><strong>DESIGN-BUILT</strong>, not generated. Hand-authored HTML/CSS with a generated inline SVG, rendered with
+headless Chrome at 1000x1250 CSS px and <code>--force-device-scale-factor=2</code> (2000x2500, 4:5).</p>
+<ul>
+<li><strong>Style:</strong> SV-034 Two-Color Acid - acid lime <code>#D2FF00</code> on near-black <code>#111112</code>, exactly two
+  colours, no white, no grey, no gradients, no mid-tones. Lime is never decoration: it is the
+  token you were billed for.</li>
+<li><strong>Geometry:</strong> the 40x40 matrix is computed in the generator, not eyeballed, and the script
+  asserts the cell count equals 820 (40 solid + 780 hairline) before it writes the file. When the
+  concept <em>is</em> a count, the count has to be auditable.</li>
+<li><strong>Hierarchy without a third colour:</strong> weight inside the one accent - a hairline square is one
+  more billing, a solid square is the same message billed again.</li>
+<li><strong>Type:</strong> Archivo 800 for the title and the hero count; IBM Plex Mono for every spec label,
+  annotation and source line.</li>
+<li><strong>Sources are printed on the work</strong>, in mono, at the foot: published reasoning is part of the
+  wall, not a footnote to it.</li>
+</ul>
+<p>Sources: platform.claude.com/docs - Messages API ("stateless multi-turn conversations", prior
+turns supplied by the caller) and Pricing (Claude Opus 5 base input USD 5.00 per MTok, cache hit
+USD 0.50 per MTok = 0.1x, 5-minute cache write 1.25x), fetched 2026-09-07.</p></section>
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">DESIGN-BUILT (not prompted) - hand-authored HTML/CSS + generated inline SVG, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (4:5).
+STYLE: SV-034 Two-Color Acid, second outing - EXACTLY two colours, acid lime #D2FF00 on near-black #111112. No white, no grey, no third hue, no gradients, no mid-tones.
+MARKS: one small square = one turn&#x27;s tokens sitting on the wire inside one request, billed as input (all 820 drawn, never symbolised); one row = one API request, and its WIDTH is everything that request had to carry; the solid left column = turn 1, written once and re-billed in all 40 requests; the diagonal edge = the only genuinely new text, 40 blocks of 820; the triangle&#x27;s area = the bill.
+HIERARCHY: weight inside the one accent - hairline square = billed again, solid square = the same message billed again. The palette allows no third colour, so nothing is dimmed.
+TYPE: Archivo 800 for the title and the hero count, IBM Plex Mono for every spec label, annotation and source line.
+MESSAGE: the chat has 40 turns; the invoice has 820. The shape of a stateless conversation is a triangle.</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-09-06-retry-storm/"><span class="pager-dir">&larr; Older</span><span class="pager-title">Retries don&#x27;t add. They multiply.</span></a>
+    <a class="pager-link pager-next" href="../2026-09-11-the-price-of-a-word/"><span class="pager-dir">Newer &rarr;</span><span class="pager-title">The price of a word</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>

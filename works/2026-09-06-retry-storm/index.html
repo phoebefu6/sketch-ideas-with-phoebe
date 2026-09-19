@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retries don&#x27;t add. They multiply. - Worth a thousand words</title>
+<meta name="description" content="Retries compound as a product, not a sum. Three layers at four attempts each is 4 x 4 x 4 - one user action, 64 calls landing on the endpoint that was already failing. And in an LLM stack you probably configured only two of those layers: the provider SDK ships retries on by defau">
+<link rel="canonical" href="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-06-retry-storm/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Retries don&#x27;t add. They multiply.">
+<meta property="og:description" content="Retries compound as a product, not a sum. Three layers at four attempts each is 4 x 4 x 4 - one user action, 64 calls landing on the endpoint that was already failing. And in an LLM stack you probably configured only two of those layers: the provider SDK ships retries on by defau">
+<meta property="og:image" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-06-retry-storm/full.png">
+<meta property="og:url" content="https://phoebefu6.github.io/sketch-ideas-with-phoebe/works/2026-09-06-retry-storm/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site/style.css?v=e64d8a77">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='30' fill='none' stroke='%23111111' stroke-width='10'/><circle cx='50' cy='50' r='9' fill='%23111111'/></svg>">
+</head>
+<body class="work-page">
+
+<header class="bar work-bar">
+  <div class="brand">
+    <a class="mark-link" href="../../">Worth a thousand words</a>
+    <p class="tagline">Data and AI, explained in pictures · by Phoebe Fu</p>
+  </div>
+  <p class="counts"><a href="../../">&larr; Back to the wall</a></p>
+</header>
+
+<main class="work-main">
+  <figure class="work-hero">
+    <img src="../../works/2026-09-06-retry-storm/full.png?v=728b9384" alt="Retries don&#x27;t add. They multiply." width="2000" height="2500">
+  </figure>
+
+  <article class="work-body">
+    <h1>Retries don&#x27;t add. They multiply.</h1>
+    <p class="work-dateline">Diagram · 2026-09-06 · blueprint ledger</p>
+    <p class="work-takeaway">Retries compound as a product, not a sum. Three layers at four attempts each is 4 x 4 x 4 - one user action, 64 calls landing on the endpoint that was already failing. And in an LLM stack you probably configured only two of those layers: the provider SDK ships retries on by default. Retry at one layer, cap the attempts, add a budget.</p>
+    <div class="lb-meta work-chips"><span>html-render</span><span>applied ai</span><span>llmops</span><span>agents</span><span>reliability</span><span>retries</span><span>api cost</span><span>sre</span><span>inspired by WL-047 (reservoir) promoted as IK-17 · mechanism from Google&#x27;s SRE book (Addressing Cascading Failures, Handling Overload) and the Amazon Builders&#x27; Library retry chapter · SV-033 Blueprint Ledger style DNA</span></div>
+
+    <section class="work-story"><h2>The making of</h2><h2>Key Concept</h2>
+<p>Every engineer reads "3 retries" as <em>three more calls</em>. In a layered stack it is not
+addition, it is a product. A request that passes through three layers, each configured to
+retry three times - four attempts apiece - can arrive at the bottom <strong>64 times</strong> from a
+single user action.</p>
+<p>This is documented, not clever. Google's SRE book states it plainly in <em>Addressing Cascading
+Failures</em>: "a single request at the highest layer may produce a number of attempts as large
+as the <em>product</em> of the number of attempts at each layer to the lowest layer. If the database
+can't service requests because it's overloaded, and the backend, frontend, and JavaScript
+layers all issue 3 retries (4 attempts), then a single user action may create 64 attempts
+(4^3) on the database."</p>
+<p>Swap the database for a model endpoint and the arithmetic is unchanged. What changes is who
+is holding the amplifier: an agent loop that retries, behind a gateway that retries, on top
+of an SDK that retries. That is exactly three layers.</p>
+<p>The tension: the thing being hit 64 times is almost always the thing that was already
+failing. The 429 you were being polite about is the reason all 64 calls exist. Retries
+designed to survive an overload are a mechanism for extending it.</p>
+<h2>Explanation</h2>
+<p>The sheet is an honest count, and the count is the whole argument - which is why it was
+design-built rather than generated. Diffusion cannot draw 64 of anything reliably, and
+"roughly a lot of lines" would have destroyed the piece.</p>
+<p>Every mark carries one meaning. One hairline is one real request on the wire; all 64 are
+drawn, never symbolised. Each horizontal band is a layer that owns a retry decision, with
+its <code>ATTEMPTS x4</code> stamp on the right. The ladder down the left margin is the running tally -
+x1, 4, 16, 64 - so the eye can watch the multiplication happen without reading a word.</p>
+<p>The two-second read is geometry: a wide dense fan pinching into a port that is visibly too
+small for it. That inversion is deliberate. A funnel narrows because you <em>want</em> it to; this
+narrows because the endpoint has no choice. The single accent - alarm red - is spent only on
+the 64-fan, its comb, the port, and the x64 tally: one meaning, amplification and its victim.
+Everything structural stays indigo.</p>
+<p>The 64 lines get a short parallel segment before they converge. Without it they merged into
+a solid triangle and the count became a vibe. The comb is what keeps the claim checkable.</p>
+<p>Two annotations do the argumentative work, one on each side of the port. Left: <strong>"Nobody
+wrote 64. Every layer wrote 3."</strong> - the number is emergent, and no individual code review
+would catch it, because each local decision was textbook. Right: <strong>"Already returning 429.
+That is what started this."</strong></p>
+<p>The AI-native sting sits in the footer. You probably wired two retry layers on purpose. The
+third came free: the Anthropic Python SDK auto-retries connection errors, 408, 409, 429 and
+5xx with exponential backoff at a default <code>max_retries = 2</code> - up to three attempts per call -
+and it is on until you set it to <code>0</code>. Most LLM stacks are running a retry layer their author
+never chose.</p>
+<p>The fix was published before the problem reached AI. The Amazon Builders' Library: "for
+low-cost control-plane and data-plane operations, the best practice is to retry at a single
+point in the stack." Google's SRE handbook adds the numbers - a per-request cap of three
+attempts, plus a per-client budget that retries only while the retry ratio stays under 10%,
+which holds load growth to 1.1x rather than the ~3x it reaches unbudgeted.</p>
+<p>The reusable taste distinction: <strong>when the concept is a count, draw the count.</strong> A schematic
+with "N retries" written on an arrow explains nothing that the sentence didn't. Sixty-four
+individually drawn hairlines pinching into one port is an argument the reader can audit with
+their own eyes.</p>
+<p>One claim was deliberately left off the sheet: that all 64 calls are billed. Retried 429s and
+5xx are not billed for output, while a retry after a client-side timeout can bill for work
+already done. Too fine a distinction for a poster and easy to get wrong - so the piece argues
+load, not spend.</p>
+<h2>Recipe</h2>
+<p>Design-built, no diffusion. Hand-authored HTML/CSS with an inline SVG hero (<code>poster.html</code>),
+rendered with headless Chrome at 1000x1250 CSS px and <code>--force-device-scale-factor=2</code>
+(2000x2500 final, 4:5).</p>
+<p>The fan geometry is computed rather than eyeballed: each layer's children are generated from
+its parent positions, so 4, 16 and 64 are literally countable and the tree is structurally
+correct - every parent emits exactly four children.</p>
+<p>Style skin: <strong>SV-033 Blueprint Ledger</strong>, third outing and first non-cheatsheet. Warm paper
+<code>#FDFDFB</code>, blueprint indigo <code>#1F3A5F</code> at single stroke weight, pale wash <code>#EAF0F7</code> for
+components you own and configured, hairline grid <code>#D5DDE8</code>, and one meaning accent - alarm
+red <code>#C2372B</code>. Type: Georgia serif title, system sans body, IBM Plex Mono for every spec
+label, stamp and source line.</p>
+<p>Sources, all published and named on the sheet itself: Google SRE Book (<em>Addressing Cascading
+Failures</em>, <em>Handling Overload</em>), Amazon Builders' Library (<em>Timeouts, retries, and backoff
+with jitter</em>), and the <code>anthropic-sdk-python</code> README for the retry default.</p></section>
+
+    <section class="work-recipe">
+      <h2>The recipe</h2>
+      <p class="work-recipe-note">The full prompt, published as promised - copy it and make something.</p>
+      <pre class="work-prompt" id="work-prompt">DESIGN-BUILT (not prompted) - hand-authored HTML/CSS + inline SVG, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (4:5).
+STYLE: SV-033 Blueprint Ledger, third outing and first non-cheatsheet - indigo single-weight line-art on warm paper, Georgia serif display, IBM Plex Mono spec labels, ruled blueprint grid.
+MARKS: one hairline = one actual request on the wire (all 64 drawn, never symbolised); horizontal band = one layer that owns a retry decision; ATTEMPTS x4 stamp = attempts that layer issues per inbound request; left ladder = requests in flight after each layer (x1 / 4 / 16 / 64); the narrow port = the model endpoint, deliberately drawn smaller than the fan arriving at it; the parallel comb segment exists so 64 stays countable.
+PALETTE: warm paper #FDFDFB, blueprint indigo #1F3A5F, pale wash #EAF0F7, hairline #D5DDE8, and ONE meaning accent - alarm red #C2372B, used only on the 64-fan, the comb, the port and the x64 tally.
+TYPE: Georgia serif title, system sans body, IBM Plex Mono for all spec and source labels.
+MESSAGE: three defensible local decisions produce one number nobody chose.</pre>
+      <button class="copy-btn" id="work-copy">Copy prompt</button>
+    </section>
+  </article>
+
+  <nav class="work-pager" aria-label="More works">
+    <a class="pager-link pager-prev" href="../2026-09-02-data-infra-town/"><span class="pager-dir">&larr; Older</span><span class="pager-title">Where does your data live?</span></a>
+    <a class="pager-link pager-next" href="../2026-09-07-820-billed-turns/"><span class="pager-dir">Newer &rarr;</span><span class="pager-title">You sent 40 turns. The API billed 820.</span></a>
+  </nav>
+</main>
+
+<footer class="foot">
+  <p><strong>Phoebe Fu</strong> - data and AI leader, visual explainer.</p>
+  <p>Made with Midjourney, ChatGPT image, Nano Banana, hand-set HTML - and strong opinions about data.</p>
+  <p><a href="https://github.com/phoebefu6/sketch-ideas-with-phoebe">Repo + prompts</a> ·
+     <a href="https://www.linkedin.com/in/phoebe-fu-50168895/" rel="me">LinkedIn</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById("work-copy");
+  var pre = document.getElementById("work-prompt");
+  if (!btn || !pre) return;
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(pre.textContent || "").then(function () {
+      btn.textContent = "Copied - go make something";
+      btn.classList.add("copied");
+    });
+  });
+})();
+</script>
+</body>
+</html>

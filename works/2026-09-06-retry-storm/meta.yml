@@ -1,0 +1,11 @@
+title: Retries don't add. They multiply.
+date: 2026-09-06
+tool: html-render
+format: diagram
+topic: [applied ai, llmops, agents, reliability, retries, api cost, sre]
+style: blueprint ledger
+prompt: "DESIGN-BUILT (not prompted) - hand-authored HTML/CSS + inline SVG, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (4:5).\nSTYLE: SV-033 Blueprint Ledger, third outing and first non-cheatsheet - indigo single-weight line-art on warm paper, Georgia serif display, IBM Plex Mono spec labels, ruled blueprint grid.\nMARKS: one hairline = one actual request on the wire (all 64 drawn, never symbolised); horizontal band = one layer that owns a retry decision; ATTEMPTS x4 stamp = attempts that layer issues per inbound request; left ladder = requests in flight after each layer (x1 / 4 / 16 / 64); the narrow port = the model endpoint, deliberately drawn smaller than the fan arriving at it; the parallel comb segment exists so 64 stays countable.\nPALETTE: warm paper #FDFDFB, blueprint indigo #1F3A5F, pale wash #EAF0F7, hairline #D5DDE8, and ONE meaning accent - alarm red #C2372B, used only on the 64-fan, the comb, the port and the x64 tally.\nTYPE: Georgia serif title, system sans body, IBM Plex Mono for all spec and source labels.\nMESSAGE: three defensible local decisions produce one number nobody chose."
+takeaway: "Retries compound as a product, not a sum. Three layers at four attempts each is 4 x 4 x 4 - one user action, 64 calls landing on the endpoint that was already failing. And in an LLM stack you probably configured only two of those layers: the provider SDK ships retries on by default. Retry at one layer, cap the attempts, add a budget."
+concept: "Retry amplification drawn as an honest count: one user action fans through three well-meaning retry layers into 64 hairlines that pinch into a model endpoint too small for them. Nobody wrote 64 - every layer wrote 3."
+inspired_by: "WL-047 (reservoir) promoted as IK-17 · mechanism from Google's SRE book (Addressing Cascading Failures, Handling Overload) and the Amazon Builders' Library retry chapter · SV-033 Blueprint Ledger style DNA"
+featured: false

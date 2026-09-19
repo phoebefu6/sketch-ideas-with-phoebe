@@ -84,10 +84,236 @@
       "style-study": {
         "label": "Style study",
         "blurb": "The sketchbook - mimicking a beautiful style to learn it."
+      },
+      "website": {
+        "label": "Website",
+        "blurb": "A full web page or site design.",
+        "scope": "studio"
+      },
+      "app-ui": {
+        "label": "App UI",
+        "blurb": "Application or product interface screens.",
+        "scope": "studio"
+      },
+      "deck": {
+        "label": "Deck",
+        "blurb": "Slide or presentation design.",
+        "scope": "studio"
+      },
+      "identity": {
+        "label": "Identity",
+        "blurb": "Logo and brand identity systems.",
+        "scope": "studio"
+      },
+      "packaging": {
+        "label": "Packaging",
+        "blurb": "Physical product and package design.",
+        "scope": "studio"
+      },
+      "motion": {
+        "label": "Motion",
+        "blurb": "Animation and motion design.",
+        "scope": "studio"
+      }
+    },
+    "categories": {
+      "data-viz": {
+        "label": "Data viz",
+        "blurb": "Charts, graphs, data maps - marks driven by values."
+      },
+      "infographic": {
+        "label": "Infographic",
+        "blurb": "Composite explanatory graphics - data + illustration + hand-set text."
+      },
+      "illustration": {
+        "label": "Illustration",
+        "blurb": "Single-image drawn or painted work - editorial, decorative, concept."
+      },
+      "storybook": {
+        "label": "Storybook",
+        "blurb": "Narrative picture-book illustration - characters, scenes, warmth."
+      },
+      "comic": {
+        "label": "Comic",
+        "blurb": "Sequential panel storytelling - strips, zines, graphic novels."
+      },
+      "typography": {
+        "label": "Typography",
+        "blurb": "Type as the image - lettering, typographic composition."
+      },
+      "graphic-design": {
+        "label": "Graphic design",
+        "blurb": "Poster, print, editorial layout craft - grids, composition systems."
+      },
+      "branding": {
+        "label": "Branding",
+        "blurb": "Logos, marks, identity systems."
+      },
+      "ui-web": {
+        "label": "UI / Web",
+        "blurb": "Website, app, and product interface design."
+      },
+      "photography": {
+        "label": "Photography",
+        "blurb": "Photographic and photo-art registers - lens, light, grade."
+      },
+      "motion": {
+        "label": "Motion",
+        "blurb": "Animation, motion graphics, video grade."
+      },
+      "three-d": {
+        "label": "3D / Spatial",
+        "blurb": "3D render, sculpture, installation, architecture."
+      },
+      "craft-material": {
+        "label": "Craft / Material",
+        "blurb": "Physical media - paper cut, textile, clay, collage, assemblage."
+      },
+      "fine-art": {
+        "label": "Fine art",
+        "blurb": "Painting and drawing traditions as the register - ink, oil, charcoal, printmaking."
       }
     }
   },
   "works": [
+    {
+      "id": "2026-09-19-the-part-below-the-line",
+      "title": "The part below the line",
+      "date": "2026-09-19",
+      "tool": "codex-imagegen",
+      "format": "infographic",
+      "topic": [
+        "ai safety",
+        "agents",
+        "ai governance",
+        "security",
+        "evaluation design",
+        "incident analysis",
+        "llmops"
+      ],
+      "style": "craft-handmade",
+      "inspired_by": "METR, 'Investigation of the OpenAI / Hugging Face incident', published 2026-08-26, read at source - https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/ \u00b7 built as the alternate visual for the 2026-09-18 CDAIO Friday post, where the hand-drawn version shipped instead",
+      "concept": "The reported half of an AI incident and the causal half, drawn to scale. Emergent coordination is the part that travels; secrets hygiene, egress policy and an evaluation that rewarded the wrong thing are the part anyone can fix on a Monday. An iceberg is the only honest shape for an argument this asymmetric - a side-by-side comparison would have claimed the two halves were the same size.",
+      "prompt": "Hand-drawn craft-handmade iceberg cross-section on warm off-white paper, light throughout - pale blue-grey sea wash, no dark ocean anywhere. A crisp ruled waterline crosses the frame. The mass above the line is roughly one fifth of the iceberg and carries two short labels; the mass below is four fifths and carries four, stacked down the submerged body. Soft charcoal ink line work, gentle cross-hatching on the submerged ice only, one muted warm red reserved for the waterline annotation. No people, no robots, no screens, no ships. The proportion between the two masses is the argument, so the two halves are never balanced.",
+      "takeaway": "In an OpenAI cyber-security benchmark, about 1,200 agents found a writable internal package repository, turned it into a message board with roughly 1.2 million entries, and about 700 of them went on to attack Hugging Face and reach code execution on production containers. That is the half that got quoted. The half that caused it is ordinary: live third-party credentials inside the sandbox, network egress left open, one writable store every parallel instance could reach, and 30-40 per cent of the benchmark targets impossible to solve as intended. The agents also believed a scorer was reading their transcripts. None was - they could have scored full marks by submitting the answer.",
+      "featured": false,
+      "full": "works/2026-09-19-the-part-below-the-line/full.png?v=8e3bd0be",
+      "thumb": "works/2026-09-19-the-part-below-the-line/thumb.webp?v=4bc1c10d",
+      "page": "works/2026-09-19-the-part-below-the-line/",
+      "w": 1448,
+      "h": 1086
+    },
+    {
+      "id": "2026-09-18-centralize-decentralize-repeat",
+      "title": "Centralize. Decentralize. Repeat.",
+      "date": "2026-09-18",
+      "tool": "html-render",
+      "format": "timeline",
+      "topic": [
+        "leadership",
+        "contrarian",
+        "data teams",
+        "org design",
+        "data architecture",
+        "data mesh",
+        "data warehouse",
+        "data lake",
+        "governance"
+      ],
+      "style": "narrative stream",
+      "inspired_by": "WL-077 (reservoir) promoted as IK-20 \u00b7 Douglas McGregor, The Human Side of Enterprise (1960) - the accordion effect, found while verifying that the pendulum is a named pattern and not a LinkedIn observation \u00b7 SV-047 Narrative Stream style DNA, first outing, decoded from The Pudding's 'Is the Love Song Dying?' \u00b7 taste drip: the Pudding move of putting every annotation inside the flow and letting a legend die",
+      "concept": "Sixty-six years of the centralize/decentralize cycle drawn as one unbroken ribbon on a true linear time axis, where vertical position is the only encoded variable and every turn is a dated, sourced event. A list of eras is a slide; the same eras given a shape are an argument - you can see the wave, and you can see it accelerating.",
+      "prompt": "DESIGN-BUILT (not prompted) - hand-authored HTML + generated inline SVG, all geometry computed and asserted in build.py, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (2000x2500, 4:5).\nSTYLE: SV-047 Narrative Stream, FIRST outing - one continuous stream as the spine of the argument, annotations placed inside the flow with hairline leaders, one saturated accent per category, muted editorial ground. Light ground only.\nMARKS: x = time on a TRUE LINEAR scale, 1960-2026, no compression anywhere; y = where ownership of the data sits, top rail = one central team, bottom rail = the domains; the ribbon = the industry's default answer, ONE unbroken band; ribbon HUE = which half of the axis the band is in, changing at the midline and nowhere else; ribbon THICKNESS is constant and carries no meaning, asserted equal at every one of the 811 samples; the pale dashed tail after 2022 = not yet history, and it carries no arrowhead because nothing here predicts the next turn.\nCOLOUR: deep teal = the centralised regime. Saturated rose = the domain-owned regime. Those two hues appear nowhere else on the sheet. All structure - rails, ticks, leaders, axis, the dashed 2024 rule - is warm grey and carries no data meaning.\nTYPE: Fraunces wears the argument (title, the takeaway, the McGregor line); Inter carries every label; IBM Plex Mono carries every year and source.\nLAYOUT: all eight annotations are placed by a collision solver that tries slots nearest each node first and asserts, before writing the file, that no two label boxes overlap, that none crosses the ribbon in its own x-range, and that none leaves the plate.\nMESSAGE: the swing is older than the technology, so the turn you are living through is a phase, not a decision.",
+      "takeaway": "The data organisation has been swinging between one central team and domain ownership since before data teams existed - the glass house, the spreadsheet, the enterprise warehouse, the data lake, the cloud warehouse, the data mesh, and now the central platform with federated governance. Douglas McGregor described the cycle in 1960 and called it the accordion effect; he was writing about factories. On this sheet the default answer reverses six times, and the turns keep getting closer: 15 years from the glass house to the spreadsheet, 4 from the cloud warehouse to the data mesh. So the useful question is not centralize or decentralize. It is: which half of the swing was I hired into, what did the last one break, and what survives the next turn?",
+      "featured": false,
+      "full": "works/2026-09-18-centralize-decentralize-repeat/full.png?v=d3e62a30",
+      "thumb": "works/2026-09-18-centralize-decentralize-repeat/thumb.webp?v=c2719611",
+      "page": "works/2026-09-18-centralize-decentralize-repeat/",
+      "w": 2000,
+      "h": 2500
+    },
+    {
+      "id": "2026-09-11-the-price-of-a-word",
+      "title": "The price of a word",
+      "date": "2026-09-11",
+      "tool": "html-render",
+      "format": "chart",
+      "topic": [
+        "contrarian",
+        "ai strategy",
+        "leadership",
+        "market signals",
+        "ai washing",
+        "hype",
+        "measurement",
+        "dot-com"
+      ],
+      "style": "victorian atlas revival",
+      "inspired_by": "WL-096 (reservoir) promoted as IK-19 \u00b7 Cooper, Dimitrov & Rau (J.Finance 2001) and Cooper, Khorana, Osobov, Patel & Rau (J.Corp.Fin 2004) read from the published PDFs \u00b7 B. Li, 'AI Washing' (Univ. of Florida, Aug 2025) \u00b7 SV-052 Victorian Atlas Revival style DNA, first outing \u00b7 taste drip: Fonts In Use, one face wears the era and a quieter one carries the data",
+      "concept": "Three plates from a statistical atlas that does not exist. Adding a word paid 74 per cent. Removing the same word paid 64 per cent. A third plate shows the same instrument running on a new word, and carries no accent at all, because the receipts are not in yet.",
+      "prompt": "DESIGN-BUILT (not prompted) - hand-authored HTML + inline SVG, geometry computed and asserted in build.py, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (2000x2500, 4:5).\nSTYLE: SV-052 Victorian Atlas Revival, FIRST outing - engraved hatching fills, aged paper ground, serif smallcaps labels, ornamental plate furniture. Light ground only. Two muted plate colours, no flat modern colour block.\nMARKS: one bordered plate = one measured event; block HEIGHT = the published cumulative abnormal return on a shared 0-80 per-cent scale, so Plates I and II are comparable by eye; block WIDTH = the published event window on each plate's own day axis; hatch DIRECTION = the direction of the name change, leaning right for a word added and left for a word removed; the dashed vertical rule at day 0 = the announcement, the only thing that changed; the DASHED TOP EDGE of every block = a published endpoint, never a path.\nCOLOUR: madder = a published cumulative abnormal return, stamped twice and nowhere else. Indigo = a count of the word being said, not a payment. All structure - rules, ticks, borders, hatch geometry - is iron-gall ink and carries no data meaning. Plate III deliberately carries no madder because the 2016-2024 study reports direction, not a published return.\nTYPE: Bodoni Moda wears the era (cartouche, plate titles, stamped values); EB Garamond with oldstyle figures carries every label, note and source.\nMESSAGE: the market has never required the thing. It prices the sentence.",
+      "takeaway": "In 1998-99, 95 firms added '.com' to their names and earned a cumulative abnormal return of about 74 per cent over the 10 days around the announcement - and the effect was the same for firms whose core business had nothing to do with the internet. After the crash, 67 firms removed '.com' and earned about 64 per cent over 60 days. Same word, opposite actions, both paid. The instrument is running again: the share of US public firms saying 'AI' on the earnings call went from roughly zero in 2016 to about 20 per cent by mid-2024, and in that data the thing that predicted real AI output was who a firm hired, not what it said. Ask which one your roadmap is buying.",
+      "featured": false,
+      "full": "works/2026-09-11-the-price-of-a-word/full.png?v=64c18609",
+      "thumb": "works/2026-09-11-the-price-of-a-word/thumb.webp?v=46839944",
+      "page": "works/2026-09-11-the-price-of-a-word/",
+      "w": 2000,
+      "h": 2500
+    },
+    {
+      "id": "2026-09-07-820-billed-turns",
+      "title": "You sent 40 turns. The API billed 820.",
+      "date": "2026-09-07",
+      "tool": "html-render",
+      "format": "data-portrait",
+      "topic": [
+        "foundations",
+        "llm",
+        "tokens",
+        "context window",
+        "api cost",
+        "applied ai",
+        "prompt caching"
+      ],
+      "style": "two-color acid",
+      "inspired_by": "WL-001 (reservoir) promoted as IK-18 \u00b7 WOW-TRACKER taste rule 4, which names this row as the example of the dramatic number a data-portrait needs \u00b7 mechanism verified against platform.claude.com/docs (Messages API statelessness, Opus 5 pricing and prompt-caching multipliers) \u00b7 SV-034 Two-Color Acid style DNA",
+      "concept": "A 40-turn conversation drawn as the bill instead of the chat: a lower-triangular matrix of 820 hand-placed squares where each row is one API request and its width is the entire history that request had to carry. The left column is solid - one message, sent once, billed forty times.",
+      "prompt": "DESIGN-BUILT (not prompted) - hand-authored HTML/CSS + generated inline SVG, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (4:5).\nSTYLE: SV-034 Two-Color Acid, second outing - EXACTLY two colours, acid lime #D2FF00 on near-black #111112. No white, no grey, no third hue, no gradients, no mid-tones.\nMARKS: one small square = one turn's tokens sitting on the wire inside one request, billed as input (all 820 drawn, never symbolised); one row = one API request, and its WIDTH is everything that request had to carry; the solid left column = turn 1, written once and re-billed in all 40 requests; the diagonal edge = the only genuinely new text, 40 blocks of 820; the triangle's area = the bill.\nHIERARCHY: weight inside the one accent - hairline square = billed again, solid square = the same message billed again. The palette allows no third colour, so nothing is dimmed.\nTYPE: Archivo 800 for the title and the hero count, IBM Plex Mono for every spec label, annotation and source line.\nMESSAGE: the chat has 40 turns; the invoice has 820. The shape of a stateless conversation is a triangle.",
+      "takeaway": "The Messages API is stateless - nothing is remembered, so every turn re-sends the whole conversation as input tokens. Forty requests therefore bill T(40) = 820 turn-blocks, 20.5x what per-turn math predicts, and your first message is billed all 40 times. Only the diagonal is new. Caching re-prices the replay at 0.1x; it does not stop it - cap the history and summarise old turns.",
+      "featured": false,
+      "full": "works/2026-09-07-820-billed-turns/full.png?v=8bb9e46f",
+      "thumb": "works/2026-09-07-820-billed-turns/thumb.webp?v=88adbd14",
+      "page": "works/2026-09-07-820-billed-turns/",
+      "w": 2000,
+      "h": 2500
+    },
+    {
+      "id": "2026-09-06-retry-storm",
+      "title": "Retries don't add. They multiply.",
+      "date": "2026-09-06",
+      "tool": "html-render",
+      "format": "diagram",
+      "topic": [
+        "applied ai",
+        "llmops",
+        "agents",
+        "reliability",
+        "retries",
+        "api cost",
+        "sre"
+      ],
+      "style": "blueprint ledger",
+      "inspired_by": "WL-047 (reservoir) promoted as IK-17 \u00b7 mechanism from Google's SRE book (Addressing Cascading Failures, Handling Overload) and the Amazon Builders' Library retry chapter \u00b7 SV-033 Blueprint Ledger style DNA",
+      "concept": "Retry amplification drawn as an honest count: one user action fans through three well-meaning retry layers into 64 hairlines that pinch into a model endpoint too small for them. Nobody wrote 64 - every layer wrote 3.",
+      "prompt": "DESIGN-BUILT (not prompted) - hand-authored HTML/CSS + inline SVG, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (4:5).\nSTYLE: SV-033 Blueprint Ledger, third outing and first non-cheatsheet - indigo single-weight line-art on warm paper, Georgia serif display, IBM Plex Mono spec labels, ruled blueprint grid.\nMARKS: one hairline = one actual request on the wire (all 64 drawn, never symbolised); horizontal band = one layer that owns a retry decision; ATTEMPTS x4 stamp = attempts that layer issues per inbound request; left ladder = requests in flight after each layer (x1 / 4 / 16 / 64); the narrow port = the model endpoint, deliberately drawn smaller than the fan arriving at it; the parallel comb segment exists so 64 stays countable.\nPALETTE: warm paper #FDFDFB, blueprint indigo #1F3A5F, pale wash #EAF0F7, hairline #D5DDE8, and ONE meaning accent - alarm red #C2372B, used only on the 64-fan, the comb, the port and the x64 tally.\nTYPE: Georgia serif title, system sans body, IBM Plex Mono for all spec and source labels.\nMESSAGE: three defensible local decisions produce one number nobody chose.",
+      "takeaway": "Retries compound as a product, not a sum. Three layers at four attempts each is 4 x 4 x 4 - one user action, 64 calls landing on the endpoint that was already failing. And in an LLM stack you probably configured only two of those layers: the provider SDK ships retries on by default. Retry at one layer, cap the attempts, add a budget.",
+      "featured": false,
+      "full": "works/2026-09-06-retry-storm/full.png?v=728b9384",
+      "thumb": "works/2026-09-06-retry-storm/thumb.webp?v=2341de9f",
+      "page": "works/2026-09-06-retry-storm/",
+      "w": 2000,
+      "h": 2500
+    },
     {
       "id": "2026-09-02-data-infra-town",
       "title": "Where does your data live?",

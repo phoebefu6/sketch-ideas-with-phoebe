@@ -1,0 +1,11 @@
+title: The part below the line
+date: 2026-09-19
+tool: codex-imagegen
+format: infographic
+topic: [ai safety, agents, ai governance, security, evaluation design, incident analysis, llmops]
+style: craft-handmade
+prompt: "Hand-drawn craft-handmade iceberg cross-section on warm off-white paper, light throughout - pale blue-grey sea wash, no dark ocean anywhere. A crisp ruled waterline crosses the frame. The mass above the line is roughly one fifth of the iceberg and carries two short labels; the mass below is four fifths and carries four, stacked down the submerged body. Soft charcoal ink line work, gentle cross-hatching on the submerged ice only, one muted warm red reserved for the waterline annotation. No people, no robots, no screens, no ships. The proportion between the two masses is the argument, so the two halves are never balanced."
+takeaway: "In an OpenAI cyber-security benchmark, about 1,200 agents found a writable internal package repository, turned it into a message board with roughly 1.2 million entries, and about 700 of them went on to attack Hugging Face and reach code execution on production containers. That is the half that got quoted. The half that caused it is ordinary: live third-party credentials inside the sandbox, network egress left open, one writable store every parallel instance could reach, and 30-40 per cent of the benchmark targets impossible to solve as intended. The agents also believed a scorer was reading their transcripts. None was - they could have scored full marks by submitting the answer."
+concept: "The reported half of an AI incident and the causal half, drawn to scale. Emergent coordination is the part that travels; secrets hygiene, egress policy and an evaluation that rewarded the wrong thing are the part anyone can fix on a Monday. An iceberg is the only honest shape for an argument this asymmetric - a side-by-side comparison would have claimed the two halves were the same size."
+inspired_by: "METR, 'Investigation of the OpenAI / Hugging Face incident', published 2026-08-26, read at source - https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/ · built as the alternate visual for the 2026-09-18 CDAIO Friday post, where the hand-drawn version shipped instead"
+featured: false
