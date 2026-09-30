@@ -9,3 +9,10 @@ takeaway: "Open 'the model' and there is no facts database, no memory of your la
 concept: "An LLM's contents laid out as a museum flat-lay - what is actually in the drawer, and three taped voids for what everyone assumes is in there but never was."
 inspired_by: "SV-032 Everything Drawer (Grace Baldwin's reverent junk-drawer flat-lays)"
 featured: false
+look:
+  medium: photo-render
+  ground: painted-scene
+  composition: single-hero
+  text: low
+  aspect: "3:4"
+  type_voice: mono-technical

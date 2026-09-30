@@ -9,3 +9,10 @@ takeaway: "Between Enter and the answer there is no lookup - your words are exch
 concept: "The inference pipeline drawn as a four-station pilgrimage up a xianxia mountain - tokenizer gate, embedding cloud-sea, attention hall, sampling summit."
 inspired_by: "SV-011 Cloud Sea Xianxia x the illustrated-journey shape of The Minds of Modern AI"
 featured: false
+look:
+  medium: ink-wash
+  ground: painted-scene
+  composition: journey-map
+  text: low
+  aspect: "3:4"
+  type_voice: bookish-serif

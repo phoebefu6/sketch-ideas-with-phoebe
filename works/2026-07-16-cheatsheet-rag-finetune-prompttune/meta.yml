@@ -7,3 +7,10 @@ style: blueprint ledger
 prompt: "Blueprint Ledger style-DNA - deep blueprint indigo (#1f3a5f) on warm paper, Georgia display + mono spec labels, thin ruled hairlines. Hero: four LLM levers as blueprint line-art (prompt box, RAG retrieval circle, fine-tune dial, soft-prompt vectors). Rendered SVG, not diffusion."
 takeaway: "Fine-tuning teaches a skill; RAG supplies facts. Default to prompt + RAG - fine-tune only the pipelines that prove they need it."
 featured: false
+look:
+  medium: vector-line
+  ground: white
+  composition: grid
+  text: high
+  aspect: "5:7"
+  type_voice: grotesk

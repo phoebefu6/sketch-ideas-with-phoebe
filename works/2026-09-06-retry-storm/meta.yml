@@ -9,3 +9,10 @@ takeaway: "Retries compound as a product, not a sum. Three layers at four attemp
 concept: "Retry amplification drawn as an honest count: one user action fans through three well-meaning retry layers into 64 hairlines that pinch into a model endpoint too small for them. Nobody wrote 64 - every layer wrote 3."
 inspired_by: "WL-047 (reservoir) promoted as IK-17 · mechanism from Google's SRE book (Addressing Cascading Failures, Handling Overload) and the Amazon Builders' Library retry chapter · SV-033 Blueprint Ledger style DNA"
 featured: false
+look:
+  medium: vector-line
+  ground: white
+  composition: diagram
+  text: high
+  aspect: "4:5"
+  type_voice: bookish-serif

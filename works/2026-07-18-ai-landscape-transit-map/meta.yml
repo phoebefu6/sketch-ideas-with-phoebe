@@ -14,3 +14,10 @@ prompt: |
   Full editable SVG source is published alongside this work as sheet.html.
 inspired_by: "Massimo Vignelli transit maps"
 featured: false
+look:
+  medium: vector-line
+  ground: cream
+  composition: map
+  text: low
+  aspect: "16:9"
+  type_voice: grotesk

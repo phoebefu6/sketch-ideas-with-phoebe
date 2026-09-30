@@ -8,3 +8,10 @@ prompt: "Cinematic product photography of a precision-machined exploded assembly
 takeaway: "You bought a managed guardrail. It does not read toolUse.input, toolResult or toolSpec - so the one station where an agent can actually cause harm is the one nothing inspects."
 inspired_by: "Modern Metro and Meta Quest 3 spec-poster references"
 featured: true
+look:
+  medium: 3d-render
+  ground: full-bleed-colour
+  composition: single-hero
+  text: medium
+  aspect: "3:4"
+  type_voice: grotesk

@@ -10,3 +10,10 @@ prompt: >-
 takeaway: "AI's practical value is already real; what remains uncertain is whether scale, new paradigms, or human-machine collaboration defines the road ahead."
 featured: true
 inspired_by: "https://www.youtube.com/watch?v=0zXSrsKlm5A"
+look:
+  medium: watercolour
+  ground: painted-scene
+  composition: journey-map
+  text: medium
+  aspect: "1:2"
+  type_voice: hand-lettered

@@ -9,3 +9,10 @@ takeaway: "Bus factor = the number of people who can leave before a system stops
 concept: "The bus factor taught as a 4-panel story instead of assumed as vocabulary: meet the single point of failure, watch them board the literal bus, feel the panic, then land the definition when the reader has already lived the problem."
 inspired_by: "Redesign of 2026-08-29-bus-factor-timetable after the insider-register failed a cold first read - same concept, beginner-clear register"
 featured: false
+look:
+  medium: marker-cartoon
+  ground: white
+  composition: panels
+  text: medium
+  aspect: "4:3"
+  type_voice: hand-lettered

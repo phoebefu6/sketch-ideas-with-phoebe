@@ -10,7 +10,7 @@ simplified into images anyone can act on. Every prompt published.
 
 ## Latest
 
-<table><tr><td width="33%"><img src="works/2026-09-28-one-street-three-rulers/thumb.webp?v=37052f7e" alt="18% or 78%? One street, three rulers." width="100%"></td><td width="33%"><img src="works/2026-09-19-the-part-below-the-line/thumb.webp?v=4bc1c10d" alt="The part below the line" width="100%"></td><td width="33%"><img src="works/2026-09-18-centralize-decentralize-repeat/thumb.webp?v=c2719611" alt="Centralize. Decentralize. Repeat." width="100%"></td></tr><tr><td align="center"><sub><b>18% or 78%? One street, three rulers.</b> · html-render</sub></td><td align="center"><sub><b>The part below the line</b> · codex-imagegen</sub></td><td align="center"><sub><b>Centralize. Decentralize. Repeat.</b> · html-render</sub></td></tr></table>
+<table><tr><td width="33%"><img src="works/2026-09-28-one-street-three-rulers/thumb.webp?v=af0f2349" alt="18% or 78%? One street, three rulers." width="100%"></td><td width="33%"><img src="works/2026-09-19-the-part-below-the-line/thumb.webp?v=4bc1c10d" alt="The part below the line" width="100%"></td><td width="33%"><img src="works/2026-09-18-centralize-decentralize-repeat/thumb.webp?v=c2719611" alt="Centralize. Decentralize. Repeat." width="100%"></td></tr><tr><td align="center"><sub><b>18% or 78%? One street, three rulers.</b> · codex-imagegen</sub></td><td align="center"><sub><b>The part below the line</b> · codex-imagegen</sub></td><td align="center"><sub><b>Centralize. Decentralize. Repeat.</b> · html-render</sub></td></tr></table>
 
 <table><tr><td width="33%"><img src="works/2026-09-11-the-price-of-a-word/thumb.webp?v=46839944" alt="The price of a word" width="100%"></td><td width="33%"><img src="works/2026-09-07-820-billed-turns/thumb.webp?v=88adbd14" alt="You sent 40 turns. The API billed 820." width="100%"></td><td width="33%"><img src="works/2026-09-06-retry-storm/thumb.webp?v=2341de9f" alt="Retries don't add. They multiply." width="100%"></td></tr><tr><td align="center"><sub><b>The price of a word</b> · html-render</sub></td><td align="center"><sub><b>You sent 40 turns. The API billed 820.</b> · html-render</sub></td><td align="center"><sub><b>Retries don't add. They multiply.</b> · html-render</sub></td></tr></table>
 
@@ -18,10 +18,10 @@ simplified into images anyone can act on. Every prompt published.
 
 ## Formats
 
-- **Infographic** (5) - A complex data/AI concept, explained in one image.
+- **Infographic** (6) - A complex data/AI concept, explained in one image.
 - **Chart** (1) - One chart, one idea - single-chart experiments, d3.js spirit. Never a dashboard.
 - **Data portrait** (2) - One number or stat as the hero - the two-second rule made visible.
-- **Diagram** (2) - A system, pipeline, or architecture drawn as designed art, not a boxes-and-arrows dump.
+- **Diagram** (1) - A system, pipeline, or architecture drawn as designed art, not a boxes-and-arrows dump.
 - **Timeline** (1) - How a concept, tech, or idea evolved - time as the spine.
 - **Map** (1) - A concept as territory - a landscape or transit-map of an idea space.
 - **Matrix** (0) - A 2x2 or quadrant framework - a decision or trade-off made spatial.

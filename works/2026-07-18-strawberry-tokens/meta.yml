@@ -8,3 +8,10 @@ prompt: "Flat vector editorial data-portrait poster, crop 4:5. STRICT two-color 
 takeaway: "LLMs read tokens, not letters - which is why they confidently miscount the r's in strawberry. The unit of thought isn't the character you see."
 inspired_by: "Two-color system - OFF+BRAND (Lando Norris) x Josef Müller-Brockmann"
 featured: false
+look:
+  medium: vector-flat
+  ground: full-bleed-colour
+  composition: typographic
+  text: low
+  aspect: "4:5"
+  type_voice: mono-technical

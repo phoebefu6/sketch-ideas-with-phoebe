@@ -9,3 +9,10 @@ takeaway: "The data organisation has been swinging between one central team and 
 concept: "Sixty-six years of the centralize/decentralize cycle drawn as one unbroken ribbon on a true linear time axis, where vertical position is the only encoded variable and every turn is a dated, sourced event. A list of eras is a slide; the same eras given a shape are an argument - you can see the wave, and you can see it accelerating."
 inspired_by: "WL-077 (reservoir) promoted as IK-20 · Douglas McGregor, The Human Side of Enterprise (1960) - the accordion effect, found while verifying that the pendulum is a named pattern and not a LinkedIn observation · SV-047 Narrative Stream style DNA, first outing, decoded from The Pudding's 'Is the Love Song Dying?' · taste drip: the Pudding move of putting every annotation inside the flow and letting a legend die"
 featured: false
+look:
+  medium: vector-line
+  ground: cream
+  composition: diagram
+  text: high
+  aspect: "4:5"
+  type_voice: bookish-serif

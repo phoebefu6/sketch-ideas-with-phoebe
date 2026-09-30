@@ -57,11 +57,13 @@ A real design has an authored system:
 
 ## Maker Routing Memory
 
-- Posters, infographics, diagrams, cheatsheets, typographic pieces, chart-like work, exact text,
-  exact labels, and data-art should be design-built in HTML/SVG and rendered.
-- Image generation is reserved for raster-first illustration, painterly/comic scenes, style studies,
-  or photo-like metaphor work where exact layout and text are not the core.
-- Midjourney and ChatGPT image are idea/style tools, not reliable layout engines.
+**Superseded 2026-09-30.** The old rule here (exact text or labels -> design-build) is what made
+the wall look like one template: 11 of 21 works hand-built HTML, same cream-serif-diagram skeleton.
+The default maker is now WORLD-FIRST raster, with hybrid for exact figures and design-build only
+for grids and axes. The rules - taste benchmark (07-15 Minds of Modern AI), world gate, lettering,
+25-word image budget, `look:` fingerprint rotation against the last 4 works, register menu - live
+in ONE file: `~/.claude/skills/sketch-engine/references/creative-engine.md`. Read it before any
+build. Never restate or fork it here.
 
 ## Current Quality Bar
 

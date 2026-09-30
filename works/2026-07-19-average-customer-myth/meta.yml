@@ -23,3 +23,10 @@ prompt: >-
 takeaway: "The average customer is a myth - decide on the distribution, not the mean."
 featured: true
 inspired_by: ""
+look:
+  medium: photo-render
+  ground: painted-scene
+  composition: single-hero
+  text: low
+  aspect: "2:3"
+  type_voice: bookish-serif

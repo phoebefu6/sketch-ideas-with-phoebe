@@ -9,3 +9,10 @@ takeaway: "In 1998-99, 95 firms added '.com' to their names and earned a cumulat
 concept: "Three plates from a statistical atlas that does not exist. Adding a word paid 74 per cent. Removing the same word paid 64 per cent. A third plate shows the same instrument running on a new word, and carries no accent at all, because the receipts are not in yet."
 inspired_by: "WL-096 (reservoir) promoted as IK-19 · Cooper, Dimitrov & Rau (J.Finance 2001) and Cooper, Khorana, Osobov, Patel & Rau (J.Corp.Fin 2004) read from the published PDFs · B. Li, 'AI Washing' (Univ. of Florida, Aug 2025) · SV-052 Victorian Atlas Revival style DNA, first outing · taste drip: Fonts In Use, one face wears the era and a quieter one carries the data"
 featured: false
+look:
+  medium: engraving-vector
+  ground: parchment
+  composition: diagram
+  text: high
+  aspect: "4:5"
+  type_voice: bookish-serif

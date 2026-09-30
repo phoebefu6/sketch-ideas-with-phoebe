@@ -180,8 +180,8 @@
       "id": "2026-09-28-one-street-three-rulers",
       "title": "18% or 78%? One street, three rulers.",
       "date": "2026-09-28",
-      "tool": "html-render",
-      "format": "diagram",
+      "tool": "codex-imagegen",
+      "format": "infographic",
       "topic": [
         "ai adoption",
         "applied ai",
@@ -192,17 +192,17 @@
         "data decode",
         "kpi"
       ],
-      "style": "ink sketch, one accent",
-      "inspired_by": "Phoebe's Wednesday Data Decode KPI repo (linkedin-wed-post-vault/Sources/kpi-repo.md), AI Adoption Rate decoded 2026-08-05, the gallery source lane per her 2026-09-22 steer - and Jeffrey S. Allen, 'Monitoring AI Adoption in the U.S. Economy', FEDS Notes, Federal Reserve Board, 3 April 2026",
-      "concept": "The AI adoption rate drawn as one street measured with three honest rulers. Ten firms, 152 workers, two towers flying the flag. Count the firms and you get 20 per cent; count the workers under a flag and you get 79; count the lit windows and you get 37. The real US numbers for late 2025 fall in the same order - 18, 78, 41 - for the same reason.",
-      "prompt": "DESIGN-BUILT (not prompted) - hand-authored HTML + generated inline SVG, every count computed and asserted in build.py, rendered headless Chrome at 1000x1250 CSS px with --force-device-scale-factor=2 (2000x2500, 4:5).\nSTYLE: ink sketch, one accent - loose indigo line on warm paper, seeded wobble and corner overshoot for the hand, exactly ONE saturated hue on the sheet.\nMARKS: a drawn street of 10 firms and 152 workers (8 shops of 4, 2 towers of 60). Building size = headcount; each window is one worker. Amber = AI actually in use, and nothing else: a roof flag (the firm uses AI) or a lit window (this person uses AI). Six lit windows sit in unflagged shops - bring-your-own use the owner would not report. Below, three rulers count the same street: firms flagged 2/10 = 20%, workers under a flag 120/152 = 79% (indigo fill = counted because of the building, not their own use), lit windows 56/152 = 37%. Each ruler is paired with the real US figure it mirrors, stamped with source and month.\nTYPE: Fraunces for the argument and the numbers, Inter for labels, IBM Plex Mono for counts and sources.\nMESSAGE: the gap between AI adoption rates is mostly the unit - firm-weighted vs employment-weighted vs individual use - not a disagreement about reality.",
-      "takeaway": "In the same autumn the US AI adoption rate was 18 per cent (share of firms, Census BTOS, Dec 2025), 41 per cent (share of workers using genAI for work, Real-Time Population Survey, Nov 2025) and 78 per cent (share of the workforce at a firm that has adopted AI, Atlanta Fed SBU, Nov 2025). All three are right. Big firms adopt first and hold most of the workers, so counting firms gives a small number and counting workers under an adopting roof gives a big one. An adoption rate without its unit is not a number yet: say per firm, per worker, or per worker-at-a-firm, then the date.",
+      "style": "storybook high street",
+      "inspired_by": "Phoebe's Wednesday Data Decode KPI repo (linkedin-wed-post-vault/Sources/kpi-repo.md), AI Adoption Rate decoded 2026-08-05 - and Jeffrey S. Allen, 'Monitoring AI Adoption in the U.S. Economy', FEDS Notes, Federal Reserve Board, 3 April 2026 - the gallery's own 2026-07-15 storybook, The Minds of Modern AI, as the taste benchmark",
+      "concept": "The AI adoption rate painted as one autumn high street measured by three surveyors. One counts shop doors with a clicker, one wraps a tape round the two flagged towers and takes in everyone inside, one climbs a ladder with a lantern to see who is actually using it - including the one cafe owner at a laptop in a street of bakers, barbers and tailors working by hand. Three honest rulers, three honest numbers.",
+      "prompt": "RASTER, generated with GPT Image via codex-cli (baoyu-image-gen), 2:3, third variant; all six lettering items checked letter by letter on the render. Replaced an ink-sketch v1 on 2026-09-30 under the new world-first rule.\n\nA tall portrait storybook editorial illustration, hand-painted watercolour and gouache on warm airy paper, delicate ink outlines, rich warm saturated colours, full-bleed painted scene to every edge, premium children's-book craft for grown-ups, optimistic and intellectually serious.\n\nSCENE: a cobbled high street at soft blue-hour twilight seen straight on, like a stage set, the street curving gently uphill. Along it stand eight small cosy shops (a bakery, a barber, a bookshop, a florist, a bike repair shop, a tailor, a cafe, a toy shop) and two tall office towers. ONLY the two towers fly a small orange flag on their roofs. The towers are full of windows, and many of their windows glow warm amber. The small shops are cosy but ordinary: shopkeepers bake bread, cut hair, arrange flowers, sew, fix a bicycle - by hand, with NO laptops, NO screens, NO computers in six of the eight shops. Only TWO small shops have a single glowing window where one shopkeeper sits at a laptop - and these two shops fly no flag. The contrast must be obvious: towers full of lit screens, the small shops almost all hands-on work.\n\nIn the foreground, three friendly surveyors in waistcoats measure the same street in three different ways, each beside a painted wooden signpost:\n1. Left: a surveyor with a clipboard and a hand tally counter counts shop doors one by one. Her signpost reads exactly: \"COUNT THE FIRMS 18%\"\n2. Centre: a surveyor pulls an enormous yellow measuring tape wrapped around both tall towers, sweeping in every window lit or dark. His signpost reads exactly: \"COUNT EVERYONE UNDER A FLAG 78%\"\n3. Right: a surveyor on a tall wooden ladder holds up a lantern and peers into the glowing windows one at a time, including the lit window of a small shop. Her signpost reads exactly: \"COUNT WHO USES IT 41%\"\n\nTOP: a painted ribbon banner across the sky reading exactly: \"18% OR 78%?\" and beneath it in smaller hand lettering exactly: \"Same street. Same autumn. Three honest rulers.\"\nBOTTOM: a curling paper scroll across the cobbles reading exactly: \"No unit, no number.\"\n\nAll lettering is clean, correctly spelled English, hand-painted, large and legible. No other text anywhere. No robots, no glowing brains, no circuit boards, no logos, no watermark, no dark background, no photorealism.",
+      "takeaway": "In the same autumn the US AI adoption rate was 18 per cent (share of firms, Census BTOS, Dec 2025), 41 per cent (share of workers using genAI for work, Real-Time Population Survey, Nov 2025) and 78 per cent (share of the workforce at a firm that has adopted AI, Atlanta Fed SBU, Nov 2025). All three are right. Big firms adopt first and hold most of the workers, so counting firms gives a small number and counting everyone under an adopting roof gives a big one. An adoption rate without its unit is not a number yet: say per firm, per worker, or per worker-at-a-firm, then the date.",
       "featured": false,
-      "full": "works/2026-09-28-one-street-three-rulers/full.png?v=18c5ea6d",
-      "thumb": "works/2026-09-28-one-street-three-rulers/thumb.webp?v=37052f7e",
+      "full": "works/2026-09-28-one-street-three-rulers/full.png?v=a230dba6",
+      "thumb": "works/2026-09-28-one-street-three-rulers/thumb.webp?v=af0f2349",
       "page": "works/2026-09-28-one-street-three-rulers/",
-      "w": 2000,
-      "h": 2500
+      "w": 1024,
+      "h": 1536
     },
     {
       "id": "2026-09-19-the-part-below-the-line",

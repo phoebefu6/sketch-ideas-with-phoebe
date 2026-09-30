@@ -15,3 +15,10 @@ prompt: |-
   MESSAGE: approve the range, not just the value.
 inspired_by: "Constructed-object poster photography and measured forecast fan charts"
 featured: true
+look:
+  medium: vector-flat
+  ground: cream
+  composition: single-hero
+  text: medium
+  aspect: "4:5"
+  type_voice: grotesk

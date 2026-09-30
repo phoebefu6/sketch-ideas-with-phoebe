@@ -16,31 +16,39 @@ Nobody is wrong. They counted different things on the same street.
 
 ## Explanation
 
-The sheet draws that street. Eight small shops with four people each, two towers with sixty each:
-ten firms, 152 workers. Only the towers fly the flag. Some windows are lit - that person uses AI -
-most of them in the towers, a few in shops whose owner would tell a survey "no".
+The picture paints that street. Two office towers fly the flag - the firms that use AI - and
+their windows are full of people at screens. Around them, small shops: a baker, a barber, a
+bookseller, a florist, a bike mechanic, a tailor, a toymaker, all working by hand. One cafe owner
+sits at a laptop, and her shop flies no flag.
 
-- **Count the firms:** 2 of 10 fly the flag. 20 per cent.
-- **Count workers under a flag:** 120 of 152 work in a flagged building. 79 per cent.
-- **Count the lit windows:** 56 of 152 use it themselves. 37 per cent.
+Three surveyors measure the same street:
 
-The drawn street is illustrative, but the order is not: the real figures land 18, 78, 41 for the
-same reason. Big firms adopt first - 37 per cent of US firms with 250+ employees used AI in May
-2026, against under 20 per cent of the smallest (Census) - and big firms hold most of the workers.
-So a firm-weighted rate is small, an employment-weighted rate is large, and individual use sits in
-between, pulled up by people using their own tools where the company says it does not.
+- **Count the firms** - a clicker on each door. Most doors are small shops, so the rate is small:
+  18 per cent of US firms.
+- **Count everyone under a flag** - a tape round the two towers, taking in every desk inside
+  whether that person uses AI or not: 78 per cent of the US workforce works at an adopting firm.
+- **Count who uses it** - a ladder and a lantern, window by window, including the cafe: 41 per
+  cent of US workers use genAI for work.
+
+The order is not an accident. Big firms adopt first - 37 per cent of US firms with 250+ employees
+used AI in May 2026, against under 20 per cent of the smallest (Census) - and big firms hold most
+of the workers. So a firm-weighted rate is small, an employment-weighted rate is large, and
+individual use sits in between, pulled up by people using their own tools where the company
+says it does not.
 
 The practical rule for any dashboard: an adoption rate without its unit is not a number yet. Say
 per firm, per worker, or per worker-at-a-firm - then the date.
 
 ## Recipe
 
-- **Maker:** design-built. `build.py` draws the street and computes every ruler from it, with
-  asserts, then writes `poster.html`; headless Chrome renders 2000x2500.
-- **Style:** ink sketch, one accent. Indigo line, warm paper, seeded wobble. Amber is the only
-  saturated colour and means one thing - AI in use - as a roof flag (firm) or a lit window (person).
+- **Maker:** raster, GPT Image through codex-cli, 2:3. Three variants; the first two put a
+  laptop in nearly every shop, which blurred the argument, so the third prompt says six of the
+  eight shops work by hand.
+- **Style:** storybook high street - watercolour and gouache, ink outlines, autumn blue hour,
+  lettering only on the banner, the three signposts and the scroll.
 - **Why it works as a picture:** the weighting argument is abstract in words and obvious in a
-  drawing. Two tall buildings are two firms and 120 people at once.
+  place. Two towers are two firms and most of the people at once, and the surveyor with the tape
+  is visibly measuring something different from the one with the clicker.
 
 Sources: J. S. Allen, "Monitoring AI Adoption in the U.S. Economy", FEDS Notes, Federal Reserve
 Board, 3 April 2026. US Census Bureau, "Large Firms With at Least 20 Employees Biggest AI Users",

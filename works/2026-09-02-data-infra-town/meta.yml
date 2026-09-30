@@ -9,3 +9,10 @@ takeaway: "Lake stores raw, warehouse stores structured, mart serves one team, l
 concept: "The five data architectures drawn as the literal town their names describe, so the geography teaches the differences: what each stores, how structured it is, and who owns it - visible in one look, no definitions required."
 inspired_by: "Taste rule from IK-15 (build the object the concept is named after) applied to a whole vocabulary at once; style traits from Phoebe's hand-drawn flowchart reference"
 featured: false
+look:
+  medium: watercolour
+  ground: cream
+  composition: scene
+  text: high
+  aspect: "2:3"
+  type_voice: hand-lettered

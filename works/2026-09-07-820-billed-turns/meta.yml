@@ -9,3 +9,10 @@ takeaway: "The Messages API is stateless - nothing is remembered, so every turn 
 concept: "A 40-turn conversation drawn as the bill instead of the chat: a lower-triangular matrix of 820 hand-placed squares where each row is one API request and its width is the entire history that request had to carry. The left column is solid - one message, sent once, billed forty times."
 inspired_by: "WL-001 (reservoir) promoted as IK-18 · WOW-TRACKER taste rule 4, which names this row as the example of the dramatic number a data-portrait needs · mechanism verified against platform.claude.com/docs (Messages API statelessness, Opus 5 pricing and prompt-caching multipliers) · SV-034 Two-Color Acid style DNA"
 featured: false
+look:
+  medium: vector-flat
+  ground: full-bleed-colour
+  composition: diagram
+  text: high
+  aspect: "4:5"
+  type_voice: grotesk

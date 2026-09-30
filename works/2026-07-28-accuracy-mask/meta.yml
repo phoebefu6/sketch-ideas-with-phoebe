@@ -27,3 +27,10 @@ prompt: >-
 takeaway: "A perfect score is not proof. Validation only means something when the validation data means something."
 featured: true
 inspired_by: ""
+look:
+  medium: 3d-render
+  ground: full-bleed-colour
+  composition: single-hero
+  text: none
+  aspect: "4:5"
+  type_voice: none

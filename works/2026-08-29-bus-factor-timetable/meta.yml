@@ -9,3 +9,10 @@ takeaway: "Every critical system has a bus factor - the number of people who can
 concept: "Key-person risk drawn as the thing it is named after: a municipal bus timetable where every critical route has exactly one qualified driver, and one route is already stamped SERVICE WITHDRAWN because the sole driver resigned."
 inspired_by: "SV-015 Straight-Faced Nonsense (deadpan register) x municipal timetable print vernacular"
 featured: false
+look:
+  medium: vector-flat
+  ground: cream
+  composition: typographic
+  text: high
+  aspect: "4:5"
+  type_voice: grotesk

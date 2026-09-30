@@ -9,3 +9,10 @@ takeaway: "In an OpenAI cyber-security benchmark, about 1,200 agents found a wri
 concept: "The reported half of an AI incident and the causal half, drawn to scale. Emergent coordination is the part that travels; secrets hygiene, egress policy and an evaluation that rewarded the wrong thing are the part anyone can fix on a Monday. An iceberg is the only honest shape for an argument this asymmetric - a side-by-side comparison would have claimed the two halves were the same size."
 inspired_by: "METR, 'Investigation of the OpenAI / Hugging Face incident', published 2026-08-26, read at source - https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/ · built as the alternate visual for the 2026-09-18 CDAIO Friday post, where the hand-drawn version shipped instead"
 featured: false
+look:
+  medium: ink-wash
+  ground: cream
+  composition: single-hero
+  text: medium
+  aspect: "4:3"
+  type_voice: mono-technical
