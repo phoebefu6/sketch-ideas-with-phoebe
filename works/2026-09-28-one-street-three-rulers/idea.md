@@ -41,11 +41,13 @@ per firm, per worker, or per worker-at-a-firm - then the date.
 
 ## Recipe
 
-- **Maker:** raster, GPT Image through codex-cli, 2:3. Three variants; the first two put a
-  laptop in nearly every shop, which blurred the argument, so the third prompt says six of the
-  eight shops work by hand.
+- **Maker:** raster, GPT Image through codex-cli, 2:3. Four variants. The first two put a laptop
+  in nearly every shop, which blurred the argument; the third fixed that but carried almost no
+  information; the fourth builds the facts into the street - a shop sign and a tower plaque for
+  WHY the rates split, and a source line on each surveyor's signpost.
 - **Style:** storybook high street - watercolour and gouache, ink outlines, autumn blue hour,
-  lettering only on the banner, the three signposts and the scroll.
+  lettering on the banner, a hanging shop sign, a brass plaque, a cafe chalkboard, the three
+  signposts and the scroll - every fact in the scene, no paragraph block.
 - **Why it works as a picture:** the weighting argument is abstract in words and obvious in a
   place. Two towers are two firms and most of the people at once, and the surveyor with the tape
   is visibly measuring something different from the one with the clicker.
