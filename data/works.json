@@ -177,6 +177,31 @@
   },
   "works": [
     {
+      "id": "2026-10-16-titles-die-learners-climb",
+      "title": "Titles die. Learners keep climbing.",
+      "date": "2026-10-16",
+      "tool": "codex-imagegen",
+      "format": "map",
+      "topic": [
+        "data careers",
+        "lifelong learning",
+        "data science",
+        "ai adoption",
+        "leadership"
+      ],
+      "style": "alpine data panorama",
+      "inspired_by": "Style card SV-051 Alpine Data Panorama (19th-century alpine relief panoramas); room-escape games for the locked mystery rooms",
+      "concept": "A learning journey drawn as a game map with no end point. Each flag on the first mountain is a course domain picked up along the way, with its course count. A rope bridge jumps to a second mountain, Applied AI, where the climber is still going. Both summits are lost in cloud, and a third mountain sits in fog with padlocked doors marked with a question mark: the next rooms are not on any map yet.",
+      "prompt": "HYBRID: the painted scene below was generated with GPT Image via codex-cli (baoyu-image-gen), 4:3, first try, zero stray characters; every word on the image is HTML type set over it (anchors measured on gridded zooms), course counts computed from the phoebe-learns learning log.\n\nA hand-painted 19th-century alpine panorama illustration, like an antique tourist relief panorama map, of an adventure game world with no visible end.\n\nCOMPOSITION, left to right:\n- LEFT: one large mountain filling the left 40 percent of the frame, its broad face crossed by a clear zigzag switchback footpath that climbs from the bottom-left foot to a high right shoulder. Six small blank triangular pennant flags are planted along the path, one at each switchback corner, evenly spread from bottom to top, each flag plain and empty. The summit disappears into a soft bank of white cloud.\n- CENTRE: a long sagging rope-and-plank suspension bridge spans the deep gap from the left mountain's right shoulder across to a second mountain.\n- CENTRE-RIGHT: a second, taller mountain. High on its slope a small determined young woman climber, about one tenth of the frame height, ponytail, backpack, ice axe raised mid-swing, clearly working hard as she climbs upward. Below her on the path, one blank pennant flag. Its summit is lost in cloud.\n- FAR RIGHT: a third mountain almost entirely veiled in thick drifting fog, only faintly visible, with three small mysterious stone doorways carved into its rock, each sealed by a plain door with a padlock, softly glowing at the edges like unexplored rooms in a puzzle game.\n- Faint dotted footpaths branch off into the fog in several directions, leading nowhere visible.\n\nRESERVED EMPTY ZONES: keep the top 20 percent of the frame as calm, open, pale sky with nothing in it. Keep the bottom 10 percent as soft pale mist with nothing in it. Leave clear open rock or sky beside every flag so a label can sit there later.\n\nHAND: painted relief shading in gouache and translucent watercolour washes over fine ink linework, visible brush edges and gentle pooling, hatched rock faces, the warm hand of an antique panorama painter. This is a painting, not a 3D render, not a photograph, not flat vector.\n\nPALETTE, strictly: warm cream paper ground, slate indigo and soft blue-grey for rock and shadow, pale cloud white, and exactly ONE warm accent - the climber's jacket is vivid orange. No other orange or red anywhere, no purple, no teal, no dark background, no night sky. The overall image is light and airy.\n\nABSOLUTELY NO TEXT ANYWHERE. No letters, no words, no numerals, no Roman numerals, no handwriting, no captions, no titles, no labels, no signatures, no dates, no map legends, no scale bars with numbers, no compass letters, no signs with writing, no brand names, no logos, no watermarks, no legible characters of any script. Every flag, door and sign must be entirely blank. This is critical: all lettering is added separately afterwards, so any character rendered in this image is a defect.",
+      "takeaway": "Every few months someone declares data science dead. Job titles do die - but the work underneath them keeps moving, and the people who last are the ones who keep learning whatever the next problem needs. 296 courses across 21 domains, and only 16 of them are data science.",
+      "featured": false,
+      "full": "works/2026-10-16-titles-die-learners-climb/full.png?v=85bcf1ea",
+      "thumb": "works/2026-10-16-titles-die-learners-climb/thumb.webp?v=7d9ff3d5",
+      "page": "works/2026-10-16-titles-die-learners-climb/",
+      "w": 1448,
+      "h": 1072
+    },
+    {
       "id": "2026-09-28-one-street-three-rulers",
       "title": "18% or 78%? One street, three rulers.",
       "date": "2026-09-28",
