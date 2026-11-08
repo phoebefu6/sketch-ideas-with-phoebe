@@ -173,6 +173,20 @@
         "label": "Fine art",
         "blurb": "Painting and drawing traditions as the register - ink, oil, charcoal, printmaking."
       }
+    },
+    "registers": {
+      "board": {
+        "label": "Board",
+        "blurb": "Calm, exact, credible. C-level, board packs, client proposals. Numbers carry authority; nothing cute."
+      },
+      "bold": {
+        "label": "Bold",
+        "blurb": "One loud idea, high contrast, reads at a distance. Keynotes, posters, LinkedIn hooks, launches."
+      },
+      "creative": {
+        "label": "Creative",
+        "blurb": "Art-led, surprising, playful. Gallery, storytelling, workshops, personal brand, courses."
+      }
     }
   },
   "works": [
