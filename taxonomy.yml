@@ -137,3 +137,17 @@ categories:
   fine-art:
     label: Fine art
     blurb: Painting and drawing traditions as the register - ink, oil, charcoal, printmaking.
+
+# REGISTER = who the visual is for, i.e. how loud it may be (added 2026-11-08 by Phoebe:
+# "sometimes very professional if audience is board level, sometimes bold, sometimes very creative").
+# Cards store it as `register: [a, b]`, primary first. Every visual skill picks styles by this.
+registers:
+  board:
+    label: Board
+    blurb: Calm, exact, credible. C-level, board packs, client proposals. Numbers carry authority; nothing cute.
+  bold:
+    label: Bold
+    blurb: One loud idea, high contrast, reads at a distance. Keynotes, posters, LinkedIn hooks, launches.
+  creative:
+    label: Creative
+    blurb: Art-led, surprising, playful. Gallery, storytelling, workshops, personal brand, courses.
