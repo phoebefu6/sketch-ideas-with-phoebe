@@ -117,75 +117,67 @@
       }
     },
     "categories": {
+      "dashboard": {
+        "label": "Dashboard design",
+        "blurb": "Complex, production-ready professional data dashboards - many linked views, KPIs, filters, built to be used daily."
+      },
       "data-viz": {
         "label": "Data viz",
-        "blurb": "Charts, graphs, data maps - marks driven by values."
+        "blurb": "Simple data viz - a single chart, graph or data map; marks driven by values."
       },
       "infographic": {
         "label": "Infographic",
-        "blurb": "Composite explanatory graphics - data + illustration + hand-set text."
+        "blurb": "Explainers that combine data, pictures and hand-set text on one page."
       },
-      "illustration": {
-        "label": "Illustration",
-        "blurb": "Single-image drawn or painted work - editorial, decorative, concept."
-      },
-      "storybook": {
-        "label": "Storybook",
-        "blurb": "Narrative picture-book illustration - characters, scenes, warmth."
-      },
-      "comic": {
-        "label": "Comic",
-        "blurb": "Sequential panel storytelling - strips, zines, graphic novels."
-      },
-      "typography": {
-        "label": "Typography",
-        "blurb": "Type as the image - lettering, typographic composition."
-      },
-      "graphic-design": {
-        "label": "Graphic design",
-        "blurb": "Poster, print, editorial layout craft - grids, composition systems."
-      },
-      "branding": {
-        "label": "Branding",
-        "blurb": "Logos, marks, identity systems."
-      },
-      "ui-web": {
-        "label": "UI / Web",
-        "blurb": "Website, app, and product interface design."
+      "story-comic": {
+        "label": "Story and comic",
+        "blurb": "Narrative pictures - storybook characters, scenes, comic panels and strips."
       },
       "photography": {
         "label": "Photography",
-        "blurb": "Photographic and photo-art registers - lens, light, grade."
+        "blurb": "Lens-based pictures and photo-art - light, grade, staged scenes, miniatures."
       },
-      "motion": {
-        "label": "Motion",
-        "blurb": "Animation, motion graphics, video grade."
+      "three-d-material": {
+        "label": "3D and material",
+        "blurb": "Rendered 3D, sculpture, objects and physical craft - clay, textile, glass, paper."
       },
-      "three-d": {
-        "label": "3D / Spatial",
-        "blurb": "3D render, sculpture, installation, architecture."
+      "graphic-type": {
+        "label": "Graphic and type design",
+        "blurb": "Posters, layout, lettering, marks and identity - design carried by shape and type."
       },
-      "craft-material": {
-        "label": "Craft / Material",
-        "blurb": "Physical media - paper cut, textile, clay, collage, assemblage."
+      "ui-web": {
+        "label": "UI / Web",
+        "blurb": "Website, app and product interface screens (dashboards have their own category)."
       },
-      "fine-art": {
-        "label": "Fine art",
-        "blurb": "Painting and drawing traditions as the register - ink, oil, charcoal, printmaking."
+      "illustration-painting": {
+        "label": "Illustration and painting",
+        "blurb": "Drawn or painted images - editorial illustration and fine-art traditions such as ink, oil and engraving."
       }
     },
     "registers": {
-      "board": {
-        "label": "Board",
-        "blurb": "Calm, exact, credible. C-level, board packs, client proposals. Numbers carry authority; nothing cute."
+      "boardroom": {
+        "label": "Boardroom",
+        "blurb": "Board, C-level, investors and client decision-makers. Board packs, proposals, governance. Calm, exact, credible."
       },
-      "bold": {
-        "label": "Bold",
-        "blurb": "One loud idea, high contrast, reads at a distance. Keynotes, posters, LinkedIn hooks, launches."
+      "stage": {
+        "label": "Stage",
+        "blurb": "Keynotes, conferences, launches and all-hands. One big idea that reads from the back row."
       },
-      "creative": {
-        "label": "Creative",
-        "blurb": "Art-led, surprising, playful. Gallery, storytelling, workshops, personal brand, courses."
+      "feed": {
+        "label": "Feed",
+        "blurb": "LinkedIn and social followers scrolling past. Stops the scroll in a second; personal-brand posts."
+      },
+      "classroom": {
+        "label": "Classroom",
+        "blurb": "Courses, workshops, training and handouts. Explains clearly and stays friendly."
+      },
+      "team": {
+        "label": "Team",
+        "blurb": "Your own colleagues - culture, recognition, onboarding, farewells. Warm and about belonging."
+      },
+      "gallery": {
+        "label": "Gallery",
+        "blurb": "Art viewers and reflective essays. Slow, contemplative, art first."
       }
     }
   },
